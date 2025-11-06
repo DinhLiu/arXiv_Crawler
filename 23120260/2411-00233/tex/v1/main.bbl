@@ -1,0 +1,637 @@
+\begin{thebibliography}{75}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ali et~al.(2024)Ali, Zimerman, and Wolf]{ali_hidden_2024}
+Ameen Ali, Itamar Zimerman, and Lior Wolf.
+\newblock The {Hidden} {Attention} of {Mamba} {Models}, 3 2024.
+\newblock URL \url{http://arxiv.org/abs/2403.01590}.
+\newblock arXiv:2403.01590 [cs].
+
+\bibitem[Behrouz et~al.(2024)Behrouz, Santacatterina, and
+  Zabih]{behrouz_mambamixer_2024}
+Ali Behrouz, Michele Santacatterina, and Ramin Zabih.
+\newblock {MambaMixer}: {Efficient} {Selective} {State} {Space} {Models} with
+  {Dual} {Token} and {Channel} {Selection}, 3 2024.
+\newblock URL \url{http://arxiv.org/abs/2403.19888}.
+\newblock arXiv:2403.19888 [cs].
+
+\bibitem[Chen et~al.(2024{\natexlab{a}})Chen, Huang, Xu, Pei, Chen, Li, Wang,
+  Li, Lu, and Wang]{chen_video_2024}
+Guo Chen, Yifei Huang, Jilan Xu, Baoqi Pei, Zhe Chen, Zhiqi Li, Jiahao Wang,
+  Kunchang Li, Tong Lu, and Limin Wang.
+\newblock Video {Mamba} {Suite}: {State} {Space} {Model} as a {Versatile}
+  {Alternative} for {Video} {Understanding}, 3 2024{\natexlab{a}}.
+\newblock URL \url{http://arxiv.org/abs/2403.09626}.
+\newblock arXiv:2403.09626.
+
+\bibitem[Chen et~al.(2024{\natexlab{b}})Chen, Qin, Zhao, Yang, Cai, and
+  Wu]{Chen2024}
+Xin Chen, Yuwen Qin, Weidong Zhao, Qiming Yang, Ningbo Cai, and Kai Wu.
+\newblock A self-attention knowledge domain adaptation network for commercial
+  lithium-ion batteries state-of-health estimation under shallow cycles.
+\newblock \emph{Journal of Energy Storage}, 86, 5 2024{\natexlab{b}}.
+\newblock ISSN 2352152X.
+
+\bibitem[Crocioni et~al.(2020)Crocioni, Pau, Delorme, and
+  Gruosso]{Crocioni2020}
+Giulia Crocioni, Danilo Pau, Jean~Michel Delorme, and Giambattista Gruosso.
+\newblock Li-ion batteries parameter estimation with tiny neural networks
+  embedded on intelligent iot microcontrollers.
+\newblock \emph{IEEE Access}, 8:\penalty0 122135--122146, 2020.
+\newblock ISSN 21693536.
+\newblock \doi{10.1109/ACCESS.2020.3007046}.
+
+\bibitem[Dao and Gu(2024)]{dao_mamba-2_2024}
+Tri Dao and Albert Gu.
+\newblock [{Mamba}-2] {Transformers} are {SSMs}: {Generalized} {Models} and
+  {Efficient} {Algorithms} {Through} {Structured} {State} {Space} {Duality}, 5
+  2024.
+\newblock URL \url{http://arxiv.org/abs/2405.21060}.
+\newblock arXiv:2405.21060 [cs].
+
+\bibitem[Elmahallawy et~al.(2022)Elmahallawy, Elfouly, Alouani, and
+  Massoud]{elmahallawy_comprehensive_2022}
+Mohamed Elmahallawy, Tarek Elfouly, Ali Alouani, and Ahmed~M. Massoud.
+\newblock A {Comprehensive} {Review} of {Lithium}-{Ion} {Batteries} {Modeling},
+  and {State} of {Health} and {Remaining} {Useful} {Lifetime} {Prediction}.
+\newblock \emph{IEEE Access}, 10:\penalty0 119040--119070, 2022.
+\newblock ISSN 2169-3536.
+\newblock \doi{10.1109/ACCESS.2022.3221137}.
+\newblock URL
+  \url{https://ieeexplore.ieee.org/document/9944663/?arnumber=9944663}.
+\newblock Conference Name: IEEE Access.
+
+\bibitem[Erol et~al.(2024)Erol, Senocak, Feng, and Chung]{erol_audio_2024}
+Mehmet~Hamza Erol, Arda Senocak, Jiu Feng, and Joon~Son Chung.
+\newblock Audio {Mamba}: {Bidirectional} {State} {Space} {Model} for {Audio}
+  {Representation} {Learning}, 6 2024.
+\newblock URL \url{http://arxiv.org/abs/2406.03344}.
+\newblock arXiv:2406.03344 [cs, eess].
+
+\bibitem[Feng et~al.(2024)Feng, Hu, and Zhang]{Feng2024}
+Yuyuan Feng, Guosheng Hu, and Zhihong Zhang.
+\newblock Gpt4battery: An llm-driven framework for adaptive state of health
+  estimation of raw li-ion batteries.
+\newblock 1 2024.
+\newblock URL \url{http://arxiv.org/abs/2402.00068}.
+
+\bibitem[Fernholm(2019)]{fernholm_nobel_2019}
+Ann Fernholm.
+\newblock The {Nobel} {Prize} in {Chemistry} 2019.
+\newblock \emph{The Royal Swedish Academy of Sciences}, 2019.
+\newblock URL
+  \url{https://www.nobelprize.org/prizes/chemistry/2019/popular-information/}.
+
+\bibitem[Finegan et~al.(2015)Finegan, Scheel, Robinson, Tjaden, Hunt, Mason,
+  Millichamp, Michiel, Offer, Hinds, Brett, and Shearing]{Finegan2015}
+Donal~P. Finegan, Mario Scheel, James~B. Robinson, Bernhard Tjaden, Ian Hunt,
+  Thomas~J. Mason, Jason Millichamp, Marco~Di Michiel, Gregory~J. Offer, Gareth
+  Hinds, Dan~J.L. Brett, and Paul~R. Shearing.
+\newblock In-operando high-speed tomography of lithium-ion batteries during
+  thermal runaway.
+\newblock \emph{Nature Communications}, 6, 4 2015.
+\newblock ISSN 20411723.
+\newblock \doi{10.1038/ncomms7924}.
+
+\bibitem[Fu et~al.(2023)Fu, Dao, Saab, Thomas, Rudra, and Ré]{fu_h3_2023}
+Daniel~Y. Fu, Tri Dao, Khaled~K. Saab, Armin~W. Thomas, Atri Rudra, and
+  Christopher Ré.
+\newblock [{H3}] {Hungry} {Hungry} {Hippos}: {Towards} {Language} {Modeling}
+  with {State} {Space} {Models}, 4 2023.
+\newblock URL \url{http://arxiv.org/abs/2212.14052}.
+\newblock arXiv:2212.14052 [cs].
+
+\bibitem[Gao et~al.(2017)Gao, Jiang, Zhang, Zhang, Ma, and Jiang]{Gao2017}
+Yang Gao, Jiuchun Jiang, Caiping Zhang, Weige Zhang, Zeyu Ma, and Yan Jiang.
+\newblock Lithium-ion battery aging mechanisms and life model under different
+  charging stresses.
+\newblock \emph{Journal of Power Sources}, 356:\penalty0 103--114, 2017.
+\newblock ISSN 03787753.
+\newblock \doi{10.1016/j.jpowsour.2017.04.084}.
+
+\bibitem[Garse et~al.(2024)Garse, Bairwa, and Roy]{Garse2024}
+Komal~Mohan Garse, Kedar~Narayan Bairwa, and Anindita Roy.
+\newblock Hybrid random forest regression and artificial neural networks for
+  modelling and monitoring the state of health of li-ion battery.
+\newblock \emph{J. Electrical Systems}, 20:\penalty0 2231--2243, 7 2024.
+\newblock ISSN 11125209.
+
+\bibitem[Gomez et~al.(2024)Gomez, Wang, and Chou]{Gomez2024}
+William Gomez, Fu~Kwun Wang, and Jia~Hong Chou.
+\newblock Li-ion battery capacity prediction using improved temporal fusion
+  transformer model.
+\newblock \emph{Energy}, 296, 6 2024.
+\newblock ISSN 18736785.
+
+\bibitem[Gu and Dao(2024)]{gu_mamba_2024}
+Albert Gu and Tri Dao.
+\newblock Mamba: {Linear}-{Time} {Sequence} {Modeling} with {Selective} {State}
+  {Spaces}, 5 2024.
+\newblock URL \url{http://arxiv.org/abs/2312.00752}.
+\newblock arXiv:2312.00752 [cs].
+
+\bibitem[Gu et~al.(2020)Gu, Dao, Ermon, Rudra, and Re]{gu_hippo_2020}
+Albert Gu, Tri Dao, Stefano Ermon, Atri Rudra, and Christopher Re.
+\newblock {HiPPO}: {Recurrent} {Memory} with {Optimal} {Polynomial}
+  {Projections}, 10 2020.
+\newblock URL \url{http://arxiv.org/abs/2008.07669}.
+\newblock arXiv:2008.07669 [cs, stat].
+
+\bibitem[Gu et~al.(2021)Gu, Johnson, Goel, Saab, Dao, Rudra, and
+  Ré]{gu_lssl_2021}
+Albert Gu, Isys Johnson, Karan Goel, Khaled Saab, Tri Dao, Atri Rudra, and
+  Christopher Ré.
+\newblock [{LSSL}] {Combining} {Recurrent}, {Convolutional}, and
+  {Continuous}-time {Models} with {Linear} {State}-{Space} {Layers}, 10 2021.
+\newblock URL \url{http://arxiv.org/abs/2110.13985}.
+\newblock arXiv:2110.13985 [cs].
+
+\bibitem[Gu et~al.(2022{\natexlab{a}})Gu, Goel, and Ré]{gu_s4_2022}
+Albert Gu, Karan Goel, and Christopher Ré.
+\newblock [{S4}] {Efficiently} {Modeling} {Long} {Sequences} with {Structured}
+  {State} {Spaces}, 8 2022{\natexlab{a}}.
+\newblock URL \url{http://arxiv.org/abs/2111.00396}.
+\newblock arXiv:2111.00396 [cs].
+
+\bibitem[Gu et~al.(2022{\natexlab{b}})Gu, Gupta, Goel, and Ré]{gu_s4d_2022}
+Albert Gu, Ankit Gupta, Karan Goel, and Christopher Ré.
+\newblock [{S4D}] {On} the {Parameterization} and {Initialization} of
+  {Diagonal} {State} {Space} {Models}, 8 2022{\natexlab{b}}.
+\newblock URL \url{http://arxiv.org/abs/2206.11893}.
+\newblock arXiv:2206.11893 [cs].
+
+\bibitem[Gu et~al.(2022{\natexlab{c}})Gu, Johnson, Timalsina, Rudra, and
+  Ré]{gu_how_2022}
+Albert Gu, Isys Johnson, Aman Timalsina, Atri Rudra, and Christopher Ré.
+\newblock How to {Train} {Your} {HiPPO}: {State} {Space} {Models} with
+  {Generalized} {Orthogonal} {Basis} {Projections}, 8 2022{\natexlab{c}}.
+\newblock URL \url{http://arxiv.org/abs/2206.12037}.
+\newblock arXiv:2206.12037 [cs].
+
+\bibitem[Gupta et~al.(2022)Gupta, Gu, and Berant]{gupta_dss_2022}
+Ankit Gupta, Albert Gu, and Jonathan Berant.
+\newblock [{DSS}] {Diagonal} {State} {Spaces} are as {Effective} as
+  {Structured} {State} {Spaces}, 5 2022.
+\newblock URL \url{http://arxiv.org/abs/2203.14343}.
+\newblock arXiv:2203.14343 [cs].
+
+\bibitem[He et~al.(2011{\natexlab{a}})He, Williard, Osterman, and
+  Pecht]{he_prognostics_2011}
+Wei He, Nicholas Williard, Michael Osterman, and Michael Pecht.
+\newblock Prognostics of lithium-ion batteries based on {Dempster}–{Shafer}
+  theory and the {Bayesian} {Monte} {Carlo} method.
+\newblock \emph{Journal of Power Sources}, 196\penalty0 (23):\penalty0
+  10314--10321, 12 2011{\natexlab{a}}.
+\newblock ISSN 0378-7753.
+\newblock \doi{10.1016/j.jpowsour.2011.08.040}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0378775311015400}.
+
+\bibitem[He et~al.(2011{\natexlab{b}})He, Ning, Yang, Song, Li, Su, Du, Tang,
+  and Kang]{He2011}
+Yan~Bing He, Feng Ning, Quan~Hong Yang, Quan~Sheng Song, Baohua Li, Fangyuan
+  Su, Hongda Du, Zhi~Yuan Tang, and Feiyu Kang.
+\newblock Structural and thermal stabilities of layered li(ni1/3co 1/3mn1/3)o2
+  materials in 18650 high power batteries.
+\newblock \emph{Journal of Power Sources}, 196:\penalty0 10322--10327, 12
+  2011{\natexlab{b}}.
+\newblock ISSN 03787753.
+\newblock \doi{10.1016/j.jpowsour.2011.08.042}.
+
+\bibitem[Huang et~al.(2024)Huang, Li, Zhu, and Shi]{Huang2024}
+Chengti Huang, Na~Li, Jianqing Zhu, and Shengming Shi.
+\newblock Battery health state prediction based on singular spectrum analysis
+  and transformer network.
+\newblock \emph{Electronics (Switzerland)}, 13, 7 2024.
+\newblock ISSN 20799292.
+
+\bibitem[Huang et~al.(2018)Huang, Liu, van~der Maaten, and
+  Weinberger]{huang2018denselyconnectedconvolutionalnetworks}
+Gao Huang, Zhuang Liu, Laurens van~der Maaten, and Kilian~Q. Weinberger.
+\newblock Densely connected convolutional networks, 2018.
+\newblock URL \url{https://arxiv.org/abs/1608.06993}.
+
+\bibitem[Jaguemont et~al.(2016)Jaguemont, Boulon, and Dubé]{Jaguemont2016}
+J.~Jaguemont, L.~Boulon, and Y.~Dubé.
+\newblock A comprehensive review of lithium-ion batteries used in hybrid and
+  electric vehicles at cold temperatures.
+\newblock \emph{Applied Energy}, 164:\penalty0 99--114, 2 2016.
+\newblock ISSN 03062619.
+\newblock \doi{10.1016/j.apenergy.2015.11.034}.
+
+\bibitem[Kekenes-Huskey et~al.(2016)Kekenes-Huskey, Scott, and
+  Atalay]{Kekes2016}
+Peter~M. Kekenes-Huskey, Caitlin~E. Scott, and Selcuk Atalay.
+\newblock Quantifying the influence of the crowded cytoplasm on small molecule
+  diffusion.
+\newblock \emph{Journal of Physical Chemistry B}, 120:\penalty0 8696--8706, 8
+  2016.
+\newblock ISSN 15205207.
+\newblock \doi{10.1021/acs.jpcb.6b03887}.
+
+\bibitem[Keles et~al.(2022)Keles, Wijewardena, and
+  Hegde]{keles2022computationalcomplexityselfattention}
+Feyza~Duman Keles, Pruthuvi~Mahesakya Wijewardena, and Chinmay Hegde.
+\newblock On the computational complexity of self-attention, 2022.
+\newblock URL \url{https://arxiv.org/abs/2209.04881}.
+
+\bibitem[Larsson et~al.(2016)Larsson, Maire, and
+  Shakhnarovich]{larsson_fractalnet_2016}
+Gustav Larsson, Michael Maire, and Gregory Shakhnarovich.
+\newblock Fractalnet: Ultra-deep neural networks without residuals.
+\newblock \emph{CoRR}, abs/1605.07648, 2016.
+\newblock URL \url{http://arxiv.org/abs/1605.07648}.
+
+\bibitem[Li et~al.(2024)Li, Li, Wang, He, Wang, Wang, and
+  Qiao]{li_videomamba_2024}
+Kunchang Li, Xinhao Li, Yi~Wang, Yinan He, Yali Wang, Limin Wang, and Yu~Qiao.
+\newblock {VideoMamba}: {State} {Space} {Model} for {Efficient} {Video}
+  {Understanding}, 3 2024.
+\newblock URL \url{http://arxiv.org/abs/2403.06977}.
+\newblock arXiv:2403.06977 [cs].
+
+\bibitem[Li et~al.(2018)Li, Lu, Chen, and Amine]{li_30_2018}
+Matthew Li, Jun Lu, Zhongwei Chen, and Khalil Amine.
+\newblock 30 {Years} of {Lithium}‐{Ion} {Batteries}.
+\newblock \emph{Advanced Materials}, 30\penalty0 (33):\penalty0 1800561, 8
+  2018.
+\newblock ISSN 0935-9648, 1521-4095.
+\newblock \doi{10.1002/adma.201800561}.
+\newblock URL \url{https://onlinelibrary.wiley.com/doi/10.1002/adma.201800561}.
+
+\bibitem[Li et~al.(2020)Li, Yuan, and Wang]{Li2020}
+Xiaoyu Li, Changgui Yuan, and Zhenpo Wang.
+\newblock State of health estimation for li-ion battery via partial incremental
+  capacity analysis based on support vector regression.
+\newblock \emph{Energy}, 203, 2020.
+\newblock ISSN 03605442.
+\newblock \doi{10.1016/j.energy.2020.117852}.
+
+\bibitem[Li et~al.(2019)Li, Liu, Foley, Zülke, Berecibar, Nanini-Maury,
+  Mierlo, and Hoster]{Li2019}
+Yi~Li, Kailong Liu, Aoife~M. Foley, A.~Zülke, Maitane Berecibar,
+  E.~Nanini-Maury, J.~Van Mierlo, and Harry~E. Hoster.
+\newblock Data-driven health estimation and lifetime prediction of lithium-ion
+  batteries: A review.
+\newblock \emph{Renewable and Sustainable Energy Reviews}, 113, 10 2019.
+\newblock ISSN 18790690.
+\newblock \doi{10.1016/j.rser.2019.109254}.
+
+\bibitem[Lieber et~al.(2024)Lieber, Lenz, Bata, Cohen, Osin, Dalmedigos,
+  Safahi, Meirom, Belinkov, Shalev-Shwartz, Abend, Alon, Asida, Bergman,
+  Glozman, Gokhman, Manevich, Ratner, Rozen, Shwartz, Zusman, and
+  Shoham]{lieber_jamba_2024}
+Opher Lieber, Barak Lenz, Hofit Bata, Gal Cohen, Jhonathan Osin, Itay
+  Dalmedigos, Erez Safahi, Shaked Meirom, Yonatan Belinkov, Shai
+  Shalev-Shwartz, Omri Abend, Raz Alon, Tomer Asida, Amir Bergman, Roman
+  Glozman, Michael Gokhman, Avashalom Manevich, Nir Ratner, Noam Rozen, Erez
+  Shwartz, Mor Zusman, and Yoav Shoham.
+\newblock Jamba: {A} {Hybrid} {Transformer}-{Mamba} {Language} {Model}, 3 2024.
+\newblock URL \url{http://arxiv.org/abs/2403.19887}.
+\newblock arXiv:2403.19887 [cs] version: 1.
+
+\bibitem[Lin and Hu(2024)]{lin_audio_2024}
+Jiaju Lin and Haoxuan Hu.
+\newblock Audio {Mamba}: {Pretrained} {Audio} {State} {Space} {Model} {For}
+  {Audio} {Tagging}, 5 2024.
+\newblock URL \url{http://arxiv.org/abs/2405.13636}.
+\newblock arXiv:2405.13636 [cs, eess].
+
+\bibitem[Liu et~al.(2014)Liu, Lu, Fu, Hua, Li, Ouyang, Wang, Xue, and
+  Chen]{liu_comparative_2014}
+Guangming Liu, Languang Lu, Hong Fu, Jianfeng Hua, Jianqiu Li, Minggao Ouyang,
+  Yanjing Wang, Shan Xue, and Ping Chen.
+\newblock A comparative study of equivalent circuit models and enhanced
+  equivalent circuit models of lithium-ion batteries with different model
+  structures.
+\newblock In \emph{2014 {IEEE} {Conference} and {Expo} {Transportation}
+  {Electrification} {Asia}-{Pacific} ({ITEC} {Asia}-{Pacific})}, pages 1--6, 8
+  2014.
+\newblock \doi{10.1109/ITEC-AP.2014.6940946}.
+\newblock URL
+  \url{https://ieeexplore.ieee.org/document/6940946/metrics#metrics}.
+
+\bibitem[Liu et~al.(2023)Liu, Liu, Liu, Sun, Qiao, and Xu]{Liu2023}
+Yongtao Liu, Chuanpan Liu, Yongjie Liu, Feiran Sun, Jie Qiao, and Ting Xu.
+\newblock Review on degradation mechanism and health state estimation methods
+  of lithium-ion batteries, 8 2023.
+\newblock ISSN 25890379.
+
+\bibitem[Liu et~al.(2024)Liu, Tian, Zhao, Yu, Xie, Wang, Ye, and
+  Liu]{liu_vmamba_2024}
+Yue Liu, Yunjie Tian, Yuzhong Zhao, Hongtian Yu, Lingxi Xie, Yaowei Wang,
+  Qixiang Ye, and Yunfan Liu.
+\newblock {VMamba}: {Visual} {State} {Space} {Model}, 5 2024.
+\newblock URL \url{http://arxiv.org/abs/2401.10166}.
+\newblock arXiv:2401.10166 [cs].
+
+\bibitem[Loshchilov and Hutter(2017)]{loshchilov_decoupled_2017}
+Ilya Loshchilov and Frank Hutter.
+\newblock Decoupled weight decay regularization.
+\newblock \emph{CoRR}, abs/1711.05101, 2017.
+\newblock URL \url{http://arxiv.org/abs/1711.05101}.
+
+\bibitem[Lu et~al.(2023)Lu, Xiong, Tian, Wang, and Sun]{lu_deep_2023}
+Jiahuan Lu, Rui Xiong, Jinpeng Tian, Chenxu Wang, and Fengchun Sun.
+\newblock Deep learning to estimate lithium-ion battery state of health without
+  additional degradation experiments.
+\newblock \emph{Nature Communications}, 14\penalty0 (1):\penalty0 2760, 5 2023.
+\newblock ISSN 2041-1723.
+\newblock \doi{10.1038/s41467-023-38458-w}.
+\newblock URL \url{https://www.nature.com/articles/s41467-023-38458-w}.
+
+\bibitem[Mazzi et~al.(2024)Mazzi, Ben~Sassi, and
+  Errahimi]{mazzi_lithium-ion_2024}
+Yahia Mazzi, Hicham Ben~Sassi, and Fatima Errahimi.
+\newblock Lithium-ion battery state of health estimation using a hybrid model
+  based on a convolutional neural network and bidirectional gated recurrent
+  unit.
+\newblock \emph{Engineering Applications of Artificial Intelligence},
+  127:\penalty0 107199, 1 2024.
+\newblock ISSN 0952-1976.
+\newblock \doi{10.1016/j.engappai.2023.107199}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0952197623013830}.
+
+\bibitem[Micikevicius(2018)]{micikevicius_mixed_2017}
+Paulius~et.al. Micikevicius.
+\newblock Mixed precision training, 2018.
+\newblock URL \url{https://arxiv.org/abs/1710.03740}.
+
+\bibitem[Nakano and Tanaka(2024)]{Nakano2024}
+Kosaku Nakano and Kenji Tanaka.
+\newblock Transformer-based online battery state of health estimation from
+  electric vehicle driving data.
+\newblock 1 2024.
+\newblock \doi{10.46855/energy-proceedings-11038}.
+
+\bibitem[Nguyen et~al.(2022)Nguyen, Goel, Gu, Downs, Shah, Dao, Baccus, and
+  Ré]{nguyen_s4nd_2022}
+Eric Nguyen, Karan Goel, Albert Gu, Gordon~W. Downs, Preey Shah, Tri Dao,
+  Stephen~A. Baccus, and Christopher Ré.
+\newblock {S4ND}: {Modeling} {Images} and {Videos} as {Multidimensional}
+  {Signals} {Using} {State} {Spaces}, 10 2022.
+\newblock URL \url{http://arxiv.org/abs/2210.06583}.
+\newblock arXiv:2210.06583 [cs, eess].
+
+\bibitem[Ouyang et~al.(2015)Ouyang, Ren, Lu, Li, Feng, Han, and
+  Liu]{Ouyang2015}
+Minggao Ouyang, Dongsheng Ren, Languang Lu, Jianqiu Li, Xuning Feng, Xuebing
+  Han, and Guangming Liu.
+\newblock Overcharge-induced capacity fading analysis for large format
+  lithium-ion batteries with liyni1/3co1/3mn1/3o2 + liymn2o4 composite cathode.
+\newblock \emph{Journal of Power Sources}, 279:\penalty0 626--635, 4 2015.
+\newblock ISSN 03787753.
+\newblock \doi{10.1016/j.jpowsour.2015.01.051}.
+
+\bibitem[Popel and Bojar(2018)]{Popel_2018}
+Martin Popel and Ondřej Bojar.
+\newblock Training tips for the transformer model.
+\newblock \emph{The Prague Bulletin of Mathematical Linguistics}, 110\penalty0
+  (1):\penalty0 43–70, 4 2018.
+\newblock ISSN 1804-0462.
+\newblock \doi{10.2478/pralin-2018-0002}.
+\newblock URL \url{http://dx.doi.org/10.2478/pralin-2018-0002}.
+
+\bibitem[Ren et~al.(2021)Ren, Dong, Wang, Meng, Zhao, and Deen]{Ren2021}
+Lei Ren, Jiabao Dong, Xiaokang Wang, Zihao Meng, Li~Zhao, and M.~Jamal Deen.
+\newblock A data-driven auto-cnn-lstm prediction model for lithium-ion battery
+  remaining useful life.
+\newblock \emph{IEEE Transactions on Industrial Informatics}, 17:\penalty0
+  3478--3487, 5 2021.
+\newblock ISSN 19410050.
+\newblock \doi{10.1109/TII.2020.3008223}.
+
+\bibitem[Ren and Du(2023)]{Ren2023}
+Zhong Ren and Changqing Du.
+\newblock A review of machine learning state-of-charge and state-of-health
+  estimation algorithms for lithium-ion batteries.
+\newblock \emph{Energy Reports}, 9:\penalty0 2993--3021, 12 2023.
+\newblock ISSN 23524847.
+\newblock \doi{10.1016/j.egyr.2023.01.108}.
+
+\bibitem[Saha and Goebel(2007)]{saha2007nasa}
+B.~Saha and K.~Goebel.
+\newblock Battery data set.
+\newblock \emph{NASA Ames Prognostics Data Repository, NASA Ames Research
+  Center, Moffett Field, CA}, 2007.
+\newblock URL
+  \url{https://phm-datasets.s3.amazonaws.com/NASA/5.+Battery+Data+Set.zip}.
+
+\bibitem[Severson et~al.(2019)Severson, Attia, Jin, Perkins, Jiang, Yang, Chen,
+  Aykol, Herring, Fraggedakis, Bazant, Harris, Chueh, and
+  Braatz]{severson_data-driven_2019}
+Kristen~A. Severson, Peter~M. Attia, Norman Jin, Nicholas Perkins, Benben
+  Jiang, Zi~Yang, Michael~H. Chen, Muratahan Aykol, Patrick~K. Herring,
+  Dimitrios Fraggedakis, Martin~Z. Bazant, Stephen~J. Harris, William~C. Chueh,
+  and Richard~D. Braatz.
+\newblock Data-driven prediction of battery cycle life before capacity
+  degradation.
+\newblock \emph{Nature Energy}, 4\penalty0 (5):\penalty0 383--391, 5 2019.
+\newblock ISSN 2058-7546.
+\newblock \doi{10.1038/s41560-019-0356-8}.
+\newblock URL \url{https://doi.org/10.1038/s41560-019-0356-8}.
+
+\bibitem[Shen et~al.(2023)Shen, Ma, Shu, Shen, Chen, and Liu]{Shen2023}
+Jiangwei Shen, Wensai Ma, Xing Shu, Shiquan Shen, Zheng Chen, and Yonggang Liu.
+\newblock Accurate state of health estimation for lithium-ion batteries under
+  random charging scenarios.
+\newblock \emph{Energy}, 279, 9 2023.
+\newblock ISSN 03605442.
+\newblock \doi{10.1016/j.energy.2023.128092}.
+
+\bibitem[Shi(2024)]{shi_mambastock_2024}
+Zhuangwei Shi.
+\newblock {MambaStock}: {Selective} state space model for stock prediction, 2
+  2024.
+\newblock URL \url{http://arxiv.org/abs/2402.18959}.
+\newblock arXiv:2402.18959 [cs, q-fin].
+
+\bibitem[Smith et~al.(2023)Smith, Warrington, and Linderman]{smith_s5_2023}
+Jimmy T.~H. Smith, Andrew Warrington, and Scott~W. Linderman.
+\newblock [{S5}] {Simplified} {State} {Space} {Layers} for {Sequence}
+  {Modeling}, 3 2023.
+\newblock URL \url{http://arxiv.org/abs/2208.04933}.
+\newblock arXiv:2208.04933 [cs].
+
+\bibitem[Tan et~al.(2020)Tan, Tan, Zhao, and Zhao]{Tan2020}
+Yandan Tan, Yandan Tan, Guangcai Zhao, and Guangcai Zhao.
+\newblock Transfer learning with long short-term memory network for
+  state-of-health prediction of lithium-ion batteries.
+\newblock \emph{IEEE Transactions on Industrial Electronics}, 67:\penalty0
+  8723--8731, 10 2020.
+\newblock ISSN 15579948.
+\newblock \doi{10.1109/TIE.2019.2946551}.
+
+\bibitem[Tian et~al.(2020)Tian, Qin, Li, and Zhao]{Tian2020}
+Huixin Tian, Pengliang Qin, Kun Li, and Zhen Zhao.
+\newblock A review of the state of health for lithium-ion batteries: Research
+  status and suggestions.
+\newblock \emph{Journal of Cleaner Production}, 261, 7 2020.
+\newblock ISSN 09596526.
+\newblock \doi{10.1016/j.jclepro.2020.120813}.
+
+\bibitem[Tong et~al.(2021)Tong, Miao, Tong, and Lu]{Tong2021}
+Zheming Tong, Jiazhi Miao, Shuiguang Tong, and Yingying Lu.
+\newblock Early prediction of remaining useful life for lithium-ion batteries
+  based on a hybrid machine learning method.
+\newblock \emph{Journal of Cleaner Production}, 317, 10 2021.
+\newblock ISSN 09596526.
+\newblock \doi{10.1016/j.jclepro.2021.128265}.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser, and Polosukhin]{vaswani_attention_2017}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
+\newblock Attention {Is} {All} {You} {Need}, 6 2017.
+\newblock URL \url{http://arxiv.org/abs/1706.03762}.
+\newblock arXiv:1706.03762 [cs] version: 1.
+
+\bibitem[Vetter et~al.(2005)Vetter, Novák, Wagner, Veit, Möller, Besenhard,
+  Winter, Wohlfahrt-Mehrens, Vogler, and Hammouche]{Vetter2005}
+J.~Vetter, P.~Novák, M.~R. Wagner, C.~Veit, K.~C. Möller, J.~O. Besenhard,
+  M.~Winter, M.~Wohlfahrt-Mehrens, C.~Vogler, and A.~Hammouche.
+\newblock Ageing mechanisms in lithium-ion batteries.
+\newblock \emph{Journal of Power Sources}, 147:\penalty0 269--281, 9 2005.
+\newblock ISSN 03787753.
+\newblock \doi{10.1016/j.jpowsour.2005.01.006}.
+
+\bibitem[Waldmann et~al.(2014)Waldmann, Wilka, Kasper, Fleischhammer, and
+  Wohlfahrt-Mehrens]{Waldmann2014}
+Thomas Waldmann, Marcel Wilka, Michael Kasper, Meike Fleischhammer, and Margret
+  Wohlfahrt-Mehrens.
+\newblock Temperature dependent ageing mechanisms in lithium-ion batteries - a
+  post-mortem study.
+\newblock \emph{Journal of Power Sources}, 262:\penalty0 129--135, 9 2014.
+\newblock ISSN 03787753.
+\newblock \doi{10.1016/j.jpowsour.2014.03.112}.
+
+\bibitem[Wan et~al.(2024)Wan, Wang, Yong, Zhang, Stepputtis, Sycara, and
+  Xie]{wan_sigma_2024}
+Zifu Wan, Yuhao Wang, Silong Yong, Pingping Zhang, Simon Stepputtis, Katia
+  Sycara, and Yaqi Xie.
+\newblock Sigma: {Siamese} {Mamba} {Network} for {Multi}-{Modal} {Semantic}
+  {Segmentation}, 4 2024.
+\newblock URL \url{http://arxiv.org/abs/2404.04256}.
+\newblock arXiv:2404.04256 [cs].
+
+\bibitem[Wang et~al.(2021)Wang, Jia, and Xu]{Wang2021}
+Lubing Wang, Yikai Jia, and Jun Xu.
+\newblock Mechanistic understanding of the electrochemo-dependent mechanical
+  behaviors of battery anodes.
+\newblock \emph{Journal of Power Sources}, 510, 10 2021.
+\newblock ISSN 03787753.
+\newblock \doi{10.1016/j.jpowsour.2021.230428}.
+
+\bibitem[Wang et~al.(2012)Wang, Ping, Zhao, Chu, Sun, and Chen]{Wang2012}
+Qingsong Wang, Ping Ping, Xuejuan Zhao, Guanquan Chu, Jinhua Sun, and Chunhua
+  Chen.
+\newblock Thermal runaway caused fire and explosion of lithium ion battery.
+\newblock \emph{Journal of Power Sources}, 208:\penalty0 210--224, 6 2012.
+\newblock ISSN 03787753.
+\newblock \doi{10.1016/j.jpowsour.2012.02.038}.
+
+\bibitem[Wu et~al.(2022)Wu, Chen, Feng, Xiang, and Zhu]{Wu2022}
+Ji~Wu, Junxiong Chen, Xiong Feng, Haitao Xiang, and Qiao Zhu.
+\newblock State of health estimation of lithium-ion batteries using
+  autoencoders and ensemble learning.
+\newblock \emph{Journal of Energy Storage}, 55, 11 2022.
+\newblock ISSN 2352152X.
+\newblock \doi{10.1016/j.est.2022.105708}.
+
+\bibitem[Yamada et~al.(2020)Yamada, Watanabe, Gunji, Wu, and
+  Matsumoto]{Yamada2020}
+Mitsuru Yamada, Tatsuya Watanabe, Takao Gunji, Jianfei Wu, and Futoshi
+  Matsumoto.
+\newblock Review of the design of current collectors for improving the battery
+  performance in lithium-ion and post-lithium-ion batteries.
+\newblock \emph{Electrochem}, 1:\penalty0 124--159, 6 2020.
+\newblock ISSN 26733293.
+\newblock \doi{10.3390/electrochem1020011}.
+
+\bibitem[Yang et~al.(2016)Yang, Zhang, Shang, and Li]{Yang2016}
+Naixing Yang, Xiongwen Zhang, Binbin Shang, and Guojun Li.
+\newblock Unbalanced discharging and aging due to temperature differences among
+  the cells in a lithium-ion battery pack with parallel combination.
+\newblock \emph{Journal of Power Sources}, 306:\penalty0 733--741, 2 2016.
+\newblock ISSN 03787753.
+\newblock \doi{10.1016/j.jpowsour.2015.12.079}.
+
+\bibitem[Yang et~al.(2020)Yang, Song, Hofmann, and Sun]{Yang2020}
+Niankai Yang, Ziyou Song, Heath Hofmann, and Jing Sun.
+\newblock Robust state of health estimation of lithium-ion batteries using
+  convolutional neural network and random forest.
+\newblock 10 2020.
+\newblock \doi{10.48550/arxiv.2010.10452}.
+\newblock URL \url{http://arxiv.org/abs/2010.10452}.
+
+\bibitem[Yang et~al.(2017)Yang, Leng, Zhang, Ge, and Wang]{Yang2017}
+Xiao~Guang Yang, Yongjun Leng, Guangsheng Zhang, Shanhai Ge, and Chao~Yang
+  Wang.
+\newblock Modeling of lithium plating induced aging of lithium-ion batteries:
+  Transition from linear to nonlinear aging.
+\newblock \emph{Journal of Power Sources}, 360:\penalty0 28--40, 2017.
+\newblock ISSN 03787753.
+\newblock \doi{10.1016/j.jpowsour.2017.05.110}.
+
+\bibitem[Yao et~al.(2024)Yao, Song, and Xie]{Yao2024}
+Quanzheng Yao, Xianhua Song, and Wei Xie.
+\newblock State of health estimation of lithium-ion battery based on
+  cnn–wnn–wlstm.
+\newblock \emph{Complex and Intelligent Systems}, 10:\penalty0 2919--2936, 4
+  2024.
+\newblock ISSN 21986053.
+\newblock \doi{10.1007/s40747-023-01300-3}.
+
+\bibitem[Zeng and Liu(2023)]{Zeng2023}
+Jing Zeng and Sifeng Liu.
+\newblock Research on aging mechanism and state of health prediction in lithium
+  batteries, 11 2023.
+\newblock ISSN 2352152X.
+
+\bibitem[Zhang et~al.(2024)Zhang, Liu, Reid, Hartley, Zhuang, and
+  Tang]{zhang_motion_2024}
+Zeyu Zhang, Akide Liu, Ian Reid, Richard Hartley, Bohan Zhuang, and Hao Tang.
+\newblock Motion {Mamba}: {Efficient} and {Long} {Sequence} {Motion}
+  {Generation}, 8 2024.
+\newblock URL \url{http://arxiv.org/abs/2403.07487}.
+\newblock arXiv:2403.07487 [cs].
+
+\bibitem[Zhu et~al.(2024{\natexlab{a}})Zhu, Liao, Zhang, Wang, Liu, and
+  Wang]{zhu_vision_2024}
+Lianghui Zhu, Bencheng Liao, Qian Zhang, Xinlong Wang, Wenyu Liu, and Xinggang
+  Wang.
+\newblock Vision {Mamba}: {Efficient} {Visual} {Representation} {Learning} with
+  {Bidirectional} {State} {Space} {Model}, 2 2024{\natexlab{a}}.
+\newblock URL \url{http://arxiv.org/abs/2401.09417}.
+\newblock arXiv:2401.09417 [cs].
+
+\bibitem[Zhu et~al.(2024{\natexlab{b}})Zhu, Xu, Song, Huang, and
+  Zhang]{Zhu2024}
+Xinshan Zhu, Chengqian Xu, Tianbao Song, Zhen Huang, and Yun Zhang.
+\newblock Sparse self-attentive transformer with multiscale feature fusion on
+  long-term soh forecasting.
+\newblock \emph{IEEE Transactions on Power Electronics}, 8 2024{\natexlab{b}}.
+\newblock ISSN 19410107.
+
+\bibitem[Zhu et~al.(2022)Zhu, Yang, Liu, and Gao]{Zhu2022}
+Zhenyu Zhu, Qing Yang, Xin Liu, and Dexin Gao.
+\newblock Attention-based cnn-bilstm for soh and rul estimation of lithium-ion
+  batteries.
+\newblock \emph{Journal of Algorithms and Computational Technology}, 16, 2022.
+\newblock ISSN 17483026.
+\newblock \doi{10.1177/17483026221130598}.
+
+\bibitem[Zichen and Changqing(2021)]{Zichen2021}
+Wang Zichen and Du~Changqing.
+\newblock A comprehensive review on thermal management systems for power
+  lithium-ion batteries.
+\newblock \emph{Renewable and Sustainable Energy Reviews}, 139, 4 2021.
+\newblock ISSN 18790690.
+\newblock \doi{10.1016/j.rser.2020.110685}.
+
+\end{thebibliography}

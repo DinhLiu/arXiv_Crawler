@@ -1,0 +1,126 @@
+\begin{thebibliography}{10}
+
+\bibitem{kier_1985}
+W.~Kier and K.~Smith, ``Tongues, tentacles and trunks: the biomechanics of
+  movement in muscular-hydrostats,'' {\em Zoological Journal of the Linnean
+  Society}, vol.~83, no.~4, pp.~307--324, 1985.
+
+\bibitem{chen_review_2022}
+X.~Chen, X.~Zhang, Y.~Huang, L.~Cao, and J.~Liu, ``A review of soft manipulator
+  research, applications, and opportunities,'' {\em Journal of Field Robotics},
+  vol.~39, pp.~281--311, May 2022.
+
+\bibitem{octarm}
+I.~Walker, D.~Dawson, T.~Flash, F.~Grasso, R.~Hanlon, B.~Hochner, W.~Kier,
+  C.~Pagano, C.~Rahn, and Q.~Zhang, ``Continuum robot arms inspired by
+  cephalopods,'' {\em Proceedings SPIE Conference on Unmanned Ground Vehicle
+  Technology VII}, pp.~303--314, 2005.
+
+\bibitem{davis_bidirectional_varstiff}
+H.~Al-Fahaam, S.~Nefti-Meziani, T.~Theodoridis, and S.~Davis, ``The design and
+  mathematical model of a novel variable stiffness extensor-contractor
+  pneumatic artificial muscle,'' {\em Soft Robotics}, vol.~5, no.~5,
+  pp.~576--591, 2018.
+
+\bibitem{stiff_flop_jamming}
+M.~Cianchetti, T.~Ranzani, G.~Gerboni, I.~D. Falco, C.~Laschi, and
+  A.~Menciassi, ``Stiff-flop surgical manipulator: mechanical design and
+  experimental characterization of the single module,'' {\em IEEE/RSJ
+  International Conference on Intelligent Robots and Systems}, 2013.
+
+\bibitem{jiang_hierarchical_2021}
+H.~Jiang, Z.~Wang, Y.~Jin, X.~Chen, P.~Li, Y.~Gan, S.~Lin, and X.~Chen,
+  ``Hierarchical control of soft manipulators towards unstructured
+  interactions,'' {\em The International Journal of Robotics Research},
+  vol.~40, pp.~411--434, Jan. 2021.
+
+\bibitem{var_grip_stiffness_independence}
+M.~Giannaccini, C.~Xiang, A.~Atyabi, T.~Theodoridis, S.~Nefti-Meziani, and
+  S.~Davis, ``Novel design of a soft lightweight pneumatic continuum robot arm
+  with decoupled variable stiffness and positioning,'' {\em Soft Robotics},
+  vol.~5, no.~1, 2018.
+
+\bibitem{davis_varstiff_advancedrobotics}
+L.~Hao, C.~Xiang, M.~Giannaccini, H.~Cheng, Y.~Zhang, S.~Nefti-Meziani, and
+  S.~Davis, ``Design and control of a novel variable stiffness soft arm,'' {\em
+  Advanced Robotics}, vol.~32, no.~11, 2018.
+
+\bibitem{OlsonAsselmeier_RoboSoft}
+M.~Asselmeier, R.~L. Hatton, Y.~Mengüç, and G.~Olson, ``Evaluation of a
+  circumferential extending antagonist actuator in a soft arm,'' in {\em 2020
+  3rd IEEE International Conference on Soft Robotics (RoboSoft)}, pp.~402--409,
+  2020.
+
+\bibitem{zlatintsi_i-support_2020}
+A.~Zlatintsi, A.~Dometios, N.~Kardaris, I.~Rodomagoulakis, P.~Koutras,
+  X.~Papageorgiou, P.~Maragos, C.~Tzafestas, P.~Vartholomeos, K.~Hauer,
+  C.~Werner, R.~Annicchiarico, M.~Lombardi, F.~Adriano, T.~Asfour, A.~Sabatini,
+  C.~Laschi, M.~Cianchetti, A.~Güler, I.~Kokkinos, B.~Klein, and R.~López,
+  ``I-{Support}: {A} robotic platform of an assistive bathing robot for the
+  elderly population,'' {\em Robotics and Autonomous Systems}, vol.~126,
+  p.~103451, Apr. 2020.
+
+\bibitem{guan_trimmed_2023}
+Q.~Guan, F.~Stella, C.~Della~Santina, J.~Leng, and J.~Hughes, ``Trimmed
+  helicoids: an architectured soft structure yielding soft robots with high
+  precision, large workspace, and compliant interactions,'' {\em npj Robotics},
+  vol.~1, p.~4, Oct. 2023.
+
+\bibitem{jiang_design_2016}
+H.~Jiang, X.~Liu, X.~Chen, Z.~Wang, Y.~Jin, and X.~Chen, ``Design and
+  simulation analysis of a soft manipulator based on honeycomb pneumatic
+  networks,'' in {\em 2016 {IEEE} {International} {Conference} on {Robotics}
+  and {Biomimetics} ({ROBIO})}, (Qingdao, China), pp.~350--356, IEEE, Dec.
+  2016.
+
+\bibitem{stella_piecewise_2023_s}
+F.~Stella, Q.~Guan, C.~Della~Santina, and J.~Hughes, ``Piecewise {Affine}
+  {Curvature} model: a {Reduced}-{Order} {Model} for {Soft}
+  {Robot}-{Environment} {Interaction} {Beyond} {PCC},'' in {\em 2023 {IEEE}
+  {International} {Conference} on {Soft} {Robotics} ({RoboSoft})}, pp.~1--7,
+  IEEE, Apr. 2023.
+
+\bibitem{renda_cosserat_tro}
+F.~Renda, F.~Boyer, J.~Dias, and L.~Seneviratne, ``Discrete cosserat approach
+  for multisection soft manipulator dynamics,'' {\em IEEE Transactions on
+  Robotics}, vol.~34, pp.~1518 -- 1533, 2018.
+
+\bibitem{trivedi_model_tro}
+D.~Trivedi, A.~Lotfi, and C.~D. Rahn, ``Geometrically exact models for soft
+  robotic manipulators,'' {\em IEEE Transactions on Robotics}, vol.~24, no.~4,
+  pp.~773--780, 2008.
+
+\bibitem{rus_ijrr_control}
+C.~D. Santina, R.~K. Katzschmann, A.~Bicchi, and D.~Rus, ``Model-based dynamic
+  feedback control of a planar soft robot: trajectory tracking and interaction
+  with the environment,'' {\em The International Journal of Robotics Research},
+  vol.~39, no.~4, pp.~490--513, 2020.
+
+\bibitem{olson_eulerbernoulli_2020}
+G.~Olson, R.~L. Hatton, J.~A. Adams, and Y.~Mengüç, ``An
+  {Euler}–{Bernoulli} beam model for soft robot arms bent through self-stress
+  and external loads,'' {\em International Journal of Solids and Structures},
+  vol.~207, pp.~113--131, Dec. 2020.
+
+\bibitem{me_mocap}
+G.~Olson, J.~A. Adams, and Y.~Menguc, ``Redundancy and overactuation in
+  cephalopod-inspired soft robot arms,'' {\em Bioinspiration \& Biomimetics},
+  vol.~17, no.~3, 2022.
+
+\bibitem{fan_linear_2023}
+B.~Fan, F.~Rozaidi, C.~Bass, G.~Olson, M.~Malley, and R.~L. Hatton, ``Linear
+  {Kinematics} for {General} {Constant} {Curvature} and {Torsion}
+  {Manipulators},'' in {\em 2023 {IEEE} {International} {Conference} on {Soft}
+  {Robotics} ({RoboSoft})}, pp.~1--7, Apr. 2023.
+\newblock ISSN: 2769-4534.
+
+\bibitem{munkres_topology_2000}
+J.~R. Munkres, {\em Topology}.
+\newblock Upper Saddle River, NJ: Prentice Hall, Inc, 2nd ed~ed., 2000.
+
+\bibitem{garbulinski_bending_2022}
+J.~Garbulinski and N.~M. Wereley, ``Bending {Properties} of an {Extensile}
+  {Fluidic} {Artificial} {Muscle},'' {\em Frontiers in Robotics and AI},
+  vol.~9, p.~804095, Apr. 2022.
+
+\end{thebibliography}

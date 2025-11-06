@@ -1,0 +1,79 @@
+{
+    "2312-08682": {
+        "title": "High-coherence parallelization in integrated photonics",
+        "authors": [
+            "Xuguang Zhang",
+            "Zixuan Zhou",
+            "Yijun Guo",
+            "Minxue Zhuang",
+            "Warren Jin",
+            "Bitao Shen",
+            "Yujun Chen",
+            "Jiahui Huang",
+            "Zihan Tao",
+            "Ming Jin",
+            "Ruixuan Chen",
+            "Zhangfeng Ge",
+            "Zhou Fang",
+            "Ning Zhang",
+            "Yadong Liu",
+            "Pengfei Cai",
+            "Weiwei Hu",
+            "Haowen Shu",
+            "Dong Pan",
+            "John E. Bowers",
+            "Xingjun Wang",
+            "Lin Chang"
+        ],
+        "submission_date": "2023-12-14T06:38:08+00:00",
+        "revised_dates": [],
+        "publication_venue": null
+    },
+    "2307-08937": {
+        "title": "Photonic chip-based low noise microwave oscillator",
+        "authors": [
+            "Igor Kudelin",
+            "William Groman",
+            "Qing-Xin Ji",
+            "Joel Guo",
+            "Megan L. Kelleher",
+            "Dahyeon Lee",
+            "Takuma Nakamura",
+            "Charles A. McLemore",
+            "Pedram Shirmohammadi",
+            "Samin Hanifi",
+            "Haotian Cheng",
+            "Naijun Jin",
+            "Sam Halliday",
+            "Zhaowei Dai",
+            "Lue Wu",
+            "Warren Jin",
+            "Yifan Liu",
+            "Wei Zhang",
+            "Chao Xiang",
+            "Vladimir Iltchenko",
+            "Owen Miller",
+            "Andrey Matsko",
+            "Steven Bowers",
+            "Peter T. Rakich",
+            "Joe C. Campbell",
+            "John E. Bowers",
+            "Kerry Vahala",
+            "Franklyn Quinlan",
+            "Scott A. Diddams"
+        ],
+        "submission_date": "2023-07-18T03:06:21+00:00",
+        "revised_dates": [],
+        "publication_venue": null
+    },
+    "2306-08697": {
+        "title": "Modulation-free Laser Stabilization Technique Using Integrated Cavity-Coupled Mach-Zehnder Interferometer",
+        "authors": [
+            "Mohamad Hossein Idjadi",
+            "Kwangwoong Kim"
+        ],
+        "submission_date": "2023-06-14T18:38:21+00:00",
+        "revised_dates": [],
+        "publication_venue": "Nature Communications 15 (2024) 1922"
+    }
+}

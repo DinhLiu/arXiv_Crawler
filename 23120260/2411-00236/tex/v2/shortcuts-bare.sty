@@ -1,0 +1,371 @@
+\newif\if@nrevtex % Enable shortcuts that conflict with REVTeX 4.1
+\@nrevtextrue
+\newif\if@standalone % Enable modifications when not called from math-shortcuts.sty
+\@standalonetrue
+\newif\if@bfvec % Use boldface for vectors and the like
+\@bfvecfalse
+
+\DeclareOption{mathshortcuts}{\@standalonefalse}
+\DeclareOption{bfvec}{\@bfvectrue}
+\DeclareOption{revtex}{\@nrevtexfalse}
+% Keep old commands here for compatibility
+\DeclareOption{legacy}
+{
+ \renewcommand{\ss}{\subset} % Conflict with built-in subscript,
+ \renewcommand{\sp}{\supset} % superscript commands
+ \newcommand{\aln}[1]{\begin{align*} #1 \end{align*}}
+ \newcommand{\naln}[1]{\begin{align} #1 \end{align}}
+}
+\ProcessOptions\relax
+
+\if@standalone
+	% Needed for \DeclareMathOperator
+	\usepackage{amsmath}
+	% Needed for \rotatebox (used by \mat and \cev)
+	\usepackage{graphicx}
+\fi
+
+% Needed for \mat and \cev
+\usepackage{stackengine}
+\stackMath
+
+% Internal gizmo for finding characters in strings
+% (used by \pder,\pdbyd)
+\def\instring#1#2{TT\fi\begingroup
+  \protected@edef\x{\endgroup\noexpand\in@{#1}{#2}}\x\ifin@}
+  
+\let\@left\left
+\let\@right\right
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\@left}
+\renewcommand{\right}{\aftergroup\egroup\@right}
+
+% Equation environments %
+\newcommand{\eqn}[1]{\begin{equation*}\begin{split} #1 \end{split}\end{equation*}}
+\newcommand{\neqn}[1]{\begin{equation}\begin{split} #1 \end{split}\end{equation}}
+
+% Number sets %
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{R}\mathrm{P}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\CP}{\mathbb{C}\mathrm{P}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Hq}{\mathbb{H}}
+
+% Missing greek capitals %
+\newcommand{\Alpha}{\mathrm{A}}
+\newcommand{\Beta}{\mathrm{B}}
+\newcommand{\Epsilon}{\mathrm{E}}
+\newcommand{\Zeta}{\mathrm{Z}}
+\newcommand{\Eta}{\mathrm{H}}
+\newcommand{\Iota}{\mathrm{I}}
+\newcommand{\Kappa}{\mathrm{K}}
+\newcommand{\Mu}{\mathrm{M}}
+\newcommand{\Nu}{\mathrm{N}}
+\newcommand{\Omicron}{\mathrm{O}}
+\newcommand{\Rho}{\mathrm{P}}
+\newcommand{\Tau}{\mathrm{T}}
+
+% Transpose %
+\newcommand{\T}{\mathsf{T}}
+
+% Letter shortcuts %
+\newcommand{\ph}{\varphi}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\lm}{\lambda}
+\newcommand{\pd}{\partial}
+\newcommand{\ee}{e}
+\newcommand{\ii}{i}
+\newcommand{\erm}{\mathrm{e}}
+\newcommand{\irm}{\mathrm{i}}
+
+% Derivatives and parenthesized fractions%
+\newcommand{\dd}[2][]{\mathop{}\mkern-4mud^{#1}\mkern-0.5mu#2}
+\newcommand{\drm}[2][]{\mathop{}\mkern-4mu\mathrm{d}^{#1}\mkern-0.5mu#2}
+\newcommand{\der}[3][]{\frac{\dd[#1]{#2}}{\dd{#3}^{#1}}}
+\newcommand{\pder}[3][]{\if\instring{,}{#3}\frac{\pd^{#1}#2}{\@for\el:=#3\do{\pd\el\,}\!}\else\frac{\pd^{#1}#2}{\pd#3^{#1}}\fi}
+\newcommand{\vder}[3][]{\frac{\delta^{#1}#2}{\delta{#3}^{#1}}}
+\newcommand{\dbyd}[2][]{\frac{\dd[#1]{}}{\dd{#2}^{#1}}}
+\newcommand{\pdbyd}[2][]{\if\instring{,}{#2}\frac{\pd^{#1}}{\@for\el:=#2\do{\pd\el\,}\!}\else\frac{\pd^{#1}}{\pd#2^{#1}}\fi}
+\newcommand{\vdbyd}[3][]{\frac{\delta^{#1}}{\delta{#2}^{#1}}}
+\newcommand{\efrac}[3][]{\paren[#1]{\frac{#2}{#3}}}
+\newcommand{\eder}[3][]{\paren{\frac{\dd[#1]{#2}}{\dd{#3}^{#1}}}}
+\newcommand{\epder}[3][]{\paren{\pder[#1]{#2}{#3}}}
+\newcommand{\del}{\nabla}
+
+% Set-theoretic notations %
+\renewcommand{\iff}{\Leftrightarrow}
+\newcommand{\iffy}{\;\Leftrightarrow\;}
+\newcommand{\impl}{\Rightarrow}
+\newcommand{\imply}{\;\Rightarrow\;}
+\newcommand{\nil}{\varnothing}
+\newcommand{\bij}{\leftrightarrow}
+\newcommand{\nin}{\notin}
+\newcommand{\rc}{\diagdown}
+\newcommand{\cross}{\times}
+
+% Inclusion orderings %
+\newcommand{\sso}{\subset}
+\newcommand{\spo}{\supset}
+\newcommand{\sse}{\subseteq}
+\newcommand{\sseq}{\subseteq}
+\newcommand{\nsse}{\nsubseteq}
+\newcommand{\nsseq}{\nsubseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\speq}{\supseteq}
+\newcommand{\nspe}{\nsupseteq}
+\newcommand{\nspeq}{\nsupseteq}
+
+% Algebraic notations %
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Span}{Span}
+\DeclareMathOperator{\image}{im}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Adj}{Adj}
+\DeclareMathOperator{\Res}{Res}
+
+% Style shortcuts %
+\let\@mathbf\mathbf
+\renewcommand{\mathbf}[1]{\boldsymbol{\@mathbf{#1}}}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\mi}[1]{\mathit{#1}}
+\newcommand{\mbb}[1]{\mathbb{#1}}
+\newcommand{\mr}[1]{\mathrm{#1}}
+\newcommand{\mf}[1]{\mathfrak{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\ms}[1]{\mathscr{#1}}
+\newcommand{\ds}[1]{\displaystyle{#1}}
+
+% Symbols with limits %
+\newcommand{\Lim}{\lim\limits}
+\newcommand{\dlim}{\displaystyle\lim}
+\newcommand{\Liminf}{\liminf\limits}
+\newcommand{\Limsup}{\limsup\limits}
+\newcommand{\Min}{\min\limits}
+\newcommand{\Max}{\max\limits}
+\newcommand{\Inf}{\inf\limits}
+\newcommand{\Sup}{\sup\limits}
+
+% Brackets and the like %
+\newcommand{\bracket}{\@ifstar\@@bracket\@bracket}
+\newcommand{\@bracket}[2][]{\if\relax\detokenize{#1}\relax\left\langle #2 \right\rangle\else\csname#1l\endcsname\langle #2 \csname#1r\endcsname\rangle\fi}
+\newcommand{\@@bracket}[2][]{\langle #2 \rangle}
+
+\newcommand{\paren}{\@ifstar\@@paren\@paren}
+\newcommand{\@paren}[2][]{\if\relax\detokenize{#1}\relax\left( #2 \right)\else\csname#1l\endcsname( #2 \csname#1r\endcsname)\fi}
+\newcommand{\@@paren}[2][]{( #2 )}
+
+\newcommand{\curly}{\@ifstar\@@curly\@curly}
+\newcommand{\@curly}[2][]{\if\relax\detokenize{#1}\relax\left\lbrace #2 \right\rbrace\else\csname#1l\endcsname\lbrace #2 \csname#1r\endcsname\rbrace\fi}
+\newcommand{\@@curly}[2][1]{\{ #2 \}}
+
+\newcommand{\sbrack}{\@ifstar\@@sbrack\@sbrack}
+\newcommand{\@sbrack}[2][]{\if\relax\detokenize{#1}\relax\left\lbrack #2 \right\rbrack\else\csname#1l\endcsname\lbrack #2 \csname#1r\endcsname\rbrack\fi}
+\newcommand{\@@sbrack}[2][1]{\lbrack #2 \rbrack}
+
+\newcommand{\@sofkern}{\mkern2mu}
+\newcommand{\sof}{\@ifstar\@@sof\@sof}
+\newcommand{\@sof}[2][]{\if\relax\detokenize{#1}\relax\left\lbrack\@sofkern #2 \@sofkern\right\rbrack\else\csname#1l\endcsname\lbrack\@sofkern #2 \@sofkern\csname#1r\endcsname\rbrack\fi}
+\newcommand{\@@sof}[2][1]{\lbrack\@sofkern #2 \@sofkern\rbrack}
+
+\newcommand{\eval}{\@ifstar\@@eval\@eval}
+\newcommand{\@eval}[2][]{\if\relax\detokenize{#1}\relax\left. #2 \right\rvert\else\csname#1l\endcsname. #2 \csname#1r\endcsname\rvert\fi}
+\newcommand{\@@eval}[2][]{ #2 \rvert}
+
+\newcommand{\parfrac}[3][]{\paren[#1]{\frac{#2}{#3}}}
+
+\newcommand{\given}[1][]{\@ifstar\@@given\@given}
+\newcommand{\@given}[1][]{\if\relax\detokenize{#1}\relax\,\middle\vert\,\else\,\csname#1m\endcsname\vert\,\fi}
+\newcommand{\@@given}[1][]{ \vert }
+
+\newcommand{\DKL}{\@ifstar\@@DKL\@DKL}
+\newcommand{\@DKL}[3][]{\mathop{D_{\mathrm{KL}}}\sof{#2\@sofkern\middle\Vert\@sofkern#3}}
+\newcommand{\@@DKL}[3][]{\mathop{D_{\mathrm{KL}}}\sof*{#2\@sofkern\Vert\@sofkern#3}}
+
+\newcommand{\stirling}[2]{\left\lbrack\genfrac{}{}{0pt}{}{#1}{#2}\right\rbrack}
+\newcommand{\Stirling}[2]{\left\lbrace\genfrac{}{}{0pt}{}{#1}{#2}\right\rbrace}
+
+% Shortcuts for brackets %
+\let\of\paren
+\let\e\paren
+\let\comm\sbrack
+
+% Interval notation %
+\newcommand{\oo}{\@ifstar\@@oo\@oo}
+\newcommand{\@oo}[2][]{\if\relax\detokenize{#1}\relax\left( #2 \right)\else\csname#1l\endcsname( #2 \csname#1r\endcsname)\fi}
+\newcommand{\@@oo}[2][]{( #2 )}
+
+\newcommand{\cc}{\@ifstar\@@cc\@cc}
+\newcommand{\@cc}[2][]{\if\relax\detokenize{#1}\relax\left[ #2 \right]\else\csname#1l\endcsname[ #2 \csname#1r\endcsname]\fi}
+\newcommand{\@@cc}[2][]{[ #2 ]}
+
+\if@nrevtex
+    \newcommand{\oc}{\@ifstar\@@oc\@oc}
+    \newcommand{\@oc}[2][]{\if\relax\detokenize{#1}\relax\left( #2 \right]\else\csname#1l\endcsname( #2 \csname#1r\endcsname]\fi}
+    \newcommand{\@@oc}[2][]{( #2 ]}
+\fi
+
+\newcommand{\co}{\@ifstar\@@co\@co}
+\newcommand{\@co}[2][]{\if\relax\detokenize{#1}\relax\left[ #2 \right)\else\csname#1l\endcsname[ #2 \csname#1r\endcsname)\fi}
+\newcommand{\@@co}[2][]{[ #2 )}
+
+% Floor, ceil, abs, norm, set %
+\newcommand{\floor}{\@ifstar\@@floor\@floor}
+\newcommand{\@floor}[2][]{\if\relax\detokenize{#1}\relax\left\lfloor #2 \right\rfloor\else\csname#1l\endcsname\lfloor #2 \csname#1r\endcsname\rfloor\fi}
+\newcommand{\@@floor}[2][]{\lfloor #2 \rfloor}
+
+\newcommand{\ceil}{\@ifstar\@@ceil\@ceil}
+\newcommand{\@ceil}[2][]{\if\relax\detokenize{#1}\relax\left\lceil #2 \right\rceil\else\csname#1l\endcsname\lceil #2 \csname#1r\endcsname\rceil\fi}
+\newcommand{\@@ceil}[2][]{\lceil #2 \rceil}
+
+\newcommand{\abs}{\@ifstar\@@abs\@abs}
+\newcommand{\@abs}[2][]{\if\relax\detokenize{#1}\relax\left\lvert #2 \right\rvert\else\csname#1l\endcsname\lvert #2 \csname#1r\endcsname\rvert\fi}
+\newcommand{\@@abs}[2][]{\lvert #2 \rvert}
+
+\newcommand{\norm}{\@ifstar\@@norm\@norm}
+\newcommand{\@norm}[2][]{\if\relax\detokenize{#1}\relax\left\lVert #2 \right\rVert\else\csname#1l\endcsname\lVert #2 \csname#1r\endcsname\rVert\fi}
+\newcommand{\@@norm}[2][]{\lVert #2 \rVert}
+
+\newcommand{\spanof}[3][]{\mathrm{span}\paren[#1]{#2~\mid~#3}}
+\newcommand{\Spanof}[3][]{\Span\paren[#1]{#2~\mid~#3}}
+
+% Decorated arrows %
+\newcommand{\functo}[1][]{\xrightarrow{#1}}
+\newcommand{\fto}[1][]{\xrightarrow{#1}}
+\newcommand{\into}{\hookrightarrow}
+\newcommand{\onto}{\twoheadrightarrow}
+\newcommand{\To}{\Rightarrow}
+\newcommand{\Gets}{\Leftarrow}
+
+% Matrices %
+\newcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\Bmat}[1]{\begin{Bmatrix} #1 \end{Bmatrix}}
+\newcommand{\vmat}[1]{\begin{vmatrix} #1 \end{vmatrix}}
+\newcommand{\Vmat}[1]{\begin{Vmatrix} #1 \end{Vmatrix}}
+
+% Vectors %
+\newcommand{\uvec}[1]{\hat{#1}}
+\newcommand{\@uvecbf}[1]{\vec{\hat{#1}}}
+% \mat and \cev based on TeX.SE answer by Stephen E. Segletes %
+\newcommand{\vecsign}{\mathchar"017E}
+\newcommand{\matsign}{\smash{\stackon[-0.198em]{\mkern-2.0mu\vecsign}{\rotatebox{180}{$\mkern-2.0mu\vecsign$}}}}
+\newcommand{\cevsign}{\rotatebox{180}{$\mkern-1.0mu\vecsign$}}
+\newcommand{\mat}[1]{\def\useanchorwidth{T}\stackon[-0.43em]{#1}{\,\matsign}}
+\newcommand{\cev}[1]{\def\useanchorwidth{T}\stackon[0.10em]{#1}{\,\cevsign}}
+
+\if@bfvec
+	\let\vec\mathbf
+	\let\cev\mathbf
+	\let\mat\mathbf
+	\let\uvec\@uvecbf
+\fi
+
+% Tensor product %
+%\newcommand{\tensor}{\otimes}
+
+% Astronomical symbols %
+\if@standalone
+	\newcommand{\earth}{\oplus}
+	\newcommand{\sun}{\odot}
+\else
+	\let\varearth\earth
+	\let\sunny\sun
+	\renewcommand{\earth}{\oplus}
+	\renewcommand{\sun}{\odot}
+\fi
+
+% Better triple and quadruple dot accents %
+% based on TeX.SE answer by Gonzalo Medina %
+% https://tex.stackexchange.com/questions/131587/mathtools-dddot-cause-the-term-to-rise %
+\newcommand\scaleddot{\scalebox{.89}{.}}
+\renewcommand{\dddot}[1]{%
+  {\mathop{\kern\z@#1}\limits^{\makebox[0pt][c]{\vbox to-2.2\ex@{\kern-\tw@\ex@
+   \hbox{\normalfont\scaleddot\kern-0.5pt\scaleddot\kern-0.5pt\scaleddot}\vss}}}}}
+\renewcommand{\ddddot}[1]{%
+  {\mathop{\kern\z@#1}\limits^{\makebox[0pt][c]{\vbox to-2.2\ex@{\kern-\tw@\ex@
+  \hbox{\normalfont\scaleddot\kern-0.5pt\scaleddot\kern-0.5pt\scaleddot\kern-0.5pt\scaleddot}\vss}}}}}
+
+% Bar through letter (for barred I, doesn't work with wider letters atm) %
+\newcommand{\midbar}[1]{\mathord{\ooalign{$#1$\cr\hidewidth\raise-.5ex\hbox{$\bar{ }\mkern4.3mu$}\cr}}\mkern-1.5mu}
+
+\let\save@mathaccent\mathaccent
+\newcommand*\if@single[3]{%
+  \setbox0\hbox{${\mathaccent"0362{#1}}^H$}%
+  \setbox2\hbox{${\mathaccent"0362{\kern0pt#1}}^H$}%
+  \ifdim\ht0=\ht2 #3\else #2\fi
+  }
+
+% \widebar based on TeX.SE answer by Hendrik Vogt 
+% (https://tex.stackexchange/com/questions/16337/can-i-get-a-widebar-without-using-the-mathabx-package)
+
+%The bar will be moved to the right by a half of \macc@kerna, which is computed by amsmath:
+\newcommand*\rel@kern[1]{\kern#1\dimexpr\macc@kerna}
+%If there's a superscript following the bar, then no negative kern may follow the bar;
+%an additional {} makes sure that the superscript is high enough in this case:
+\newcommand*\widebar[1]{\@ifnextchar^{{\wide@bar{#1}{0}}}{\wide@bar{#1}{1}}}
+%Use a separate algorithm for single symbols:
+\newcommand*\wide@bar[2]{\if@single{#1}{\wide@bar@{#1}{#2}{1}}{\wide@bar@{#1}{#2}{2}}}
+\newcommand*\wide@bar@[3]{%
+  \begingroup
+  \def\mathaccent##1##2{%
+%Enable nesting of accents:
+    \let\mathaccent\save@mathaccent
+%If there's more than a single symbol, use the first character instead (see below):
+    \if#32 \let\macc@nucleus\first@char \fi
+%Determine the italic correction:
+    \setbox\z@\hbox{$\macc@style{\macc@nucleus}_{}$}%
+    \setbox\tw@\hbox{$\macc@style{\macc@nucleus}{}_{}$}%
+    \dimen@\wd\tw@
+    \advance\dimen@-\wd\z@
+%Now \dimen@ is the italic correction of the symbol.
+    \divide\dimen@ 3
+    \@tempdima\wd\tw@
+    \advance\@tempdima-\scriptspace
+%Now \@tempdima is the width of the symbol.
+    \divide\@tempdima 10
+    \advance\dimen@-\@tempdima
+%Now \dimen@ = (italic correction / 3) - (Breite / 10)
+    \ifdim\dimen@>\z@ \dimen@0pt\fi
+%The bar will be shortened in the case \dimen@<0 !
+    \rel@kern{0.6}\kern-\dimen@
+    \if#31
+      \overline{\rel@kern{-0.6}\kern\dimen@\macc@nucleus\rel@kern{0.4}\kern\dimen@}%
+      \advance\dimen@0.4\dimexpr\macc@kerna
+%Place the combined final kern (-\dimen@) if it is >0 or if a superscript follows:
+      \let\final@kern#2%
+      \ifdim\dimen@<\z@ \let\final@kern1\fi
+      \if\final@kern1 \kern-\dimen@\fi
+    \else
+      \overline{\rel@kern{-0.6}\kern\dimen@#1}%
+    \fi
+  }%
+  \macc@depth\@ne
+  \let\math@bgroup\@empty \let\math@egroup\macc@set@skewchar
+  \mathsurround\z@ \frozen@everymath{\mathgroup\macc@group\relax}%
+  \macc@set@skewchar\relax
+  \let\mathaccentV\macc@nested@a
+%The following initialises \macc@kerna and calls \mathaccent:
+  \if#31
+    \macc@nested@a\relax111{#1}%
+  \else
+%If the argument consists of more than one symbol, and if the first token is
+%a letter, use that letter for the computations:
+    \def\gobble@till@marker##1\endmarker{}%
+    \futurelet\first@char\gobble@till@marker#1\endmarker
+    \ifcat\noexpand\first@char A\else
+      \def\first@char{}%
+    \fi
+    \macc@nested@a\relax111{\first@char}%
+  \fi
+  \endgroup
+}

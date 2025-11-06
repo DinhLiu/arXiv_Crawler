@@ -1,0 +1,138 @@
+\begin{abstract}
+    Let $\HH$ denote the three-dimensional Heisenberg group. In this paper, we study vertical curves in $\HH$ and fibers of maps $\HH \to \mathbb{R}^2$ from a metric perspective. We say that a set in $\HH$ is a vertical curve if it satisfies a cone condition with respect to a homogeneous cone with axis $\langle Z \rangle$, the center of $\HH$. This is analogous to the cone condition used to define intrinsic Lipschitz graphs.
+
+    In the first part of the paper, we prove that connected vertical curves are locally biH\"older equivalent to intervals. We also show that the class of vertical curves coincides with the class of intersections of intrinsic Lipschitz graphs satisfying a transversality condition. Unlike intrinsic Lipschitz graphs, the Hausdorff dimension of a vertical curve can vary; we construct vertical curves with Hausdorff dimension either strictly larger or strictly smaller than 2. Consequently, there are intersections of intrinsic Lipschitz graphs with Hausdorff dimension either strictly larger or strictly smaller than 2.
+
+    In the second part of the paper, we consider smooth functions $\beta$ from the unit ball $B$ in $\HH$ to $\mathbb{R}^2$. We show that, in contrast to the situation in Euclidean space, there are maps  such that $\beta$ is arbitrarily close to the projection $\pi$ from $\HH$ to the horizontal plane, but the average $\cH^2$ measure of a fiber of $\beta$ in $B$ is arbitrarily small.
+\end{abstract}
+
+\maketitle
+
+
+
+\section{Introduction}
+
+Over the past twenty years, a rich theory of rectifiability in the first Heisenberg group $\HH$ has been developed based on Lipschitz curves and intrinsic Lipschitz (iLip) graphs, see the seminal work \cite{FSSCILip, FSIlip}. By generalizations of Rademacher's theorem \cite{FSSCiLip2, VittoneiLip, AMiLip}, these submanifolds can be locally approximated by one-dimensional horizontal subgroups (Lipschitz curves) and two-dimensional vertical subgroups (iLip graphs). One gap in this theory, however, is the systematic study of non-horizontal curves; such curves occur, for instance, as fibers of maps from $\HH$ to $\R^2$ or as the intersections of iLip graphs, and they can often be locally approximated by the vertical subgroup $\langle Z\rangle$.
+Some results on smooth vertical curves have been established in \cite{Kozhevnikov, KozhevnikovArticle, LeonardiMagnani, MagnaniStepanovTrevisan}, see Section \ref{sec:Previous} for a discussion. One of our main goals in this paper is to study new phenomena that arise in the non-smooth case.
+
+In the first part of the paper, we study the class of $\lambda$--vertical curves.
+A $\lambda$--vertical curve is a set that satisfies the following cone condition. We fix exponential coordinates $(x,y,z)$ on $\HH\equiv \mathbb R^3$. For $\lambda>0$, let
+\begin{equation}\label{eqn:Vcone}
+  \VCone_\lambda := \{(x,y,z)\in \HH : |z| \ge \lambda (x^2+y^2)\}.
+\end{equation}
+This is a homogenous cone centered on $\langle Z\rangle$; as $\lambda$ increases, the cone converges to $\langle Z\rangle$. A subset $E\subset \HH$ is a \emph{$\lambda$--vertical curve} if $E\subset p \VCone_\lambda$ for all $p\in E$. 
+
+It is not \emph{a priori} clear that a $\lambda$--vertical curve is a topological curve, but in Section~\ref{sec:Properties}, we show that any connected vertical curve is a topological curve, see Propositions~\ref{prop:intervals} and \ref{lem:biHolderonCompact}.
+\begin{prop}\label{prop:Properties}
+  If $E$ is a connected $\lambda$-vertical curve, then there are an interval $I\subset \R$ and a map $\gamma\from I\to \HH$ such that $\gamma$ sends $I$ homeomorphically to $E$ and 
+  \begin{equation}\label{eq:monotone}
+    \gamma(t)\in \gamma(s) \VCone^+_\lambda \qquad \text{for all $s,t\in I$ such that $s<t$,}
+  \end{equation}
+  where $\VCone^+_\lambda := \VCone_\lambda\cap \{z\geq 0\}$.
+
+  If $E$ is compact, then we can take $\gamma$ to be a bi-H\"older map from $[0,1]$ to $E$. That is, there are exponents $0<\alpha<\beta<1$ depending on $\lambda$ and there is a $C>0$ depending on $E$ such that for all $s,t\in [0,1]$,
+  $$C^{-1}|s-t|^\beta < d(\gamma(s),\gamma(t)) < C |s-t|^\alpha.$$
+\end{prop}
+If $\gamma\from I\to \HH$ is a map satisfying \eqref{eq:monotone}, we say that $\gamma$ is a \emph{$\lambda$--vertical map}.
+
+The vertical curve condition is closely related to the cone condition used to define iLip graphs. We can define iLip graphs as follows. 
+Let $d_{\Kor}$ be the Kor\'anyi distance on $\HH$, see \eqref{eq:koranyi}. Let $W\subset \HH$ be a two-dimensional vertical subgroup, i.e., $\langle Z\rangle \subset W$. For $\lambda \in (0,1)$, we let
+\begin{equation}\label{eq:def-cone}
+  \Cone_{W,\lambda} := \{p\in \HH : d_{\Kor}(p,W) \le \lambda d_{\Kor}(\0,p)\}.
+\end{equation}
+
+Then $\Cone_{W,\lambda}$ is a scale-invariant neighborhood of $W$, with angle depending on $\lambda$. Indeed, if $p=(x,y,0)$ is a nonzero horizontal vector, then $p\in \Cone_{W,\lambda}$ if and only if $|\sin \angle(p,W)| \le \lambda$.
+%(see ???). 
+For $\lambda \in (0,1)$ and $E\subset \HH$, we say that $E$ is a \emph{$\lambda$--iLip graph (over $W$)} if for all $p\in E$, $E\subset p \Cone_{W,\lambda}$.
+
+If $V=W^\perp$ is the horizontal orthogonal complement of $W$, then $V$ is a one-dimensional horizontal subgroup and $V\cap \Cone_{W,\lambda} = \{\0\}$, so each coset of $V$ intersects an iLip graph $E$ over $W$ at most once. That is, $E$ can be viewed as the graph of a function from a subset of $W$ to $V$. The group $\HH$ splits as $\HH=W\cdot V$; let $\Pi_V\from \HH \to V$ and $\Pi_W\from \HH\to W$ be the corresponding projections. 
+If $\Pi_W(E)=W$, we say that $E$ is an \emph{entire} iLip graph. In this case, $\Pi_W$ sends $E$ homeomorphically to $W$.
+
+We can characterize vertical curves in terms of iLip graphs in the following way. 
+\begin{lemma}\label{lem:containment}
+  The following two properties hold:
+  \begin{enumerate}
+  \item For every $\lambda>0$, there is an $L\in (0,1)$, and for every $L\in (0,1)$, there is a $\lambda>0$ such that if $E$ is a $\lambda$--vertical curve and $W$ is a vertical plane, then there is an entire $L$--iLip graph $\Gamma$ over $W$ such that $E\subset \Gamma$.
+  \item For every $\lambda>0$, there is an $L\in (0,1)$, and for every $L\in (0,1)$, there is a $\lambda>0$ such that if $E\subset \HH$ and $E$ is an $L$--iLip graph over $W$ for every vertical plane $W$, then $E$ is a $\lambda$--vertical curve.
+  \end{enumerate}
+\end{lemma}
+
+Furthermore, the theory of vertical curves lets us characterize certain intersections of intrinsic Lipschitz graphs.
+
+\begin{thm}\label{thm:intersections}
+  Let $W_1,W_2\subset \HH$ be two-dimensional vertical subgroups of $\HH$ such that $W_1\ne W_2$. If $\lambda>0$ is sufficiently large, then there are $L,L'\in (0,1)$ such that:
+  \begin{enumerate}
+    \item If $\Gamma_1$ and $\Gamma_2$ are entire $L$--iLip graphs over $W_1$ and $W_2$ respectively, then $\Gamma_{1}\cap \Gamma_{2}$ is a $\lambda$--vertical curve which is nonempty, closed, connected, and has no endpoints.
+    \item If $E$ is a $\lambda$--vertical curve, then there are $\Gamma_1$ and $\Gamma_2$ that are entire $L'$--iLip graphs over $W_1$ and $W_2$ and $\Gamma_1\cap \Gamma_2$ is a vertical curve containing $E$. If $E$ is nonempty, closed, connected, and has no endpoints, then $\Gamma_1\cap \Gamma_2=E$.
+  \end{enumerate}
+\end{thm}
+
+
+Finally, we construct $\lambda$--vertical curves with non-integer Hausdorff dimension. We construct these curves by starting with a smooth curve and applying helical perturbations at many different scales; an example can be seen in Figure~\ref{fig:Hausdim2}.
+\begin{thm}\label{thm:HausDim2}
+  For any $\lambda>0$, there are connected $\lambda$--vertical curves $E,E'\subset\HH$ with $\dim_H(E)<2<\dim_H(E')$.
+\end{thm}
+In fact, we show that if $\beta\from [0,1]\to \HH$ is a smooth curve such that $\beta'(t)$ is never a horizontal vector (and thus $\dim_H(\beta)=2$), then $\beta$ can be approximated arbitrarily closely by a vertical curve $\gamma$ with $\dim_H(\gamma)<2$ or $\dim_H(\gamma)>2$ (see Proposition~\ref{prop:curves}). 
+
+The proof of Theorem~\ref{thm:intersections} 
+ and Theorem~\ref{thm:HausDim2} immediately imply the following.
+\begin{cor}
+  For any two distinct vertical planes $W_1$ and $W_2$ and any $\lambda\in (0,1)$, there are entire $\lambda$--iLip graphs $\Gamma_1$ and $\Gamma_2$ over $W_1$ and $W_2$ such that $\dim_H(\Gamma_1\cap \Gamma_2)<2$ or $\dim_H(\Gamma_1\cap \Gamma_2)> 2$.
+\end{cor}
+
+
+
+These approximations and the curves constructed in Theorem~\ref{thm:HausDim2} are similar to Kozhevnikov's construction of vertical fibers connecting two points with arbitrarily large or arbitrarily small Hausdorff $2$--measure \cite{Kozhevnikov}.
+A \emph{vertical fiber} is a curve that can be written in the form $f^{-1}(p)$ for some $C^1_H$ function $f\from \HH \to \R^2$ and some point $p\in \R^2$ which is a regular point of $f$. (Kozhevnikov called these ``vertical curves''; we have changed the name to avoid confusion.) Kozhevnikov proved that, in contrast to vertical curves, any vertical fiber is Reifenberg vanishing flat with respect to cosets of the center $\langle Z\rangle$ and thus has Hausdorff dimension $2$ \cite[Corollary 5.4.16]{Kozhevnikov}. Nonetheless, if $v,w\in \langle Z\rangle$, then there are vertical fibers that connect $v$ and $w$ and have arbitrarily large or small (possibly $\infty$ or $0$) $2$--dimensional Hausdorff measure \cite[Examples 5.6.16 \& 5.6.16]{Kozhevnikov}; see also the discussion in Section \ref{sec:Previous}. Kozhevnikov constructs these fibers using lacunary Fourier series. We will give a different construction for Theorem~\ref{thm:HausDim2}, but the geometric idea behind both constructions is that we can manipulate the Hausdorff $2$--measure of a curve by replacing smooth segments of the curve by helixes at many different scales.
+
+\begin{figure}[ht]
+    \centering
+\includegraphics[width=0.4\textwidth]{curveExample.png}  
+    \caption{An example of the curves constructed in Theorem \ref{thm:HausDim2}}
+    \label{fig:Hausdim2}
+\end{figure}
+
+\smallskip
+
+In the second part of the paper, we study maps from $\HH$ to $\R^2$ and vertical fibers. Let $\pi \from \HH \to \R^2$ be the projection $\pi(x,y,z)=(x,y)$. 
+We prove the following theorem.
+\begin{thm}\label{thm:multiscale-maps}
+  Let $B:=\overline{B}_1(\0)\subset \HH$ be the closed unit ball. 
+  For any $\varepsilon>0$, there is a contact diffeomorphism $\beta \from B \to B$ with the following properties:
+  \begin{enumerate}
+  \item \label{it:identity} $\beta$ is the identity on $\partial B$. In fact, $\closure(\{x\in B:\beta(x)\neq x\})\subset \inter(B)$.
+  \item \label{it:displace}
+    For all $p\in \HH$, $d(p,\beta(p))<\varepsilon$.
+  \item \label{it:small-fibers}
+    \begin{equation}\label{eq:small-fibers}
+      \int_{\R^2} \cH^2((\pi\circ \beta)^{-1}(v)) \ud v < \varepsilon.
+    \end{equation}
+  \end{enumerate}
+\end{thm}
+A contact diffeomorphism is a diffeomorphism that sends horizontal vectors to horizontal vectors; it is Lipschitz with respect to the Kor\'anyi metric. In particular, by Pansu's theorem, if $\alpha\from \HH\to \HH$ is a contact diffeomorphism, then for every $x\in \HH$, the differential $D\alpha_x$ is a Lie algebra isomorphism and thus $D[\pi\circ \alpha]_x$ is surjective on horizontal subspaces.
+
+Therefore, if $\beta$ is as in Theorem~\ref{thm:multiscale-maps}, this implies that every $v\in \inter(\pi(B))$ is a regular point of $\pi\circ \beta$ and every curve $(\pi\circ \beta)^{-1}(v)$ is a vertical fiber. By \eqref{eq:small-fibers}, for all $v\in \pi(B)$ except a set of small measure, we have $\cH^2((\pi\circ \beta)^{-1}(v))\lesssim \varepsilon$.
+
+Theorem~\ref{thm:multiscale-maps} contrasts with the behavior of maps from $\R^3$ to $\R^3$. Let $D^3\subset \R^3$ be the closed unit ball, $S^2=\partial D^3$, and let $\pi_{\R^2}\from \R^3\to \R^2$ be the orthogonal projection. Suppose that $f\from D^3\to D^3$ is a smooth map such that $f(x)=x$ for all $x\in \partial D$. Then for almost every $p\in D^2$, the preimage
+$$\gamma_p := (\pi_{\R^2}\circ f)^{-1}(p)$$
+contains a smooth curve connecting the two points of $\pi_{\R^2}^{-1}(p)\cap S^2$. Since $\pi_{\R^2}^{-1}(p) \cap D^3$ is the line segment between these two points, 
+$$\cH^1(\gamma_p) \ge \cH^1(\pi_{\R^2}^{-1}(p)).$$
+Therefore,
+$$\int_{\R^2} \cH^1(\gamma_p) \ud p \ge \int_{\R^2} \cH^1(\pi_{\R^2}^{-1}(p)) \ud p = \vol(D^3).$$
+
+\subsection{Methods}
+Let us discuss the proofs of Theorem \ref{thm:HausDim2} and Theorem \ref{thm:multiscale-maps}. The construction of the sets $E,E'$ in Theorem \ref{thm:HausDim2} is based on the observation that any smooth curve $F\subset \HH$ whose tangent vectors are never horizontal is Reifenberg flat in the sense that $F$ is approximately vertical at small scales. That is, if $s_r\from \HH\to \HH$ is the automorphism that scales $\HH$ by a factor of $r$, then for any $p\in F$, the rescalings
+$s_r(p^{-1}F)$ converge to $\langle Z \rangle$ as $r\to \infty$.
+
+A helix around $\langle Z\rangle$ with the appropriate parameters is smooth, close to $\langle Z\rangle$, and has nonhorizontal tangents. Furthermore, depending on the direction of the helix, a segment of the helix is either longer or shorter than the corresponding segment of $\langle Z\rangle$. Since $F$ is close to vertical at small scales, we can perturb $F$ by replacing segments of $F$ by helixes. The result is a smooth curve with nonhorizontal tangents, so it is still Reifenberg flat. By repeating the process at smaller and smaller scales, we can make the $\cH^2$ measure as small or large as we want. By taking limits, we obtain vertical curves with Hausdorff dimension greater or less than $2$. Along the way, we can ensure that any curve constructed in this way is also a $\lambda$--vertical curve. 
+\smallskip
+
+The main idea of the proof of Theorem~\ref{thm:multiscale-maps} is the following, see Lemma~\ref{lem:reduction}. Given a contact map $\beta \from \HH\to\HH$ and a point $p\in \HH$ where the horizontal Jacobian of $\beta$ does not vanish, we show that one can perturb $\beta$ in a small  ball $B_{r_0}(p)$ so that the integral of the horizontal Jacobian on $B_{r_0}(p)$ decreases by a fixed factor $\alpha<1$. The perturbation can be taken to be a composition with a properly chosen contact diffeomorphism. By the Vitali Covering Theorem, we can apply perturbations on a collection of disjoint balls to reduce the integral of the horizontal Jacobian on $B$ by a factor $\alpha'<1$. Since the result is smooth, we can repeat the process at smaller scales to make the integral arbitrarily small. Theorem~\ref{thm:multiscale-maps} then follows from the co-area formula for smooth maps (Theorem \ref{thm:Coarea}).
+
+\subsection{Structure}
+
+ In Section \ref{sec:Properties} we prove Proposition \ref{prop:Properties}.
+ In particular, Lemma~\ref{lem:Properties} and Proposition \ref{prop:intervals} prove several basic properties of $\lambda$--vertical curves, including the first part of Proposition \ref{prop:Properties}. We prove that vertical curves can be parametrized by maps that are bi-H\"older on compact sets in Lemma~\ref{lem:biHolderonCompact}, settling the second part of Proposition~\ref{prop:Properties}. In Section~\ref{sec:containment} we prove Lemma~\ref{lem:containment} and Theorem~\ref{thm:intersections}. In Section \ref{Proof2.5} we prove some auxiliary lemmas before proving Proposition~\ref{prop:curves}, from which Theorem~\ref{thm:HausDim2} follows.  In Section \ref{sec:FiberContact} we prove Lemma~\ref{lem:reduction} and use it to prove Theorem \ref{thm:multiscale-maps}.
+
+ \subsection*{Acknowledgments} We would like to thank Davide Vittone for his fruitful discussions with us at the start of this project. G.A. acknowledges the financial support of the Courant Institute and the AMS-Simons Travel Grant. R.Y. was supported by the National Science Foundation under Grant No.\ 2005609.
+

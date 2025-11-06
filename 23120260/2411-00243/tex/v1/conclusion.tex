@@ -1,0 +1,22 @@
+\section{Summary and Conclusions}
+\label{sec:conclusion}
+
+In this paper, we explore efficient quantum state preparation algorithms for the Schwinger model with a theta term, focusing on adiabatic state preparation (ASP), the quantum approximate optimization algorithm (QAOA), and the rodeo algorithm (RA). We have analyzed these algorithms based on their efficiency, scalability, and quantum resource requirements, with particular focus given to the length of the algorithms as measured in terms of the total number of two-qubit gates, as this is a useful metric for their performance on noisy intermediate-scale quantum (NISQ) machines.
+
+While ASP has its strength in its simplicity and interpretability, it requires many time-evolution steps to reach good accuracy as it is bounded by both numerical discretization in the size of the steps and by the adiabatic theorem for the total time of the evolution. We have found that choosing different discretizations for the size of the time-evolution steps can lead to improved accuracy, but that is not a significant improvement as the overall scaling is the same.
+
+The QAOA produces a short algorithm with high precision, but it requires a classical optimization step which can be extremely costly and doesn't scale with the system size. We have implemented a blocked ansatz for the QAOA that enables scaling the system by classically optimizing the parameters for a small system and reusing them for larger ones, though the precision decreases with the scaling.
+
+The RA excels in preparing any eigenstate, not just the ground state. Its success depends on the overlap between the initial and target states, which can be optimized using other algorithms.
+We find that combining blocked QAOA with the RA provides the best results. Blocked QAOA efficiently prepares a high-quality initial state, which enhances the performance of the RA by reducing the number of required cycles and improving the accuracy of the state preparation. For the 8-site system, we find that our procedure returns states that have 99.5\% overlap with the true ground state with the equivalent CNOT gate counts of just 75 adiabatic steps.
+
+The combination of blocked QAOA and the RA presents a scalable and resource-efficient method for state preparation in quantum simulations of the Schwinger model. This hybrid approach minimizes gate counts and classical optimization complexity, making it well-suited for larger systems and NISQ-era quantum devices. The results demonstrate promising directions for future research in quantum algorithms for quantum field theory simulations, paving the way for applications in more complex models.
+
+\section*{Acknowledgments}
+
+This work was supported by the Department of Energy grant DE-SC0021152. Additionally, D.~L. was supported by Department of Energy grant DE-SC0023658 and National Science Foundation grant PHY-2310620, and A.~B. and L.~H. were supported by Department of Energy grant DE-SC0019139. G.~P. acknowledges funding by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) - project number 460248186 (PUNCH4NFDI).
+A.S. acknowledges funding support from Deutsche Forschungsgemeinschaft 
+(DFG, German Research Foundation) through grant 513989149,  
+under the National Science Foundation grant PHY- 2209185 and from the Department of Energy Topical Collaboration “Nuclear Theory for New Physics”, award No. DE-SC0023663
+
+%\clearpage

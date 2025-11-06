@@ -1,0 +1,41 @@
+{
+    "2302-11661": {
+        "title": "Linear Kinematics for General Constant Curvature and Torsion Manipulators",
+        "authors": [
+            "Bill Fan",
+            "Farhan Rozaidi",
+            "Capprin Bass",
+            "Gina Olson",
+            "Melinda Malley",
+            "Ross L Hatton"
+        ],
+        "submission_date": "2023-02-22T21:29:42+00:00",
+        "revised_dates": [],
+        "publication_venue": null
+    },
+    "2211-10188": {
+        "title": "Piecewise Affine Curvature model: a reduced-order model for soft robot-environment interaction beyond PCC",
+        "authors": [
+            "Francesco Stella",
+            "Qinghua Guan",
+            "Jinsong Leng",
+            "Cosimo Della Santina",
+            "Josie Hughes"
+        ],
+        "submission_date": "2022-11-18T12:17:15+00:00",
+        "revised_dates": [],
+        "publication_venue": null
+    },
+    "1702-03660": {
+        "title": "Discrete Cosserat Approach for Multi-Section Soft Robots Dynamics",
+        "authors": [
+            "Federico Renda",
+            "Frederic Boyer",
+            "Jorge Dias",
+            "Lakmal Seneviratne"
+        ],
+        "submission_date": "2017-02-13T07:34:37+00:00",
+        "revised_dates": [],
+        "publication_venue": "IEEE Transaction on Robotics, 2018"
+    }
+}

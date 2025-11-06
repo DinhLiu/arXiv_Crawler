@@ -1,0 +1,1111 @@
+\begin{thebibliography}{175}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ahmad et~al.(2019)Ahmad, Sahu, and Patra]{AHMADdiffloadmodes}
+D.~Ahmad, S.~K. Sahu, and K.~Patra.
+\newblock Fracture toughness, hysteresis and stretchability of dielectric elastomers under equibiaxial and biaxial loading.
+\newblock \emph{Polymer Testing}, 79:\penalty0 106038, 2019.
+\newblock ISSN 0142-9418.
+
+\bibitem[Alkhoury et~al.(2024)Alkhoury, Zhang, Liu, McEnnis, Brassart, Nadimpalli, and Chester]{ALKHOURY2024113086}
+K.~Alkhoury, C.~Zhang, G.~Liu, K.~McEnnis, L.~Brassart, S.~P. Nadimpalli, and S.~A. Chester.
+\newblock Investigating the influence of stress on uv-induced degradation in cellulose acetate: A comprehensive experimental characterization.
+\newblock \emph{International Journal of Solids and Structures}, 305:\penalty0 113086, 2024.
+\newblock ISSN 0020-7683.
+
+\bibitem[Ames et~al.(2009)Ames, Srivastava, Chester, and Anand]{AMES2009}
+N.~M. Ames, V.~Srivastava, S.~A. Chester, and L.~Anand.
+\newblock A thermo-mechanically coupled theory for large deformations of amorphous polymers. part ii: Applications.
+\newblock \emph{International Journal of Plasticity}, 25\penalty0 (8):\penalty0 1495--1539, 2009.
+\newblock ISSN 0749-6419.
+\newblock \doi{https://doi.org/10.1016/j.ijplas.2008.11.005}.
+
+\bibitem[Amjadi et~al.(2015)Amjadi, Yoon, and Park]{Softpolymerapp1}
+M.~Amjadi, Y.~J. Yoon, and I.~Park.
+\newblock Ultra-stretchable and skin-mountable strain sensors using carbon nanotubes–ecoflex nanocomposites.
+\newblock \emph{Nanotechnology}, 26\penalty0 (37):\penalty0 375501, aug 2015.
+\newblock \doi{10.1088/0957-4484/26/37/375501}.
+
+\bibitem[Amor et~al.(2009)Amor, Marigo, and Maurini]{HDsplit1}
+H.~Amor, J.-J. Marigo, and C.~Maurini.
+\newblock Regularized formulation of the variational brittle fracture with unilateral contact: Numerical experiments.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 57\penalty0 (8):\penalty0 1209--1229, 2009.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/j.jmps.2009.04.011}.
+
+\bibitem[Anand et~al.(2009)Anand, Ames, Srivastava, and Chester]{AnandAmes(2009)I}
+L.~Anand, N.~M. Ames, V.~Srivastava, and S.~A. Chester.
+\newblock A thermo-mechanically coupled theory for large deformations of amorphous polymers. part i: Formulation.
+\newblock \emph{International Journal of Plasticity}, 25\penalty0 (8):\penalty0 1474--1494, 2009.
+\newblock ISSN 0749-6419.
+\newblock \doi{https://doi.org/10.1016/j.ijplas.2008.11.004}.
+
+\bibitem[Anand et~al.(2019)Anand, Mao, and Talamini]{ANANDgdHembtrl}
+L.~Anand, Y.~Mao, and B.~Talamini.
+\newblock On modeling fracture of ferritic steels due to hydrogen embrittlement.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 122:\penalty0 280--314, 2019.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/j.jmps.2018.09.012}.
+
+\bibitem[Arruda and Boyce(1993)]{ArrudaBoyce(1993)}
+E.~M. Arruda and M.~C. Boyce.
+\newblock A three-dimensional constitutive model for the large stretch behavior of rubber elastic materials.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 41\penalty0 (2):\penalty0 389--412, 1993.
+\newblock ISSN 0022-5096.
+
+\bibitem[Bai et~al.(2018)Bai, Yang, Morelle, Yang, and Suo]{Baiselfrecoverygelfracture}
+R.~Bai, J.~Yang, X.~P. Morelle, C.~Yang, and Z.~Suo.
+\newblock Fatigue fracture of self-recovery hydrogels.
+\newblock \emph{ACS Macro Letters}, 7\penalty0 (3):\penalty0 312--317, 2018.
+\newblock \doi{10.1021/acsmacrolett.8b00045}.
+\newblock PMID: 35632906.
+
+\bibitem[Bai et~al.(2021)Bai, Kaiser, Coulombe, and Srivastava]{Bai2021AEngineering}
+Y.~Bai, N.~J. Kaiser, K.~L. Coulombe, and V.~Srivastava.
+\newblock {A continuum model and simulations for large deformation of anisotropic fiber–matrix composites for cardiac tissue engineering}.
+\newblock \emph{Journal of the Mechanical Behavior of Biomedical Materials}, 121:\penalty0 104627, 9 2021.
+\newblock ISSN 17516161.
+
+\bibitem[Barney et~al.(2022)Barney, Helgeson, and Valentine]{Bulkmoduluselastomers1}
+C.~W. Barney, M.~E. Helgeson, and M.~T. Valentine.
+\newblock Network structure influences bulk modulus of nearly incompressible filled silicone elastomers.
+\newblock \emph{Extreme Mechanics Letters}, 52:\penalty0 101616, 2022.
+\newblock ISSN 2352-4316.
+\newblock \doi{https://doi.org/10.1016/j.eml.2022.101616}.
+
+\bibitem[Behera et~al.(2022)Behera, Kumar, and Sarangi]{BeheraMom2}
+S.~K. Behera, D.~Kumar, and S.~Sarangi.
+\newblock Constitutive modeling of damage-induced stress softening in electro-magneto-viscoelastic materials.
+\newblock \emph{Mechanics of Materials}, 171:\penalty0 104348, 2022.
+\newblock ISSN 0167-6636.
+\newblock \doi{https://doi.org/10.1016/j.mechmat.2022.104348}.
+
+\bibitem[Benvidi et~al.(2019)Benvidi, Ayatollahi, and Heydari-Meybodi]{EPDMrubber}
+A.~H. Benvidi, M.~R. Ayatollahi, and M.~Heydari-Meybodi.
+\newblock Fracture analysis of rounded-tip v-notched components made of rubber-like materials using averaged strain energy density criterion.
+\newblock \emph{Procedia Structural Integrity}, 21:\penalty0 12--20, 2019.
+\newblock ISSN 2452-3216.
+\newblock 1st International Workshop on Plasticity, Damage and Fracture of Engineering Materials, IWPDF 2019, 22-23 August 2019, Ankara, Turkey.
+
+\bibitem[Bergström and Boyce(1998)]{BergstromBoyce(1998)}
+J.~Bergström and M.~Boyce.
+\newblock Constitutive modeling of the large strain time-dependent behavior of elastomers.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 46\penalty0 (5):\penalty0 931--954, 1998.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/S0022-5096(97)00075-6}.
+
+\bibitem[Bouklas et~al.(2015)Bouklas, Landis, and Huang]{Bouklassolventdiffusionjintegral}
+N.~Bouklas, C.~M. Landis, and R.~Huang.
+\newblock {Effect of Solvent Diffusion on Crack-Tip Fields and Driving Force for Fracture of Hydrogels}.
+\newblock \emph{Journal of Applied Mechanics}, 82\penalty0 (8):\penalty0 081007, 08 2015.
+\newblock ISSN 0021-8936.
+\newblock \doi{10.1115/1.4030587}.
+
+\bibitem[Bourdin et~al.(2000)Bourdin, Francfort, and Marigo]{Variationalpf1}
+B.~Bourdin, G.~Francfort, and J.-J. Marigo.
+\newblock Numerical experiments in revisited brittle fracture.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 48\penalty0 (4):\penalty0 797--826, 2000.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/S0022-5096(99)00028-9}.
+
+\bibitem[Bourdin et~al.(2008)Bourdin, Francfort, and Marigo]{Variationalpf2}
+B.~Bourdin, G.~A. Francfort, and J.-J. Marigo.
+\newblock The variational approach to fracture.
+\newblock \emph{Journal of Elasticity}, 91\penalty0 (1):\penalty0 5--148, Apr 2008.
+\newblock ISSN 1573-2681.
+\newblock \doi{10.1007/s10659-007-9107-3}.
+
+\bibitem[Boyce et~al.(1989)Boyce, Weber, and Parks]{BOYCE1989}
+M.~Boyce, G.~Weber, and D.~Parks.
+\newblock On the kinematics of finite strain plasticity.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 37\penalty0 (5):\penalty0 647--665, 1989.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/0022-5096(89)90033-1}.
+
+\bibitem[Boyce et~al.(1988)Boyce, Parks, and Argon]{BOYCE1988}
+M.~C. Boyce, D.~M. Parks, and A.~S. Argon.
+\newblock Large inelastic deformation of glassy polymers. part i: rate dependent constitutive model.
+\newblock \emph{Mechanics of Materials}, 7\penalty0 (1):\penalty0 15--33, 1988.
+\newblock ISSN 0167-6636.
+\newblock \doi{https://doi.org/10.1016/0167-6636(88)90003-8}.
+
+\bibitem[Brighenti et~al.(2020)Brighenti, Li, and Vernerey]{Yingliactuator}
+R.~Brighenti, Y.~Li, and F.~J. Vernerey.
+\newblock Smart polymers for advanced applications: A mechanical perspective review.
+\newblock \emph{Frontiers in Materials}, 7, 2020.
+\newblock ISSN 2296-8016.
+\newblock \doi{10.3389/fmats.2020.00196}.
+
+\bibitem[Brostow et~al.(2015)Brostow, {Hagg Lobland}, and Khoja]{modoftoughness2}
+W.~Brostow, H.~E. {Hagg Lobland}, and S.~Khoja.
+\newblock Brittleness and toughness of polymers and other materials.
+\newblock \emph{Materials Letters}, 159:\penalty0 478--480, 2015.
+\newblock ISSN 0167-577X.
+
+\bibitem[Brown et~al.(2002)Brown, Sottos, and White]{Brown2002}
+E.~N. Brown, N.~R. Sottos, and S.~R. White.
+\newblock Fracture testing of a self-healing polymer composite.
+\newblock \emph{Experimental Mechanics}, 42\penalty0 (4):\penalty0 372--379, 2002.
+\newblock \doi{10.1007/BF02412141}.
+
+\bibitem[Buaksuntear et~al.(2022)Buaksuntear, Limarun, Suethao, and Smitthipong]{Noncovalentenergyref3}
+K.~Buaksuntear, P.~Limarun, S.~Suethao, and W.~Smitthipong.
+\newblock Non-covalent interaction on the self-healing of mechanical properties in supramolecular polymers.
+\newblock \emph{International Journal of Molecular Sciences}, 23\penalty0 (13), 2022.
+\newblock ISSN 1422-0067.
+\newblock \doi{10.3390/ijms23136902}.
+
+\bibitem[Budiansky and Rice(1973)]{ERRdef2}
+B.~Budiansky and J.~R. Rice.
+\newblock {Conservation Laws and Energy-Release Rates}.
+\newblock \emph{Journal of Applied Mechanics}, 40\penalty0 (1):\penalty0 201--203, 03 1973.
+\newblock ISSN 0021-8936.
+\newblock \doi{10.1115/1.3422926}.
+
+\bibitem[Burla et~al.(2020)Burla, Dussi, Martinez-Torres, Tauber, van~der Gucht, and Koenderink]{Burla2020}
+F.~Burla, S.~Dussi, C.~Martinez-Torres, J.~Tauber, J.~van~der Gucht, and G.~H. Koenderink.
+\newblock Connectivity and plasticity determine collagen network fracture.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 117\penalty0 (15):\penalty0 8326--8334, 2020.
+\newblock \doi{https://doi.org/10.1073/pnas.1920062117}.
+
+\bibitem[Burley and Petsko(1988)]{Noncovalentenergyref1}
+S.~Burley and G.~Petsko.
+\newblock Weakly polar interactions in proteins.
+\newblock \emph{Advances in Protein Chemistry}, 39:\penalty0 125--189, 1988.
+\newblock ISSN 0065-3233.
+\newblock \doi{https://doi.org/10.1016/S0065-3233(08)60376-9}.
+
+\bibitem[Cao et~al.(2024)Cao, Chen, Cao, and Gao]{cao2024hydrogel}
+P.~Cao, B.~Chen, Y.~Cao, and H.~Gao.
+\newblock Micropores can enhance intrinsic fracture energy of hydrogels, 2024.
+
+\bibitem[Chen et~al.(2017)Chen, Wang, and Suo]{CHENflawsensitivity}
+C.~Chen, Z.~Wang, and Z.~Suo.
+\newblock Flaw sensitivity of highly stretchable materials.
+\newblock \emph{Extreme Mechanics Letters}, 10:\penalty0 50--57, 2017.
+\newblock ISSN 2352-4316.
+\newblock \doi{https://doi.org/10.1016/j.eml.2016.10.002}.
+\newblock Filling Gaps in Material Property Space: IUTAM Symposium.
+
+\bibitem[Chen and Ravi-Chandar(2023)]{Chen2023ratedependentfracture}
+S.~Chen and K.~Ravi-Chandar.
+\newblock Rate-dependent fracture behavior of gelatin-based hydrogels.
+\newblock \emph{International Journal of Fracture}, 243\penalty0 (2):\penalty0 185--202, Oct 2023.
+
+\bibitem[Ciavarella(2024)]{CIAVARELLA2024104564}
+M.~Ciavarella.
+\newblock A generalized rivlin–thomas theory for nucleation of cracks in viscoelastic materials.
+\newblock \emph{Theoretical and Applied Fracture Mechanics}, 133:\penalty0 104564, 2024.
+\newblock ISSN 0167-8442.
+
+\bibitem[Cox et~al.(2005)Cox, Gao, Gross, and Rittel]{COX2005565}
+B.~N. Cox, H.~Gao, D.~Gross, and D.~Rittel.
+\newblock Modern topics and challenges in dynamic fracture.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 53\penalty0 (3):\penalty0 565--596, 2005.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/j.jmps.2004.09.002}.
+
+\bibitem[Creton(2017)]{Cretonperspective}
+C.~Creton.
+\newblock 50th anniversary perspective: Networks and gels: Soft but dynamic and tough.
+\newblock \emph{Macromolecules}, 50\penalty0 (21):\penalty0 8297--8316, 2017.
+\newblock \doi{10.1021/acs.macromol.7b01698}.
+
+\bibitem[de~Gennes(1996)]{Viscoelastictrumpet1}
+P.~G. de~Gennes.
+\newblock Soft adhesives.
+\newblock \emph{Langmuir}, 12\penalty0 (19):\penalty0 4497--4500, 1996.
+
+\bibitem[de~Rooij and Kuhl(2016)]{Ekuhl2}
+R.~de~Rooij and E.~Kuhl.
+\newblock Constitutive modeling of brain tissue: Current perspectives.
+\newblock \emph{Applied Mechanics Reviews}, 68:\penalty0 010801, 2016.
+
+\bibitem[Drozdov and deC. Christiansen(2020)]{TCA1}
+A.~Drozdov and J.~deC. Christiansen.
+\newblock Tension–compression asymmetry in the mechanical response of hydrogels.
+\newblock \emph{Journal of the Mechanical Behavior of Biomedical Materials}, 110:\penalty0 103851, 2020.
+\newblock ISSN 1751-6161.
+
+\bibitem[Du et~al.(2024)Du, Cui, Zhang, Cai, and Zhai]{DuMom3}
+C.~Du, H.~Cui, H.~Zhang, Z.~Cai, and W.~Zhai.
+\newblock Phase field modeling of thermal fatigue crack growth in elastoplastic solids and experimental verification.
+\newblock \emph{Mechanics of Materials}, 188:\penalty0 104839, 2024.
+\newblock ISSN 0167-6636.
+\newblock \doi{https://doi.org/10.1016/j.mechmat.2023.104839}.
+
+\bibitem[Duncan et~al.(2020)Duncan, Sarapas, Defante, Beers, and Chan]{RIFT}
+T.~T. Duncan, J.~M. Sarapas, A.~P. Defante, K.~L. Beers, and E.~P. Chan.
+\newblock Cutting to measure the elasticity and fracture of soft gels.
+\newblock \emph{Soft Matter}, 16:\penalty0 8826--8831, 2020.
+
+\bibitem[Fakhouri et~al.(2015)Fakhouri, Hutchens, and Crosby]{Punctureoriginal}
+S.~Fakhouri, S.~B. Hutchens, and A.~J. Crosby.
+\newblock Puncture mechanics of soft solids.
+\newblock \emph{Soft Matter}, 11:\penalty0 4723--4730, 2015.
+\newblock \doi{10.1039/C5SM00230C}.
+
+\bibitem[Gao et~al.(1999)Gao, Huang, Nix, and Hutchinson]{GAOstraingradientplasticity}
+H.~Gao, Y.~Huang, W.~Nix, and J.~Hutchinson.
+\newblock Mechanism-based strain gradient plasticity— i. theory.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 47\penalty0 (6):\penalty0 1239--1263, 1999.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/S0022-5096(98)00103-3}.
+
+\bibitem[Germain(1973)]{PVP1}
+P.~Germain.
+\newblock The method of virtual power in continuum mechanics. part 2: Microstructure.
+\newblock \emph{SIAM Journal on Applied Mathematics}, 25\penalty0 (3):\penalty0 556--575, 1973.
+
+\bibitem[Guo et~al.(2018)Guo, Liu, Zehnder, Zhao, Narita, Creton, and Hui]{HuiJMPSfracture}
+J.~Guo, M.~Liu, A.~T. Zehnder, J.~Zhao, T.~Narita, C.~Creton, and C.-Y. Hui.
+\newblock Fracture mechanics of a self-healing hydrogel with covalent and physical crosslinks: A numerical study.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 120:\penalty0 79--95, 2018.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/j.jmps.2018.03.009}.
+\newblock Special issue in honor of Ares J. Rosakis on the occasion of his 60th birthday.
+
+\bibitem[Guo et~al.(2019)Guo, Hui, Liu, and Zehnder]{Zehndertipstressfield}
+J.~Guo, C.-Y. Hui, M.~Liu, and A.~T. Zehnder.
+\newblock The stress field near the tip of a plane stress crack in a gel consisting of chemical and physical cross-links.
+\newblock \emph{Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences}, 475\penalty0 (2227):\penalty0 20180863, 2019.
+\newblock \doi{10.1098/rspa.2018.0863}.
+
+\bibitem[Gurtin(1996)]{PVP2}
+M.~E. Gurtin.
+\newblock Generalized ginzburg-landau and cahn-hilliard equations based on a microforce balance.
+\newblock \emph{Physica D: Nonlinear Phenomena}, 92\penalty0 (3):\penalty0 178--192, 1996.
+\newblock ISSN 0167-2789.
+
+\bibitem[Gurtin(2002)]{PVP3}
+M.~E. Gurtin.
+\newblock A gradient theory of single-crystal viscoplasticity that accounts for geometrically necessary dislocations.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 50\penalty0 (1):\penalty0 5--32, 2002.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/S0022-5096(01)00104-1}.
+
+\bibitem[Gurtin et~al.(2010)Gurtin, Fried, and Anand]{Gurtinfriedanand}
+M.~E. Gurtin, E.~Fried, and L.~Anand.
+\newblock \emph{The mechanics and thermodynamics of continua}.
+\newblock Cambridge university press, 2010.
+
+\bibitem[Gurvich and Fleischman(2003)]{Bulkmoduluselastomers2}
+M.~R. Gurvich and T.~S. Fleischman.
+\newblock A simple approach to characterize finite compressibility of elastomers.
+\newblock \emph{Rubber Chemistry and Technology}, 76\penalty0 (4):\penalty0 912--922, 09 2003.
+\newblock ISSN 0035-9475.
+\newblock \doi{10.5254/1.3547781}.
+
+\bibitem[Guzek et~al.(1997)Guzek, Azimi, and Suresh]{Guzekpolymerinterfacefracture}
+J.~Guzek, H.~Azimi, and S.~Suresh.
+\newblock Fatigue crack propagation along polymer-metal interfaces in microelectronic packages.
+\newblock \emph{IEEE Transactions on Components, Packaging, and Manufacturing Technology: Part A}, 20\penalty0 (4):\penalty0 496--504, 1997.
+\newblock \doi{10.1109/95.650940}.
+
+\bibitem[Gültekin et~al.(2016)Gültekin, Dal, and Holzapfel]{Holzapfelarterial}
+O.~Gültekin, H.~Dal, and G.~A. Holzapfel.
+\newblock A phase-field approach to model fracture of arterial walls: Theory and finite element analysis.
+\newblock \emph{Computer Methods in Applied Mechanics and Engineering}, 312:\penalty0 542--566, 2016.
+\newblock ISSN 0045-7825.
+\newblock \doi{https://doi.org/10.1016/j.cma.2016.04.007}.
+\newblock Phase Field Approaches to Fracture.
+
+\bibitem[Hai et~al.(2024)Hai, Wriggers, jie Huang, Zhang, and lang Xu]{VUEL3}
+L.~Hai, P.~Wriggers, Y.~jie Huang, H.~Zhang, and S.~lang Xu.
+\newblock Dynamic fracture investigation of concrete by a rate-dependent explicit phase field model integrating viscoelasticity and micro-viscosity.
+\newblock \emph{Computer Methods in Applied Mechanics and Engineering}, 418:\penalty0 116540, 2024.
+\newblock ISSN 0045-7825.
+\newblock \doi{https://doi.org/10.1016/j.cma.2023.116540}.
+
+\bibitem[Hamdi et~al.(2006)Hamdi, {Naït Abdelaziz}, {Aït Hocine}, Heuillet, and Benseddiq]{HAMDI2006994}
+A.~Hamdi, M.~{Naït Abdelaziz}, N.~{Aït Hocine}, P.~Heuillet, and N.~Benseddiq.
+\newblock A fracture criterion of rubber-like materials under plane stress conditions.
+\newblock \emph{Polymer Testing}, 25\penalty0 (8):\penalty0 994--1005, 2006.
+\newblock ISSN 0142-9418.
+\newblock \doi{https://doi.org/10.1016/j.polymertesting.2006.06.005}.
+
+\bibitem[Hesammokri et~al.(2023)Hesammokri, Yu, and Isaksson]{HDsplit2}
+P.~Hesammokri, H.~Yu, and P.~Isaksson.
+\newblock An extended hydrostatic–deviatoric strain energy density decomposition for phase-field fracture theories.
+\newblock \emph{International Journal of Solids and Structures}, 262-263:\penalty0 112080, 2023.
+\newblock ISSN 0020-7683.
+
+\bibitem[Hu et~al.(2020)Hu, Guilleminot, and Dolbow]{Dolbowpf2}
+T.~Hu, J.~Guilleminot, and J.~E. Dolbow.
+\newblock A phase-field model of fracture with frictionless contact and random fracture properties: Application to thin-film fracture and soil desiccation.
+\newblock \emph{Computer Methods in Applied Mechanics and Engineering}, 368:\penalty0 113106, 2020.
+\newblock ISSN 0045-7825.
+\newblock \doi{https://doi.org/10.1016/j.cma.2020.113106}.
+
+\bibitem[Hu et~al.(2017)Hu, Zhou, Daniel, Vatankhah-Varnoosfaderani, Dobrynin, and Sheiko]{Dynamiccrlnk1}
+X.~Hu, J.~Zhou, W.~F.~M. Daniel, M.~Vatankhah-Varnoosfaderani, A.~V. Dobrynin, and S.~S. Sheiko.
+\newblock Dynamics of dual networks: Strain rate and temperature effects in hydrogels with reversible h-bonds.
+\newblock \emph{Macromolecules}, 50\penalty0 (2):\penalty0 652--659, 2017.
+\newblock \doi{10.1021/acs.macromol.6b02422}.
+
+\bibitem[Huang et~al.(2016)Huang, Li, Hong, Cao, and Feng]{TCA2}
+X.~Huang, B.~Li, W.~Hong, Y.-P. Cao, and X.-Q. Feng.
+\newblock Effects of tension–compression asymmetry on the surface wrinkling of film–substrate systems.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 94:\penalty0 88--104, 2016.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/j.jmps.2016.04.014}.
+
+\bibitem[Huebsch et~al.(2014)Huebsch, Kearney, Zhao, Kim, Cezar, Suo, and Mooney]{XZhaodrugdelivery}
+N.~Huebsch, C.~J. Kearney, X.~Zhao, J.~Kim, C.~A. Cezar, Z.~Suo, and D.~J. Mooney.
+\newblock Ultrasound-triggered disruption and self-healing of reversibly cross-linked hydrogels for drug delivery and enhanced chemotherapy.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 111\penalty0 (27):\penalty0 9762--9767, 2014.
+\newblock \doi{https://doi.org/10.1073/pnas.1405469111}.
+
+\bibitem[Hui et~al.(2019)Hui, Guo, Liu, and Zehnder]{HuiModeIII}
+C.~Y. Hui, J.~Guo, M.~Liu, and A.~Zehnder.
+\newblock Finite strain theory of a mode iii crack in a rate dependent gel consisting of chemical and physical cross-links.
+\newblock \emph{International Journal of Fracture}, 215\penalty0 (1):\penalty0 77--89, Jan 2019.
+\newblock ISSN 1573-2673.
+\newblock \doi{10.1007/s10704-018-00335-9}.
+
+\bibitem[Hui et~al.(2022)Hui, Zhu, and Long]{Viscoelastictrumpet2}
+C.-Y. Hui, B.~Zhu, and R.~Long.
+\newblock Steady state crack growth in viscoelastic solids: A comparative study.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 159:\penalty0 104748, 2022.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/j.jmps.2021.104748}.
+
+\bibitem[Hwang et~al.(2022)Hwang, Kim, Zhao, Kim, Chang, Fan, Ibrahim, Suresh, Lee, and Cho]{Hwangpollenelectronics}
+Y.~Hwang, M.~K. Kim, Z.~Zhao, B.~Kim, T.~Chang, T.~F. Fan, M.~S. Ibrahim, S.~Suresh, C.~H. Lee, and N.-J. Cho.
+\newblock Plant-based substrate materials for flexible green electronics.
+\newblock \emph{Advanced Materials Technologies}, 7\penalty0 (12):\penalty0 2200446, 2022.
+
+\bibitem[Imaoka et~al.(2023)Imaoka, Nakajima, Indei, Iwata, Hong, Marcellan, and Gong]{Multiloaddrop2}
+C.~Imaoka, T.~Nakajima, T.~Indei, M.~Iwata, W.~Hong, A.~Marcellan, and J.~P. Gong.
+\newblock Inverse mechanical-swelling coupling of a highly deformed double-network gel.
+\newblock \emph{Science Advances}, 9\penalty0 (19):\penalty0 eabp8351, 2023.
+
+\bibitem[International(2015)]{ASTMD638}
+A.~International.
+\newblock \emph{ASTM D638-14, Standard Test Method for Tensile Properties of Plastics}.
+\newblock ASTM International, 2015.
+
+\bibitem[Jiang et~al.(2019)Jiang, Lawson, Erel, Pervere, Nan, Robbins, Feed, and Moreno]{Clampingissues1}
+M.~Jiang, Z.~T. Lawson, V.~Erel, S.~Pervere, T.~Nan, A.~B. Robbins, A.~D. Feed, and M.~R. Moreno.
+\newblock Clamping soft biologic tissues for uniaxial tensile testing: A brief survey of current methods and development of a novel clamping mechanism.
+\newblock \emph{J Mech Behav Biomed Mater}, 103:\penalty0 103503, Nov. 2019.
+
+\bibitem[Jihai~Yuan and Chen(2022)]{Doublepf2}
+Y.~M. Jihai~Yuan and C.~Chen.
+\newblock Multiple-phase-field modeling for fracture of composite materials.
+\newblock \emph{Mechanics of Advanced Materials and Structures}, 29\penalty0 (28):\penalty0 7476--7490, 2022.
+\newblock \doi{10.1080/15376494.2021.2000081}.
+
+\bibitem[Kadapa and Hossain(2022)]{Bulkmoduluselastomers3}
+C.~Kadapa and M.~Hossain.
+\newblock A unified numerical approach for soft to hard magneto-viscoelastically coupled polymers.
+\newblock \emph{Mechanics of Materials}, 166:\penalty0 104207, 2022.
+\newblock ISSN 0167-6636.
+\newblock \doi{https://doi.org/10.1016/j.mechmat.2021.104207}.
+
+\bibitem[Kang et~al.(2005)Kang, Zhang, Wang, and Qin]{ERRthdepnd1}
+Y.-L. Kang, Z.-F. Zhang, H.-W. Wang, and Q.-H. Qin.
+\newblock Experimental investigations of the effect of thickness on fracture toughness of metallic foils.
+\newblock \emph{Materials Science and Engineering: A}, 394\penalty0 (1):\penalty0 312--319, 2005.
+\newblock ISSN 0921-5093.
+
+\bibitem[Kim et~al.(2021)Kim, Zhang, Shi, and Suo]{Kimhydrogelfatiguefracture}
+J.~Kim, G.~Zhang, M.~Shi, and Z.~Suo.
+\newblock Fracture, fatigue, and friction of polymers in which entanglements greatly outnumber cross-links.
+\newblock \emph{Science}, 374\penalty0 (6564):\penalty0 212--216, 2021.
+\newblock \doi{10.1126/science.abg6320}.
+
+\bibitem[Kim et~al.(2022)Kim, Kim, Shin, and Yu]{Kim2022SSG}
+J.~Kim, Y.~Kim, H.~Shin, and W.-R. Yu.
+\newblock Mechanical modeling of strain rate-dependent behavior of shear-stiffening gel.
+\newblock \emph{International Journal of Mechanics and Materials in Design}, Oct 2022.
+\newblock \doi{https://doi.org/10.1007/s10999-022-09618-5}.
+
+\bibitem[King(2022)]{Multiloaddrop1}
+D.~R. King.
+\newblock Macroscale double networks: highly dissipative soft composites.
+\newblock \emph{Polymer Journal}, 54\penalty0 (8):\penalty0 943--955, Aug 2022.
+\newblock ISSN 1349-0540.
+\newblock \doi{10.1038/s41428-022-00646-8}.
+
+\bibitem[Konale et~al.(2023)Konale, Ahmed, Wanchoo, and Srivastava]{KonalePBS}
+A.~Konale, Z.~Ahmed, P.~Wanchoo, and V.~Srivastava.
+\newblock A large deformation model for quasi-static to high strain rate response of a rate-stiffening soft polymer.
+\newblock \emph{International Journal of Plasticity}, 168:\penalty0 103701, 2023.
+\newblock ISSN 0749-6419.
+
+\bibitem[Konica and Sain(2021)]{Shabnamphasefield}
+S.~Konica and T.~Sain.
+\newblock A reaction-driven evolving network theory coupled with phase-field fracture to model polymer oxidative aging.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 150:\penalty0 104347, 2021.
+\newblock ISSN 0022-5096.
+
+\bibitem[Konica et~al.(2024)Konica, Sheldon, and Srivastava]{ABAQUSshabnamSEI}
+S.~Konica, B.~W. Sheldon, and V.~Srivastava.
+\newblock Role of coupled electrochemistry and stress on the li-anode instability: A continuum approach, 2024.
+
+\bibitem[Kothari et~al.(2019)Kothari, Niu, and Srivastava]{Mjmetastablesteels}
+M.~Kothari, S.~Niu, and V.~Srivastava.
+\newblock A thermo-mechanically coupled finite strain model for phase-transitioning austenitic steels in ambient to cryogenic temperature range.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 133:\penalty0 103729, 2019.
+\newblock ISSN 0022-5096.
+
+\bibitem[Kr{\"o}ner(1959)]{Kroner(1959)}
+E.~Kr{\"o}ner.
+\newblock Allgemeine kontinuumstheorie der versetzungen und eigenspannungen.
+\newblock \emph{Archive for Rational Mechanics and Analysis}, 4\penalty0 (1):\penalty0 273--334, Jan 1959.
+\newblock ISSN 1432-0673.
+\newblock \doi{https://doi.org/10.1007/BF00281393}.
+
+\bibitem[Kuhl et~al.(2000)Kuhl, Ramm, and de~Borst]{KUHL2000}
+E.~Kuhl, E.~Ramm, and R.~de~Borst.
+\newblock An anisotropic gradient damage model for quasi-brittle materials.
+\newblock \emph{Computer Methods in Applied Mechanics and Engineering}, 183\penalty0 (1):\penalty0 87--103, 2000.
+\newblock ISSN 0045-7825.
+\newblock \doi{https://doi.org/10.1016/S0045-7825(99)00213-3}.
+
+\bibitem[Kumar and Lopez-Pamies(2020)]{KUMAR1}
+A.~Kumar and O.~Lopez-Pamies.
+\newblock The phase-field approach to self-healable fracture of elastomers: A model accounting for fracture nucleation at large, with application to a class of conspicuous experiments.
+\newblock \emph{Theoretical and Applied Fracture Mechanics}, 107:\penalty0 102550, 2020.
+\newblock ISSN 0167-8442.
+\newblock \doi{https://doi.org/10.1016/j.tafmec.2020.102550}.
+
+\bibitem[Kumar et~al.(2020)Kumar, Bourdin, Francfort, and Lopez-Pamies]{KUMAR2}
+A.~Kumar, B.~Bourdin, G.~A. Francfort, and O.~Lopez-Pamies.
+\newblock Revisiting nucleation in the phase-field approach to brittle fracture.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 142:\penalty0 104027, 2020.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/j.jmps.2020.104027}.
+
+\bibitem[Kurkin et~al.(2021)Kurkin, Lipik, Tan, Seah, Zhang, and Tok]{Kurkinetal(Synthesis)}
+A.~Kurkin, V.~Lipik, K.~B.~L. Tan, G.~L. Seah, X.~Zhang, and A.~I.~Y. Tok.
+\newblock Correlations between precursor molecular weight and dynamic mechanical properties of polyborosiloxane (pbs).
+\newblock \emph{Macromolecular Materials and Engineering}, 306\penalty0 (11):\penalty0 2100360, 2021.
+\newblock \doi{https://doi.org/10.1002/mame.202100360}.
+
+\bibitem[Lai et~al.(2019)Lai, Jia, Wang, Deng, Zheng, Li, Zuo, and Bao]{Dynamiccrlnk2}
+J.-C. Lai, X.-Y. Jia, D.-P. Wang, Y.-B. Deng, P.~Zheng, C.-H. Li, J.-L. Zuo, and Z.~Bao.
+\newblock Thermodynamically stable whilst kinetically labile coordination bonds lead to strong and tough self-healing polymers.
+\newblock \emph{Nature Communications}, 10\penalty0 (1):\penalty0 1164, Mar 2019.
+\newblock ISSN 2041-1723.
+\newblock \doi{10.1038/s41467-019-09130-z}.
+
+\bibitem[Lake(1995)]{Lake1995elastomers}
+G.~J. Lake.
+\newblock {Fatigue and Fracture of Elastomers}.
+\newblock \emph{Rubber Chemistry and Technology}, 68\penalty0 (3):\penalty0 435--460, 07 1995.
+\newblock ISSN 0035-9475.
+\newblock \doi{10.5254/1.3538750}.
+
+\bibitem[Lake et~al.(1967{\natexlab{a}})Lake, Thomas, and Tabor]{LakeandThomas}
+G.~J. Lake, A.~G. Thomas, and D.~Tabor.
+\newblock The strength of highly elastic materials.
+\newblock \emph{Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences}, 300\penalty0 (1460):\penalty0 108--119, 1967{\natexlab{a}}.
+\newblock \doi{10.1098/rspa.1967.0160}.
+
+\bibitem[Lake et~al.(1967{\natexlab{b}})Lake, Thomas, and Tabor]{Lakethomas1967}
+G.~J. Lake, A.~G. Thomas, and D.~Tabor.
+\newblock The strength of highly elastic materials.
+\newblock \emph{Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences}, 300\penalty0 (1460):\penalty0 108--119, 1967{\natexlab{b}}.
+
+\bibitem[LeBlanc et~al.(2018)LeBlanc, Shukla, and Rajapakse]{LeBlanc2018}
+J.~LeBlanc, A.~Shukla, and Y.~D.~S. Rajapakse.
+\newblock Dynamic failure of composite materials.
+\newblock \emph{Journal of Dynamic Behavior of Materials}, 4\penalty0 (3):\penalty0 257--257, 2018.
+\newblock \doi{10.1007/s40870-018-0171-5}.
+
+\bibitem[LeBlanc et~al.(2020)LeBlanc, Cavallaro, Torres, Ponte, Warner, Saenger, Mforsoh, and Shukla]{LEBLANC2020}
+J.~LeBlanc, P.~Cavallaro, J.~Torres, D.~Ponte, E.~Warner, R.~Saenger, I.~N. Mforsoh, and A.~Shukla.
+\newblock Low temperature effects on the mechanical, fracture, and dynamic behavior of carbon and e-glass epoxy laminates.
+\newblock \emph{International Journal of Lightweight Materials and Manufacture}, 3\penalty0 (4):\penalty0 344--356, 2020.
+\newblock ISSN 2588-8404.
+
+\bibitem[Lee(1969)]{Lee(1969)}
+E.~H. Lee.
+\newblock {Elastic-Plastic Deformation at Finite Strains}.
+\newblock \emph{Journal of Applied Mechanics}, 36\penalty0 (1):\penalty0 1--6, 03 1969.
+\newblock ISSN 0021-8936.
+\newblock \doi{https://doi.org/10.1115/1.3564580}.
+
+\bibitem[Lee et~al.(2024)Lee, Lee, Yun, Kim, Lee, Chester, and Cho]{Parabolicshape2}
+J.~Lee, J.~Lee, S.~Yun, S.~Kim, H.~Lee, S.~A. Chester, and H.~Cho.
+\newblock Size-dependent fracture in elastomers: experiments and continuum modeling.
+\newblock \emph{arXiv}, 2024.
+
+\bibitem[Lele and Anand(2009)]{gradientphysintpr1}
+S.~P. Lele and L.~Anand.
+\newblock A large-deformation strain-gradient theory for isotropic viscoplastic materials.
+\newblock \emph{International Journal of Plasticity}, 25\penalty0 (3):\penalty0 420--453, 2009.
+\newblock ISSN 0749-6419.
+
+\bibitem[Li and Bouklas(2020)]{LI2020193}
+B.~Li and N.~Bouklas.
+\newblock A variational phase-field model for brittle fracture in polydisperse elastomer networks.
+\newblock \emph{International Journal of Solids and Structures}, 182-183:\penalty0 193--204, 2020.
+\newblock ISSN 0020-7683.
+\newblock \doi{https://doi.org/10.1016/j.ijsolstr.2019.08.012}.
+
+\bibitem[Li et~al.(1985)Li, Shih, and Needleman]{ERRdef1}
+F.~Li, C.~Shih, and A.~Needleman.
+\newblock A comparison of methods for calculating energy release rates.
+\newblock \emph{Engineering Fracture Mechanics}, 21\penalty0 (2):\penalty0 405--421, 1985.
+\newblock ISSN 0013-7944.
+
+\bibitem[Li et~al.(2024)Li, Nguyen, and Bazilevs]{Weican2024}
+W.~Li, H.~Nguyen, and Y.~Bazilevs.
+\newblock Isogeometric multilayer thin-shell analysis of failure in composite structures with hygrothermal effects.
+\newblock \emph{International Journal of Fracture}, 2024.
+
+\bibitem[Li et~al.(2014{\natexlab{a}})Li, Zhang, Xiang, and Huang]{Lietal(2014)B:Ocrosslinkref}
+X.~Li, D.~Zhang, K.~Xiang, and G.~Huang.
+\newblock Synthesis of polyborosiloxane and its reversible physical crosslinks.
+\newblock \emph{RSC Adv.}, 4:\penalty0 32894--32901, 2014{\natexlab{a}}.
+\newblock \doi{http://dx.doi.org/10.1039/C4RA01877J}.
+
+\bibitem[Li et~al.(2014{\natexlab{b}})Li, Kröger, and Liu]{LIdrugdelivery}
+Y.~Li, M.~Kröger, and W.~K. Liu.
+\newblock Endocytosis of pegylated nanoparticles accompanied by structural and free energy changes of the grafted polyethylene glycol.
+\newblock \emph{Biomaterials}, 35\penalty0 (30):\penalty0 8467--8478, 2014{\natexlab{b}}.
+\newblock ISSN 0142-9612.
+\newblock \doi{https://doi.org/10.1016/j.biomaterials.2014.06.032}.
+
+\bibitem[Liu et~al.(2019{\natexlab{a}})Liu, Du, and Fu]{Liuetal(2019)B:Ocrosslinkref}
+B.~Liu, C.~Du, and Y.~Fu.
+\newblock Factors influencing the rheological properties of mrsp based on the orthogonal experimental design and the impact energy test.
+\newblock \emph{Advances in Materials Science and Engineering}, 2019:\penalty0 2545203, Sep 2019{\natexlab{a}}.
+\newblock ISSN 1687-8434.
+\newblock \doi{https://doi.org/10.1155/2019/2545203}.
+
+\bibitem[Liu et~al.(2023)Liu, Yin, Zhu, Zhao, Yu, and Qu]{Liu2023}
+B.~Liu, T.~Yin, J.~Zhu, D.~Zhao, H.~Yu, and S.~Qu.
+\newblock Tough and fatigue-resistant polymer networks by crack tip softening.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 120\penalty0 (6):\penalty0 e2217781120, 2023.
+\newblock \doi{https://doi.org/10.1073/pnas.2217781120}.
+
+\bibitem[Liu et~al.(2021)Liu, Yokoyama, Mayumi, and Ito]{LiuMom}
+C.~Liu, H.~Yokoyama, K.~Mayumi, and K.~Ito.
+\newblock Crack velocity dependent toughness of polyrotaxane networks: The sliding dynamics of rings on polymer under stretching.
+\newblock \emph{Mechanics of Materials}, 156:\penalty0 103784, 2021.
+\newblock ISSN 0167-6636.
+\newblock \doi{https://doi.org/10.1016/j.mechmat.2021.103784}.
+
+\bibitem[Liu et~al.(2019{\natexlab{b}})Liu, Guo, Hui, and Zehnder]{ZehnderkineticfracturePVA}
+M.~Liu, J.~Guo, C.-Y. Hui, and A.~Zehnder.
+\newblock Crack tip stress based kinetic fracture model of a pva dual-crosslink hydrogel.
+\newblock \emph{Extreme Mechanics Letters}, 29:\penalty0 100457, 2019{\natexlab{b}}.
+\newblock ISSN 2352-4316.
+
+\bibitem[Long and Hui(2016)]{Fracturechallenges1}
+R.~Long and C.-Y. Hui.
+\newblock Fracture toughness of hydrogels: measurement and interpretation.
+\newblock \emph{Soft Matter}, 12:\penalty0 8069--8086, 2016.
+
+\bibitem[Long et~al.(2021)Long, Hui, Gong, and Bouchbinder]{Fracturechallenges2}
+R.~Long, C.-Y. Hui, J.~P. Gong, and E.~Bouchbinder.
+\newblock The fracture of highly deformable soft materials: A tale of two length scales.
+\newblock \emph{Annual Review of Condensed Matter Physics}, 12\penalty0 (1):\penalty0 71--94, 2021.
+
+\bibitem[Lopez-Pamies et~al.(2025)Lopez-Pamies, Dolbow, Francfort, and Larsen]{LOPEZPAMIES2025117520}
+O.~Lopez-Pamies, J.~E. Dolbow, G.~A. Francfort, and C.~J. Larsen.
+\newblock Classical variational phase-field models cannot predict fracture nucleation.
+\newblock \emph{Computer Methods in Applied Mechanics and Engineering}, 433:\penalty0 117520, 2025.
+\newblock ISSN 0045-7825.
+\newblock \doi{https://doi.org/10.1016/j.cma.2024.117520}.
+
+\bibitem[Luo et~al.(2014)Luo, Sun, Nakajima, Kurokawa, Zhao, Ihsan, Guo, Li, and Gong]{Polyampholytefracturestudy}
+F.~Luo, T.~L. Sun, T.~Nakajima, T.~Kurokawa, Y.~Zhao, A.~B. Ihsan, H.~L. Guo, X.~F. Li, and J.~P. Gong.
+\newblock Crack blunting and advancing behaviors of tough and self-healing polyampholyte hydrogel.
+\newblock \emph{Macromolecules}, 47\penalty0 (17):\penalty0 6037--6046, 2014.
+\newblock \doi{10.1021/ma5009447}.
+
+\bibitem[Mac~Donald and Ravichandran(2020)]{MacDonald2020}
+K.~A. Mac~Donald and G.~Ravichandran.
+\newblock Crack propagation and renucleation in soft brittle hydrogels.
+\newblock \emph{International Journal of Fracture}, 222\penalty0 (1):\penalty0 37--52, 2020.
+
+\bibitem[Mai and Powell(1991)]{Npm2units2}
+Y.-W. Mai and P.~Powell.
+\newblock Essential work of fracture and j-integral measurements for ductile polymers.
+\newblock \emph{Journal of Polymer Science Part B: Polymer Physics}, 29\penalty0 (7):\penalty0 785--793, 1991.
+\newblock \doi{https://doi.org/10.1002/polb.1991.090290702}.
+
+\bibitem[Malhotra et~al.(2021)Malhotra, Jiao, Henann, Clifton, and Guduru]{malhotra2021}
+P.~Malhotra, T.~Jiao, D.~L. Henann, R.~J. Clifton, and P.~R. Guduru.
+\newblock Dynamic shearing resistance of hydroxyl-terminated polybutadiene (htpb).
+\newblock \emph{Journal of Applied Physics}, 129\penalty0 (24):\penalty0 245901, 2021.
+
+\bibitem[Malito et~al.(2019)Malito, Sov, Gludovatz, Ritchie, and Pruitt]{MALITO2019}
+L.~G. Malito, J.~V. Sov, B.~Gludovatz, R.~O. Ritchie, and L.~A. Pruitt.
+\newblock Fracture toughness of ultra-high molecular weight polyethylene: A basis for defining the crack-initiation toughness in polymers.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 122:\penalty0 435--449, 2019.
+\newblock ISSN 0022-5096.
+
+\bibitem[Mao and Anand(2018{\natexlab{a}})]{Maocrosslinkfailure}
+Y.~Mao and L.~Anand.
+\newblock Fracture of elastomeric materials by crosslink failure.
+\newblock \emph{Journal of Applied Mechanics}, 85\penalty0 (8), 06 2018{\natexlab{a}}.
+\newblock ISSN 0021-8936.
+\newblock 081008.
+
+\bibitem[Mao and Anand(2018{\natexlab{b}})]{Maogels}
+Y.~Mao and L.~Anand.
+\newblock A theory for fracture of polymeric gels.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 115:\penalty0 30--53, 2018{\natexlab{b}}.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/j.jmps.2018.02.008}.
+
+\bibitem[Mao et~al.(2017)Mao, Talamini, and Anand]{Maochainscission}
+Y.~Mao, B.~Talamini, and L.~Anand.
+\newblock Rupture of polymers by chain scission.
+\newblock \emph{Extreme Mechanics Letters}, 13:\penalty0 17--24, 2017.
+\newblock ISSN 2352-4316.
+
+\bibitem[Matsuda et~al.(2020)Matsuda, Kawakami, Nakajima, and Gong]{Damagelengthscale}
+T.~Matsuda, R.~Kawakami, T.~Nakajima, and J.~P. Gong.
+\newblock Crack tip field of a double-network gel: Visualization of covalent bond scission through mechanoradical polymerization.
+\newblock \emph{Macromolecules}, 53\penalty0 (20):\penalty0 8787--8795, 2020.
+\newblock \doi{10.1021/acs.macromol.0c01485}.
+
+\bibitem[Mayumi et~al.(2016)Mayumi, Guo, Narita, Hui, and Creton]{Mayumifracture}
+K.~Mayumi, J.~Guo, T.~Narita, C.~Y. Hui, and C.~Creton.
+\newblock Fracture of dual crosslink gels with permanent and transient crosslinks.
+\newblock \emph{Extreme Mechanics Letters}, 6:\penalty0 52--59, 2016.
+\newblock ISSN 2352-4316.
+
+\bibitem[Miehe and Schänzel(2014)]{MIEHE1}
+C.~Miehe and L.-M. Schänzel.
+\newblock Phase field modeling of fracture in rubbery polymers. part i: Finite elasticity coupled with brittle failure.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 65:\penalty0 93--113, 2014.
+\newblock ISSN 0022-5096.
+
+\bibitem[Miehe et~al.(2010{\natexlab{a}})Miehe, Hofacker, and Welschinger]{MIEHEgd}
+C.~Miehe, M.~Hofacker, and F.~Welschinger.
+\newblock A phase field model for rate-independent crack propagation: Robust algorithmic implementation based on operator splits.
+\newblock \emph{Computer Methods in Applied Mechanics and Engineering}, 199\penalty0 (45):\penalty0 2765--2778, 2010{\natexlab{a}}.
+\newblock ISSN 0045-7825.
+\newblock \doi{https://doi.org/10.1016/j.cma.2010.04.011}.
+
+\bibitem[Miehe et~al.(2010{\natexlab{b}})Miehe, Welschinger, and Hofacker]{Miehefirstpaper}
+C.~Miehe, F.~Welschinger, and M.~Hofacker.
+\newblock Thermodynamically consistent phase-field models of fracture: Variational principles and multi-field fe implementations.
+\newblock \emph{International Journal for Numerical Methods in Engineering}, 83\penalty0 (10):\penalty0 1273--1311, 2010{\natexlab{b}}.
+
+\bibitem[Miranda et~al.(2022)Miranda, Souza, Sousa, Ribeiro, Castanheira, Lima, and Minas]{Softpolymerapp2}
+I.~Miranda, A.~Souza, P.~Sousa, J.~Ribeiro, E.~M.~S. Castanheira, R.~Lima, and G.~Minas.
+\newblock Properties and applications of pdms for biomedical engineering: A review.
+\newblock \emph{Journal of Functional Biomaterials}, 13\penalty0 (1), 2022.
+\newblock ISSN 2079-4983.
+\newblock \doi{10.3390/jfb13010002}.
+
+\bibitem[Montanari et~al.(2023)Montanari, Brighenti, Terzano, and Spagnoli]{Puncturefracture}
+M.~Montanari, R.~Brighenti, M.~Terzano, and A.~Spagnoli.
+\newblock Puncturing of soft tissues: experimental and fracture mechanics-based study.
+\newblock \emph{Soft Matter}, 19:\penalty0 3629--3639, 2023.
+\newblock \doi{10.1039/D3SM00011G}.
+
+\bibitem[Mousavi et~al.(2024)Mousavi, Ang, Mulderrig, and Bouklas]{Mousavielastomerjintegral}
+S.~M. Mousavi, I.~Ang, J.~Mulderrig, and N.~Bouklas.
+\newblock {Evaluating Fracture Energy Predictions Using Phase-Field and Gradient-Enhanced Damage Models for Elastomers}.
+\newblock \emph{Journal of Applied Mechanics}, 91\penalty0 (12):\penalty0 121009, 10 2024.
+\newblock ISSN 0021-8936.
+\newblock \doi{10.1115/1.4066385}.
+
+\bibitem[Myronidis et~al.(2022)Myronidis, Thielke, Kopeć, Meo, and Pinto]{Myronidisetal(2022)rheometryref}
+K.~Myronidis, M.~Thielke, M.~Kopeć, M.~Meo, and F.~Pinto.
+\newblock Polyborosiloxane-based, dynamic shear stiffening multilayer coating for the protection of composite laminates under low velocity impact.
+\newblock \emph{Composites Science and Technology}, 222:\penalty0 109395, 2022.
+\newblock ISSN 0266-3538.
+\newblock \doi{https://doi.org/10.1016/j.compscitech.2022.109395}.
+
+\bibitem[Narayan and Anand(2019)]{Anandquasibrittle}
+S.~Narayan and L.~Anand.
+\newblock A gradient-damage theory for fracture of quasi-brittle materials.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 129:\penalty0 119--146, 2019.
+\newblock ISSN 0022-5096.
+
+\bibitem[Narayan and Anand(2021)]{Anand(2021)flowrule}
+S.~Narayan and L.~Anand.
+\newblock Fracture of amorphous polymers: A gradient-damage theory.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 146:\penalty0 104164, 2021.
+\newblock ISSN 0022-5096.
+
+\bibitem[Narumi et~al.(2019)Narumi, Qin, Liu, Cheng, Gu, Kawahara, Islam, and Yao]{PBSsensingactuators}
+K.~Narumi, F.~Qin, S.~Liu, H.-Y. Cheng, J.~Gu, Y.~Kawahara, M.~Islam, and L.~Yao.
+\newblock Self-healing ui: Mechanically and electrically self-healing materials for sensing and actuation interfaces.
+\newblock In \emph{Proceedings of the 32nd Annual ACM Symposium on User Interface Software and Technology}, UIST '19, page 293–306, New York, NY, USA, 2019. Association for Computing Machinery.
+\newblock ISBN 9781450368162.
+
+\bibitem[Niu and Srivastava(2022{\natexlab{a}})]{Niu2022SimulationMeasurements}
+S.~Niu and V.~Srivastava.
+\newblock {Simulation trained CNN for accurate embedded crack length, location, and orientation prediction from ultrasound measurements}.
+\newblock \emph{International Journal of Solids and Structures}, 242:\penalty0 111521, 2022{\natexlab{a}}.
+
+\bibitem[Niu and Srivastava(2022{\natexlab{b}})]{Niu2022engwithcomp}
+S.~Niu and V.~Srivastava.
+\newblock Ultrasound classification of interacting flaws using finite element simulations and convolutional neural network.
+\newblock \emph{Engineering with Computers}, 38\penalty0 (5):\penalty0 4653--4662, Oct 2022{\natexlab{b}}.
+\newblock ISSN 1435-5663.
+
+\bibitem[Niu et~al.(2023)Niu, Zhang, Bazilevs, and Srivastava]{SijunplasticityPINN}
+S.~Niu, E.~Zhang, Y.~Bazilevs, and V.~Srivastava.
+\newblock Modeling finite-strain plasticity using physics-informed neural network and assessment of the network performance.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 172:\penalty0 105177, 2023.
+\newblock ISSN 0022-5096.
+
+\bibitem[Nunes(2011)]{Hyperelastic1}
+L.~Nunes.
+\newblock Mechanical characterization of hyperelastic polydimethylsiloxane by simple shear test.
+\newblock \emph{Materials Science and Engineering: A}, 528\penalty0 (3):\penalty0 1799--1804, 2011.
+\newblock ISSN 0921-5093.
+\newblock \doi{https://doi.org/10.1016/j.msea.2010.11.025}.
+
+\bibitem[Qi et~al.(2019)Qi, Zou, Xiao, and Long]{Parabolaelastic1}
+Y.~Qi, Z.~Zou, J.~Xiao, and R.~Long.
+\newblock Mapping the nonlinear crack tip deformation field in soft elastomer with a particle tracking method.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 125:\penalty0 326--346, 2019.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/j.jmps.2018.12.018}.
+
+\bibitem[Qi et~al.(2024)Qi, Li, Venkata, Yang, Sun, Hui, Gong, and Long]{QIdisspmappingPA}
+Y.~Qi, X.~Li, S.~P. Venkata, X.~Yang, T.~L. Sun, C.-Y. Hui, J.~P. Gong, and R.~Long.
+\newblock Mapping deformation and dissipation during fracture of soft viscoelastic solid.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 186:\penalty0 105595, 2024.
+\newblock ISSN 0022-5096.
+
+\bibitem[Raina and Miehe(2016)]{Miehe2}
+A.~Raina and C.~Miehe.
+\newblock A phase-field model for fracture in biological tissues.
+\newblock \emph{Biomechanics and Modeling in Mechanobiology}, 15\penalty0 (3):\penalty0 479--496, Jun 2016.
+\newblock ISSN 1617-7940.
+\newblock \doi{10.1007/s10237-015-0702-0}.
+
+\bibitem[Reddy(2011)]{gradientphysintpr2}
+B.~D. Reddy.
+\newblock The role of dissipation and defect energy in variational formulations of problems in strain-gradient plasticity. part 1: polycrystalline plasticity.
+\newblock \emph{Continuum Mechanics and Thermodynamics}, 23\penalty0 (6):\penalty0 527--549, Nov 2011.
+\newblock ISSN 1432-0959.
+\newblock \doi{10.1007/s00161-011-0194-9}.
+
+\bibitem[Rosakis and Ravichandran(2000)]{ROSAKIS2000}
+A.~J. Rosakis and G.~Ravichandran.
+\newblock Dynamic failure mechanics.
+\newblock \emph{International Journal of Solids and Structures}, 37\penalty0 (1):\penalty0 331--348, 2000.
+\newblock ISSN 0020-7683.
+\newblock \doi{https://doi.org/10.1016/S0020-7683(99)00097-9}.
+
+\bibitem[Roylance(2001)]{modoftoughness1}
+D.~Roylance.
+\newblock Stress-strain curves.
+\newblock \emph{Massachusetts Institute of Technology study, Cambridge}, 2001.
+
+\bibitem[Shen and Vernerey(2020)]{Shenmodeling2}
+T.~Shen and F.~J. Vernerey.
+\newblock Rate-dependent fracture of transient networks.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 143:\penalty0 104028, 2020.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/j.jmps.2020.104028}.
+
+\bibitem[Shen et~al.(2021{\natexlab{a}})Shen, Song, Cai, and Vernerey]{Shenmodeling}
+T.~Shen, Z.~Song, S.~Cai, and F.~J. Vernerey.
+\newblock Nonsteady fracture of transient networks: The case of vitrimer.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 118\penalty0 (29):\penalty0 e2105974118, 2021{\natexlab{a}}.
+
+\bibitem[Shen et~al.(2021{\natexlab{b}})Shen, Ye, Wang, Kr{\"o}ger, and Li]{Yingli1}
+Z.~Shen, H.~Ye, Q.~Wang, M.~Kr{\"o}ger, and Y.~Li.
+\newblock Sticky rouse time features the self-adhesion of supramolecular polymer networks.
+\newblock \emph{Macromolecules}, 54\penalty0 (11):\penalty0 5053--5064, 2021{\natexlab{b}}.
+\newblock \doi{10.1021/acs.macromol.1c00335}.
+
+\bibitem[Shrivastava and Gundiah(2023)]{SHRIVASTAVA2023104524}
+A.~Shrivastava and N.~Gundiah.
+\newblock Methylglyoxal crosslinking increases the fracture toughness of gelatin hydrogels.
+\newblock \emph{Mechanics of Materials}, 176:\penalty0 104524, 2023.
+\newblock ISSN 0167-6636.
+
+\bibitem[Shrivastava et~al.(2023)Shrivastava, M., and Gundiah]{Parabolaelastic2}
+A.~Shrivastava, S.~M., and N.~Gundiah.
+\newblock Crack propagation and arrests in gelatin hydrogels are linked to tip curvatures.
+\newblock \emph{Soft Matter}, 19:\penalty0 6911--6919, 2023.
+\newblock \doi{10.1039/D3SM00637A}.
+
+\bibitem[Shukla et~al.(2010)Shukla, Ravichandran, and Rajapakse]{ArunShukla2010}
+A.~Shukla, G.~Ravichandran, and Y.~Rajapakse.
+\newblock \emph{Dynamic failure of materials and structures}, volume~1.
+\newblock Springer, 2010.
+
+\bibitem[Shukla et~al.(2020)Shukla, Favata, Srivastava, Shahbazmohamadi, Tripathi, and Shukla]{shukla2020}
+S.~Shukla, J.~Favata, V.~Srivastava, S.~Shahbazmohamadi, A.~Tripathi, and A.~Shukla.
+\newblock Effect of polymer and ion concentration on mechanical and drug release behavior of gellan hydrogels using factorial design.
+\newblock \emph{Journal of Polymer Science}, 58\penalty0 (10):\penalty0 1365--1379, 2020.
+
+\bibitem[Slootman et~al.(2022)Slootman, Yeh, Millereau, Comtet, and Creton]{Damagelengthscale2}
+J.~Slootman, C.~J. Yeh, P.~Millereau, J.~Comtet, and C.~Creton.
+\newblock A molecular interpretation of the toughness of multiple network elastomers at high temperature.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 119\penalty0 (13):\penalty0 e2116127119, 2022.
+\newblock \doi{10.1073/pnas.2116127119}.
+
+\bibitem[Somarathna et~al.(2020)Somarathna, Raman, Mohotti, Mutalib, and Badri]{Wcrexample2}
+H.~Somarathna, S.~Raman, D.~Mohotti, A.~Mutalib, and K.~Badri.
+\newblock Rate dependent tensile behavior of polyurethane under varying strain rates.
+\newblock \emph{Construction and Building Materials}, 254:\penalty0 119203, 2020.
+\newblock ISSN 0950-0618.
+
+\bibitem[Song et~al.(2021)Song, Shen, Vernerey, and Cai]{Songfracture}
+Z.~Song, T.~Shen, F.~J. Vernerey, and S.~Cai.
+\newblock Force-dependent bond dissociation explains the rate-dependent fracture of vitrimers.
+\newblock \emph{Soft Matter}, 17:\penalty0 6669--6674, 2021.
+
+\bibitem[Srivastava et~al.(2000)Srivastava, Shukla, and Parameswaran]{SrivastavaSHPB1}
+V.~Srivastava, A.~Shukla, and V.~Parameswaran.
+\newblock Experimental evaluation of the dynamic shear strength of adhesive-bonded lap joints.
+\newblock \emph{Journal of Testing and Evaluation - J TEST EVAL}, 28, 11 2000.
+
+\bibitem[Srivastava et~al.(2002)Srivastava, Parameswaran, Shukla, and Morgan]{SrivastavaSHPB2}
+V.~Srivastava, V.~Parameswaran, A.~Shukla, and D.~Morgan.
+\newblock \emph{Effect of Loading Rate and Geometry Variation on the Dynamic Shear Strength of Adhesive Lap Joints}, pages 769--780.
+\newblock Springer Netherlands, Dordrecht, 2002.
+\newblock ISBN 978-0-306-48410-0.
+\newblock \doi{https://doi.org/10.1007/0-306-48410-2\_71}.
+
+\bibitem[Srivastava et~al.(2010{\natexlab{a}})Srivastava, Chester, Ames, and Anand]{Srivastava2011Thermo}
+V.~Srivastava, S.~A. Chester, N.~M. Ames, and L.~Anand.
+\newblock A thermo-mechanically-coupled large-deformation theory for amorphous polymers in a temperature range which spans their glass transition.
+\newblock \emph{International Journal of Plasticity}, 26\penalty0 (8):\penalty0 1138--1182, 2010{\natexlab{a}}.
+\newblock ISSN 0749-6419.
+\newblock Special Issue In Honor of Lallit Anand.
+
+\bibitem[Srivastava et~al.(2010{\natexlab{b}})Srivastava, Chester, and Anand]{Srivastavashapememory}
+V.~Srivastava, S.~A. Chester, and L.~Anand.
+\newblock Thermally actuated shape-memory polymers: Experiments, theory, and numerical simulations.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 58\penalty0 (8):\penalty0 1100--1124, 2010{\natexlab{b}}.
+\newblock ISSN 0022-5096.
+
+\bibitem[Srivastava et~al.(2011)Srivastava, Buitrago, and Slocum]{Srivastava2011STRESSPIPE}
+V.~Srivastava, J.~Buitrago, and S.~T. Slocum.
+\newblock Stress analysis of a cryogenic corrugated pipe.
+\newblock In \emph{Proceedings of the ASME 2011 30th International Conference on Ocean, Offshore and Arctic Engineering: Volume 3}, pages 411--422. American Society of Mechanical Engineers, 2011.
+
+\bibitem[Steck et~al.(2019)Steck, Qu, Kordmahale, Tscharnuter, Muliana, and Kameoka]{Hyperelastic2}
+D.~Steck, J.~Qu, S.~B. Kordmahale, D.~Tscharnuter, A.~Muliana, and J.~Kameoka.
+\newblock Mechanical responses of ecoflex silicone rubber: Compressible and incompressible behaviors.
+\newblock \emph{Journal of Applied Polymer Science}, 136\penalty0 (5):\penalty0 47025, 2019.
+
+\bibitem[Subhash and Liu(2009)]{Gsubhash2}
+G.~Subhash and Q.~Liu.
+\newblock Quasistatic and dynamic crushability of polymeric foams in rigid confinement.
+\newblock \emph{International Journal of Impact Engineering}, 36\penalty0 (10):\penalty0 1303--1311, 2009.
+\newblock ISSN 0734-743X.
+\newblock \doi{https://doi.org/10.1016/j.ijimpeng.2009.03.010}.
+
+\bibitem[Subhash et~al.(2006)Subhash, Liu, and Gao]{Gsubhash1}
+G.~Subhash, Q.~Liu, and X.-L. Gao.
+\newblock Quasistatic and high strain rate uniaxial compressive response of polymeric structural foams.
+\newblock \emph{International Journal of Impact Engineering}, 32\penalty0 (7):\penalty0 1113--1126, 2006.
+\newblock ISSN 0734-743X.
+\newblock \doi{https://doi.org/10.1016/j.ijimpeng.2004.11.006}.
+
+\bibitem[Talamini et~al.(2018)Talamini, Mao, and Anand]{TALAMINI}
+B.~Talamini, Y.~Mao, and L.~Anand.
+\newblock Progressive damage and rupture in polymers.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 111:\penalty0 434--457, 2018.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/j.jmps.2017.11.013}.
+
+\bibitem[Tang et~al.(2022)Tang, Dong, Yang, Kang, Huang, Li, Chen, Cao, Huang, Guo, and Wei]{Tangetal(2022)B:Ocrosslinkrubberyref}
+F.~Tang, C.~Dong, Z.~Yang, Y.~Kang, X.~Huang, M.~Li, Y.~Chen, W.~Cao, C.~Huang, Y.~Guo, and Y.~Wei.
+\newblock Protective performance and dynamic behavior of composite body armor with shear stiffening gel as buffer material under ballistic impact.
+\newblock \emph{Composites Science and Technology}, 218:\penalty0 109190, 2022.
+\newblock ISSN 0266-3538.
+
+\bibitem[Tang et~al.(2017)Tang, Li, Vlassak, and Suo]{TANG201724}
+J.~Tang, J.~Li, J.~J. Vlassak, and Z.~Suo.
+\newblock Fatigue fracture of hydrogels.
+\newblock \emph{Extreme Mechanics Letters}, 10:\penalty0 24--31, 2017.
+\newblock ISSN 2352-4316.
+\newblock \doi{https://doi.org/10.1016/j.eml.2016.09.010}.
+\newblock Filling Gaps in Material Property Space: IUTAM Symposium.
+
+\bibitem[Tang et~al.(2016)Tang, Wang, Xu, and Wang]{Tangetal(Synthesis)}
+M.~Tang, W.~Wang, D.~Xu, and Z.~Wang.
+\newblock Synthesis of structure-controlled polyborosiloxanes and investigation on their viscoelastic response to molecular mass of polydimethylsiloxane triggered by both chemical and physical interactions.
+\newblock \emph{Industrial \& Engineering Chemistry Research}, 55\penalty0 (49):\penalty0 12582--12589, 2016.
+\newblock \doi{https://doi.org/10.1021/acs.iecr.6b03823}.
+
+\bibitem[Tu et~al.(2023)Tu, Xu, Yang, Tang, Dong, Chen, Cao, Huang, Guo, and Wei]{TU2023116811}
+H.~Tu, P.~Xu, Z.~Yang, F.~Tang, C.~Dong, Y.~Chen, W.~Cao, C.~Huang, Y.~Guo, and Y.~Wei.
+\newblock Effect of shear thickening gel on microstructure and impact resistance of ethylene–vinyl acetate foam.
+\newblock \emph{Composite Structures}, 311:\penalty0 116811, 2023.
+\newblock ISSN 0263-8223.
+
+\bibitem[Upadhyay et~al.(2021)Upadhyay, Spearot, and Subhash]{UPADHYAY2021103949}
+K.~Upadhyay, D.~Spearot, and G.~Subhash.
+\newblock Validated tensile characterization of the strain rate dependence in soft materials.
+\newblock \emph{International Journal of Impact Engineering}, 156:\penalty0 103949, 2021.
+\newblock ISSN 0734-743X.
+\newblock \doi{https://doi.org/10.1016/j.ijimpeng.2021.103949}.
+
+\bibitem[Vaishakh et~al.(2024)Vaishakh, Parambil, and Srivastava]{ABAQUSvaishakh}
+K.~Vaishakh, N.~Parambil, and V.~Srivastava.
+\newblock Hygroscopic damage of fiber–matrix interface in unidirectional composites: A computational approach.
+\newblock \emph{International Journal of Mechanical Sciences}, 279:\penalty0 109460, 2024.
+\newblock ISSN 0020-7403.
+
+\bibitem[Venkata et~al.(2021)Venkata, Cui, Guo, Zehnder, Gong, and Hui]{HuiPA1}
+S.~P. Venkata, K.~Cui, J.~Guo, A.~T. Zehnder, J.~P. Gong, and C.-Y. Hui.
+\newblock Constitutive modeling of bond breaking and healing kinetics of physical polyampholyte (pa) gel.
+\newblock \emph{Extreme Mechanics Letters}, 43:\penalty0 101184, 2021.
+\newblock ISSN 2352-4316.
+
+\bibitem[Vogel et~al.(2014)Vogel, G{\"o}ktepe, Steinmann, and Kuhl]{Ekuhl1}
+F.~Vogel, S.~G{\"o}ktepe, P.~Steinmann, and E.~Kuhl.
+\newblock Modeling and simulation of viscous electro-active polymers.
+\newblock \emph{European Journal of Mechanics / A Solids}, 48\penalty0 (Complete):\penalty0 112--128, 2014.
+\newblock ISSN 09977538.
+\newblock \doi{10.1016/j.euromechsol.2014.02.001}.
+
+\bibitem[Wang et~al.(2020)Wang, Ye, Liu, Liu, Chu, and Zhuang]{VUEL1}
+T.~Wang, X.~Ye, Z.~Liu, X.~Liu, D.~Chu, and Z.~Zhuang.
+\newblock A phase-field model of thermo-elastic coupled brittle fracture with explicit time integration.
+\newblock \emph{Computational Mechanics}, 65\penalty0 (5):\penalty0 1305--1321, May 2020.
+\newblock ISSN 1432-0924.
+
+\bibitem[Wang et~al.(2017)Wang, Zhang, and Liu]{Noncovalentenergyref2}
+W.~Wang, Y.~Zhang, and W.~Liu.
+\newblock Bioinspired fabrication of high strength hydrogels from non-covalent interactions.
+\newblock \emph{Progress in Polymer Science}, 71:\penalty0 1--25, 2017.
+\newblock ISSN 0079-6700.
+\newblock Topical Volume on Polymeric Biomaterials.
+
+\bibitem[Wang et~al.(2018)Wang, Ding, Zhao, Wang, Xuan, Jiang, and Gong]{Wangetal(2018)AnovelmagneticSSGwithselfhealingability}
+Y.~Wang, L.~Ding, C.~Zhao, S.~Wang, S.~Xuan, H.~Jiang, and X.~Gong.
+\newblock A novel magnetorheological shear-stiffening elastomer with self-healing ability.
+\newblock \emph{Composites Science and Technology}, 168:\penalty0 303--311, 2018.
+\newblock ISSN 0266-3538.
+\newblock \doi{https://doi.org/10.1016/j.compscitech.2018.10.019}.
+
+\bibitem[Wu et~al.(2016)Wu, McAuliffe, Waisman, and Deodatis]{WU2016596}
+J.~Wu, C.~McAuliffe, H.~Waisman, and G.~Deodatis.
+\newblock Stochastic analysis of polymer composites rupture at large deformations modeled by a phase field method.
+\newblock \emph{Computer Methods in Applied Mechanics and Engineering}, 312:\penalty0 596--634, 2016.
+\newblock ISSN 0045-7825.
+\newblock \doi{https://doi.org/10.1016/j.cma.2016.06.010}.
+\newblock Phase Field Approaches to Fracture.
+
+\bibitem[Xu and Wang(2006)]{XuMom4}
+M.~Xu and L.~Wang.
+\newblock A new method for studying the dynamic response and damage evolution of polymers at high strain rates.
+\newblock \emph{Mechanics of Materials}, 38\penalty0 (1):\penalty0 68--75, 2006.
+\newblock ISSN 0167-6636.
+\newblock \doi{https://doi.org/10.1016/j.mechmat.2005.05.010}.
+\newblock Macro-, Meso-, Micro- and Nano-Mechanics of Materials.
+
+\bibitem[Yang et~al.(2024)Yang, Henzel, Stewart, and Guo]{Guocytoskeletalpf}
+H.~Yang, T.~Henzel, E.~M. Stewart, and M.~Guo.
+\newblock An interpenetrating-network theory of the cytoskeletal networks in living cells.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 189:\penalty0 105688, 2024.
+\newblock ISSN 0022-5096.
+\newblock \doi{https://doi.org/10.1016/j.jmps.2024.105688}.
+
+\bibitem[Yin et~al.(2021)Yin, Wu, Liu, Qu, and Yang]{Npm2units1}
+T.~Yin, T.~Wu, J.~Liu, S.~Qu, and W.~Yang.
+\newblock Essential work of fracture of soft elastomers.
+\newblock \emph{Journal of the Mechanics and Physics of Solids}, 156:\penalty0 104616, 2021.
+\newblock ISSN 0022-5096.
+
+\bibitem[Yu et~al.(2019)Yu, Bouklas, Landis, and Huang]{Yalinporoelasticgels}
+Y.~Yu, N.~Bouklas, C.~M. Landis, and R.~Huang.
+\newblock {Poroelastic Effects on the Time- and Rate-Dependent Fracture of Polymer Gels}.
+\newblock \emph{Journal of Applied Mechanics}, 87\penalty0 (3):\penalty0 031005, 11 2019.
+\newblock ISSN 0021-8936.
+\newblock \doi{10.1115/1.4045004}.
+
+\bibitem[Yuan et~al.(2022)Yuan, Tong, Liu, and Yang]{VUEL2}
+S.~Yuan, T.~Tong, Z.~Liu, and P.~Yang.
+\newblock Explicit double-phase-field formulation and implementation for bending behavior of uhpc-nc composite beams.
+\newblock \emph{Journal of Building Engineering}, 57:\penalty0 104802, 2022.
+\newblock ISSN 2352-7102.
+
+\bibitem[Yuk et~al.(2016)Yuk, Zhang, Lin, Parada, and Zhao]{Yuk2016}
+H.~Yuk, T.~Zhang, S.~Lin, G.~A. Parada, and X.~Zhao.
+\newblock Tough bonding of hydrogels to diverse non-porous surfaces.
+\newblock \emph{Nature Materials}, 15\penalty0 (2):\penalty0 190--196, Feb 2016.
+\newblock ISSN 1476-4660.
+\newblock \doi{https://doi.org/10.1038/nmat4463}.
+
+\bibitem[Yuk et~al.(2017)Yuk, Lin, Ma, Takaffoli, Fang, and Zhao]{Yuk2017}
+H.~Yuk, S.~Lin, C.~Ma, M.~Takaffoli, N.~X. Fang, and X.~Zhao.
+\newblock Hydraulic hydrogel actuators and robots optically and sonically camouflaged in water.
+\newblock \emph{Nature Communications}, 8\penalty0 (1):\penalty0 14230, Feb 2017.
+\newblock ISSN 2041-1723.
+
+\bibitem[Yuk et~al.(2019)Yuk, Varela, Nabzdyk, Mao, Padera, Roche, and Zhao]{XZhaoadhesive}
+H.~Yuk, C.~E. Varela, C.~S. Nabzdyk, X.~Mao, R.~F. Padera, E.~T. Roche, and X.~Zhao.
+\newblock Dry double-sided tape for adhesion of wet tissues and devices.
+\newblock \emph{Nature}, 575\penalty0 (7781):\penalty0 169--174, Nov 2019.
+\newblock ISSN 1476-4687.
+
+\bibitem[Zhang et~al.(2022)Zhang, Tan, Hu, Yao, and Zhuang]{Doublepf1}
+P.~Zhang, S.~Tan, X.~Hu, W.~Yao, and X.~Zhuang.
+\newblock A double-phase field model for multiple failures in composites.
+\newblock \emph{Composite Structures}, 293:\penalty0 115730, 2022.
+\newblock ISSN 0263-8223.
+\newblock \doi{https://doi.org/10.1016/j.compstruct.2022.115730}.
+
+\bibitem[Zhao et~al.(2020{\natexlab{a}})Zhao, Gong, Wang, Jiang, and Xuan]{ZHAOSSGReview}
+C.~Zhao, X.~Gong, S.~Wang, W.~Jiang, and S.~Xuan.
+\newblock Shear stiffening gels for intelligent anti-impact applications.
+\newblock \emph{Cell Reports Physical Science}, 1\penalty0 (12):\penalty0 100266, 2020{\natexlab{a}}.
+\newblock ISSN 2666-3864.
+
+\bibitem[Zhao et~al.(2021)Zhao, Wang, Ni, He, Xuan, and Gong]{Zhaoetal(2018)IHE}
+C.~Zhao, Y.~Wang, M.~Ni, X.~He, S.~Xuan, and X.~Gong.
+\newblock Dynamic behavior of impact hardening elastomer: A flexible projectile material with unique rate-dependent performance.
+\newblock \emph{Composites Part A: Applied Science and Manufacturing}, 143:\penalty0 106285, 2021.
+\newblock ISSN 1359-835X.
+\newblock \doi{https://doi.org/10.1016/j.compositesa.2021.106285}.
+
+\bibitem[Zhao et~al.(2022)Zhao, Debertrand, Narita, and Creton]{ZHAOfractureDNgels2}
+J.~Zhao, L.~Debertrand, T.~Narita, and C.~Creton.
+\newblock Fracture of dual crosslink gels with permanent and transient crosslinks: Effect of the relaxation time of the transient crosslinks.
+\newblock \emph{Journal of Rheology}, 66\penalty0 (6):\penalty0 1255--1266, 11 2022.
+\newblock ISSN 0148-6055.
+\newblock \doi{10.1122/8.0000460}.
+
+\bibitem[Zhao et~al.(2020{\natexlab{b}})Zhao, Li, Huang, and Li]{fastdamagevolution1}
+P.-C. Zhao, W.~Li, W.~Huang, and C.-H. Li.
+\newblock A self-healing polymer with fast elastic recovery upon stretching.
+\newblock \emph{Molecules}, 25\penalty0 (3), 2020{\natexlab{b}}.
+\newblock ISSN 1420-3049.
+
+\bibitem[Zheng et~al.(2022)Zheng, Lin, Ni, and Zhao]{ZHENG2022}
+D.~Zheng, S.~Lin, J.~Ni, and X.~Zhao.
+\newblock Fracture and fatigue of entangled and unentangled polymer networks.
+\newblock \emph{Extreme Mechanics Letters}, 51:\penalty0 101608, 2022.
+\newblock ISSN 2352-4316.
+\newblock \doi{https://doi.org/10.1016/j.eml.2022.101608}.
+
+\bibitem[Zhong and Srivastava(2021)]{Zhong2021AGrowth}
+J.~Zhong and V.~Srivastava.
+\newblock {A higher-order morphoelastic beam model for tubes and filaments subjected to biological growth}.
+\newblock \emph{International Journal of Solids and Structures}, 233:\penalty0 111235, 12 2021.
+\newblock ISSN 00207683.
+
+\bibitem[Zhu and Joyce(2012)]{ERRthdepnd2}
+X.-K. Zhu and J.~A. Joyce.
+\newblock Review of fracture toughness (g, k, j, ctod, ctoa) testing and standardization.
+\newblock \emph{Engineering Fracture Mechanics}, 85:\penalty0 1--46, 2012.
+\newblock ISSN 0013-7944.
+\newblock \doi{https://doi.org/10.1016/j.engfracmech.2012.02.001}.
+
+\bibitem[Zong et~al.(2021)Zong, Liu, Wei, Dong, Yang, and Zhai]{Zongetal(2021)rheometryref}
+H.~Zong, Z.~Liu, R.~Wei, B.~Dong, X.~Yang, and W.~Zhai.
+\newblock Shear thicking and impact resistance properties of stg in flexible protection application.
+\newblock \emph{Journal of Physics: Conference Series}, 1855\penalty0 (1):\penalty0 012022, mar 2021.
+\newblock \doi{https://dx.doi.org/10.1088/1742-6596/1855/1/012022}.
+
+\end{thebibliography}

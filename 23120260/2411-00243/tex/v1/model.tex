@@ -1,0 +1,72 @@
+\section{Discretization of the Schwinger Model on a Quantum System}
+\label{sec:model}
+\subsection{The Continuum Schwinger Model}
+
+The Schwinger model is the theory of QED in $1+1$ dimensions. In the presence of a topological $\theta$ term its Lagrangian is typically written as
+\begin{equation}
+\mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \frac{g\theta}{4\pi}\epsilon_{\mu\nu}F^{\mu\nu} + i\bar{\psi}\gamma^\mu(\partial_{\mu} + igA_{\mu})\psi - m\bar{\psi}\psi,
+\end{equation}
+where $F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}$ is the field tensor, the $A_{\mu}$ are $\mathrm{U}(1)$ gauge fields, and $\epsilon_{\mu\nu}$ is the totally antisymmetric tensor. In $1+1$ dimensions, the gamma matrices are $\gamma^0=\sigma^z$, $\gamma^1=i\sigma^y$, and $\gamma^5=\gamma^0\gamma^1$.
+
+The theory has three parameters: the gauge coupling $g$, the fermion mass $m$, and the $\theta$ angle. Following prior works~\cite{Chakraborty:2020uhf}, we perform a chiral transformation of the fields $\psi \rightarrow e^{i\frac{\theta}{2}\gamma_5} \psi$, $\bar{\psi} \rightarrow \bar{\psi} e^{i\frac{\theta}{2}\gamma_5}$ and the path integral measure~\cite{Fujikawa:1979ay,Roskies:1981} to arrive at an equivalent Lagrangian
+\begin{equation}
+\mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + i\bar{\psi}\gamma^\mu(\partial_{\mu} + igA_{\mu})\psi - m\bar{\psi}e^{i\theta\gamma_5}\psi.
+\end{equation}
+We choose the temporal gauge $A_0 = 0$, and then a standard Legendre transform yields the Hamiltonian
+\begin{equation}
+\label{eq:cont_hamiltonian}
+H = \int dx \left[ -i\bar{\psi}\gamma^1 (\partial_1 + igA_1)\psi + m\bar{\psi}e^{i \theta \gamma_5}\psi + \frac{1}{2} E^2 \right],
+\end{equation}
+where in one spatial dimension, the electric field $E=F^{10}=-\dot{A}^1$ has only one component, and there is no magnetic field. To satisfy gauge invariance in the temporal gauge, additional local constraints that govern the interaction between matter and gauge fields must be imposed. These constraints are provided by the Gauss law $\partial_1 E(x) = g \bar\psi(x)\gamma^0 \psi(x)$.
+
+\subsection{Discretization}
+
+To simulate the Schwinger model on a quantum device, we need a discretized formulation of the Hamiltonian Eq.~(\ref{eq:cont_hamiltonian}). We use a 1-dimensional spatial lattice with $N$ sites and lattice spacing $a$. Time is kept continuous. Following prior works~\cite{martinez2016,muschik2017u,Chakraborty:2020uhf} we use Kogut-Susskind staggered fermions~\cite{kogut1975hamiltonian,susskind1977lattice} to arrive at the Hamiltonian
+\begin{align}
+\nonumber
+H &= -i\sum_{n=1}^{N-1}\left(\frac{1}{2a} - (-1)^n\frac{m}{2}\sin\theta \right) \left[\chi_n^\dagger e^{i\phi_n}\chi_{n+1} - \text{h.c.} \right] \\
+ & \qquad + m\cos\theta\sum_{n=1}^N {(-1)}^n\chi_n^\dagger \chi_{n} + \frac{g^2a}{2} \sum_{n=1}^{N-1} L^2_n.
+\end{align}
+The gauge operators have been rescaled as $A^1(x_n) \rightarrow -\phi_n/(ag)$ and $E(x_n) \rightarrow gL_n$, where $\phi_n$ lives on site $n$, and $L_n$ lives on the link between sites $n$ and $n+1$. The Dirac fermion $\psi(x) = (\psi_u(x),\psi_d(x))^T$, which is a 2-component spinor in $1+1$ dimensions, has been mapped to a pair of 1-component fermions $\chi_n$ living on neighboring sites such that $\chi_n = \sqrt{a}\psi_u(x_n)$ for even $n$ and $\chi_n = \sqrt{a}\psi_d(x_n)$ for odd $n$. In this formulation the Gauss law becomes~\cite{muschik2017u}
+\begin{equation}
+L_n - L_{n-1} = \chi_n^\dagger \chi_{n} - \frac{1-(-1)^n}{2} .
+\end{equation}
+For a given matter configuration, the gauge fields are now completely determined\footnote{This is true when using open boundary conditions as in this work.}.
+
+\subsection{Spin Hamiltonian}
+
+The $\chi$ field can be transformed into a qubit formulation
+using the Jordan-Wigner transformation~\cite{wigner1928paulische}
+that transforms the fermionic variables into spin variables
+\begin{equation}
+	\chi_n = \left(\prod_{l<n} -i Z_l\right) \frac{X_n - i Y_n}{2},
+\end{equation}
+where the spin variables are the Pauli matrices located at each lattice
+point, $X_i=\sigma_i^x$, $Y_i=\sigma_i^y$, $Z_i=\sigma_i^z$.
+Using open boundary conditions, i.e.~fixing the conjugate momentum $L$ at the
+boundary, and solving the Gauss law, one obtains
+\begin{equation}
+	L_n = L_0 + \frac{1}{2}\sum_{l=1}^n\left( Z_l + (-1)^l \right)\,,
+\end{equation}
+where the value of $L_0$ specifies the boundary conditions.
+Removing $L_0$ is equivalent to shifting the $\theta$ angle by
+$2\pi L_0$~\cite{coleman:1976uz},
+thus, we can safely set $L_0 = 0$.
+The $\phi$ phases can be absorbed into the fields by a gauge transformation
+$\chi_n \rightarrow \prod_{l<n}[e^{-i\phi_n}]\chi_n$.
+
+The final Hamiltonian, omitting constant terms, can be decomposed as
+$H = H_{ZZ} + H_{\pm} + H_{Z}$, where
+\begin{align}
+	\label{eq:hamiltonian}
+	\nonumber
+	H_{ZZ}  & = \frac{J}{2}\sum_{n=2}^{N-1}\sum_{1\leq k < l \leq n} Z_k Z_l \\
+	H_{\pm} & = \frac{1}{2}\sum_{n=1}^{N-1}
+	\left(w - (-1)^n\frac{m}{2}\sin\theta \right)
+	\left[X_n X_{n+1} + Y_n Y_{n+1} \right]                                  \\
+	\nonumber
+	H_{Z}   & = \frac{m\cos\theta}{2} \sum_{n=1}^N (-1)^n Z_n
+	-\frac{J}{2}\sum_{n=1}^{N-1} (n ~\text{mod} ~2) \sum_{l=1}^n Z_l\,,
+\end{align}
+where, using the same notation as Ref.~\cite{Chakraborty:2020uhf}, we denote
+the relevant couplings for the adiabatic evolution as $w=1/(2a)$ and $J=g^2a/2$.

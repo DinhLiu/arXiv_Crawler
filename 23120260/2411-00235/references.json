@@ -1,0 +1,138 @@
+{
+    "2412-17909": {
+        "title": "Continuous-variable designs and design-based shadow tomography from random lattices",
+        "authors": [
+            "Jonathan Conrad",
+            "Joseph T. Iosue",
+            "Ansgar G. Burchards",
+            "Victor V. Albert"
+        ],
+        "submission_date": "2024-12-23T19:04:47+00:00",
+        "revised_dates": [
+            "2025-07-07T12:28:19+00:00"
+        ],
+        "publication_venue": null
+    },
+    "2410-07332": {
+        "title": "Fiber Bundle Fault Tolerance of GKP Codes",
+        "authors": [
+            "Ansgar G. Burchards",
+            "Steven T. Flammia",
+            "Jonathan Conrad"
+        ],
+        "submission_date": "2024-10-09T18:00:07+00:00",
+        "revised_dates": [
+            "2025-10-07T12:49:38+00:00"
+        ],
+        "publication_venue": "Quantum 9, 1899 (2025)"
+    },
+    "2407-03270": {
+        "title": "Lattices, Gates, and Curves: GKP codes as a Rosetta stone",
+        "authors": [
+            "Jonathan Conrad",
+            "Ansgar G. Burchards",
+            "Steven T. Flammia"
+        ],
+        "submission_date": "2024-07-03T16:57:53+00:00",
+        "revised_dates": [
+            "2024-07-10T08:06:26+00:00"
+        ],
+        "publication_venue": null
+    },
+    "2405-01431": {
+        "title": "Learning quantum states of continuous variable systems",
+        "authors": [
+            "Francesco Anna Mele",
+            "Antonio Anna Mele",
+            "Lennart Bittel",
+            "Jens Eisert",
+            "Vittorio Giovannetti",
+            "Ludovico Lami",
+            "Lorenzo Leone",
+            "Salvatore F. E. Oliviero"
+        ],
+        "submission_date": "2024-05-02T16:19:55+00:00",
+        "revised_dates": [
+            "2024-11-07T09:33:36+00:00"
+        ],
+        "publication_venue": null
+    },
+    "2403-04751": {
+        "title": "Noise-mitigated randomized measurements and self-calibrating shadow estimation",
+        "authors": [
+            "E. Onorati",
+            "J. Kitzinger",
+            "J. Helsen",
+            "M. Ioannou",
+            "A. H. Werner",
+            "I. Roth",
+            "J. Eisert"
+        ],
+        "submission_date": "2024-03-07T18:53:56+00:00",
+        "revised_dates": [],
+        "publication_venue": null
+    },
+    "2310-11400": {
+        "title": "Autonomous quantum error correction of Gottesman-Kitaev-Preskill states",
+        "authors": [
+            "Dany Lachance-Quirion",
+            "Marc-Antoine Lemonde",
+            "Jean Olivier Simoneau",
+            "Lucas St-Jean",
+            "Pascal Lemieux",
+            "Sara Turcotte",
+            "Wyatt Wright",
+            "Amélie Lacroix",
+            "Joëlle Fréchette-Viens",
+            "Ross Shillito",
+            "Florian Hopfmueller",
+            "Maxime Tremblay",
+            "Nicholas E. Frattini",
+            "Julien Camirand Lemyre",
+            "Philippe St-Jean"
+        ],
+        "submission_date": "2023-10-17T17:07:28+00:00",
+        "revised_dates": [
+            "2023-10-19T12:28:09+00:00"
+        ],
+        "publication_venue": null
+    },
+    "2211-05127": {
+        "title": "Continuous-variable quantum state designs: theory and applications",
+        "authors": [
+            "Joseph T. Iosue",
+            "Kunal Sharma",
+            "Michael J. Gullans",
+            "Victor V. Albert"
+        ],
+        "submission_date": "2022-11-09T19:00:00+00:00",
+        "revised_dates": [
+            "2024-06-16T21:26:15+00:00"
+        ],
+        "publication_venue": "Phys. Rev. X 14, 011013 (2024)"
+    },
+    "1711-01053": {
+        "title": "Shadow Tomography of Quantum States",
+        "authors": [
+            "Scott Aaronson"
+        ],
+        "submission_date": "2017-11-03T08:07:11+00:00",
+        "revised_dates": [
+            "2018-11-13T07:14:02+00:00"
+        ],
+        "publication_venue": null
+    },
+    "quant-ph-0003101": {
+        "title": "Private Quantum Channels and the Cost of Randomizing Quantum Information",
+        "authors": [
+            "Michele Mosca",
+            "Alain Tapp",
+            "Ronald de Wolf"
+        ],
+        "submission_date": "2000-03-22T03:12:58+00:00",
+        "revised_dates": [
+            "2000-03-27T23:44:08+00:00"
+        ],
+        "publication_venue": null
+    }
+}

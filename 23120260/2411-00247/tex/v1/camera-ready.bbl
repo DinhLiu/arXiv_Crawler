@@ -1,0 +1,530 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{OJMDF21}
+
+\bibitem[ABNH23]{altintacs2023disentangling}
+G{\"u}l~Sena Alt{\i}nta{\c{s}}, Gregor Bachmann, Lorenzo Noci, and Thomas Hofmann.
+\newblock Disentangling linear mode connectivity.
+\newblock In {\em UniReps: the First Workshop on Unifying Representations in Neural Models}, 2023.
+
+\bibitem[ABPC23]{abe2023pathologies}
+Taiga Abe, E~Kelly Buchanan, Geoff Pleiss, and John~Patrick Cunningham.
+\newblock Pathologies of predictive diversity in deep ensembles.
+\newblock {\em Transactions on Machine Learning Research}, 2023.
+
+\bibitem[AHS22]{ainsworth2022git}
+Samuel~K Ainsworth, Jonathan Hayase, and Siddhartha Srinivasa.
+\newblock Git re-basin: Merging models modulo permutation symmetries.
+\newblock {\em arXiv preprint arXiv:2209.04836}, 2022.
+
+\bibitem[AP20]{adlam2020understanding}
+Ben Adlam and Jeffrey Pennington.
+\newblock Understanding double descent requires a fine-grained bias-variance decomposition.
+\newblock {\em Advances in neural information processing systems}, 33:11022--11032, 2020.
+
+\bibitem[ASS20]{advani2020high}
+Madhu~S Advani, Andrew~M Saxe, and Haim Sompolinsky.
+\newblock High-dimensional dynamics of generalization error in neural networks.
+\newblock {\em Neural Networks}, 132:428--446, 2020.
+
+\bibitem[BBL03]{bousquet2003introduction}
+Olivier Bousquet, St{\'e}phane Boucheron, and G{\'a}bor Lugosi.
+\newblock Introduction to statistical learning theory.
+\newblock In {\em Summer school on machine learning}, pages 169--207. Springer, 2003.
+
+\bibitem[BD10]{biau2010layered}
+G{\'e}rard Biau and Luc Devroye.
+\newblock On the layered nearest neighbour estimate, the bagged nearest neighbour estimate and the random forest method in regression and classification.
+\newblock {\em Journal of Multivariate Analysis}, 101(10):2499--2518, 2010.
+
+\bibitem[Bel21]{belkin2021fit}
+Mikhail Belkin.
+\newblock Fit without fear: remarkable mathematical phenomena of deep learning through the prism of interpolation.
+\newblock {\em Acta Numerica}, 30:203--248, 2021.
+
+\bibitem[BHMM19]{belkin2019reconciling}
+Mikhail Belkin, Daniel Hsu, Siyuan Ma, and Soumik Mandal.
+\newblock Reconciling modern machine-learning practice and the classical bias--variance trade-off.
+\newblock {\em Proceedings of the National Academy of Sciences}, 116(32):15849--15854, 2019.
+
+\bibitem[BHX20]{belkin2020two}
+Mikhail Belkin, Daniel Hsu, and Ji~Xu.
+\newblock Two models of double descent for weak features.
+\newblock {\em SIAM Journal on Mathematics of Data Science}, 2(4):1167--1180, 2020.
+
+\bibitem[BLLT20]{bartlett2020benign}
+Peter~L Bartlett, Philip~M Long, G{\'a}bor Lugosi, and Alexander Tsigler.
+\newblock Benign overfitting in linear regression.
+\newblock {\em Proceedings of the National Academy of Sciences}, 117(48):30063--30070, 2020.
+
+\bibitem[BM19]{bietti2019inductive}
+Alberto Bietti and Julien Mairal.
+\newblock On the inductive bias of neural tangent kernels.
+\newblock {\em Advances in Neural Information Processing Systems}, 32, 2019.
+
+\bibitem[BMM18]{belkin2018understand}
+Mikhail Belkin, Siyuan Ma, and Soumik Mandal.
+\newblock To understand deep learning we need to understand kernel learning.
+\newblock In {\em International Conference on Machine Learning}, pages 541--549. PMLR, 2018.
+
+\bibitem[BMR{\etalchar{+}}20]{brownlanguage}
+Tom~B Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et~al.
+\newblock Language models are few-shot learners.
+\newblock {\em Advances in neural information processing systems}, 2020.
+
+\bibitem[BO96]{bos1996dynamics}
+Siegfried B{\"o}s and Manfred Opper.
+\newblock Dynamics of training.
+\newblock {\em Advances in Neural Information Processing Systems}, 9, 1996.
+
+\bibitem[Bre01]{breiman2001random}
+Leo Breiman.
+\newblock Random forests.
+\newblock {\em Machine learning}, 45:5--32, 2001.
+
+\bibitem[BSM{\etalchar{+}}22]{benzing2022random}
+Frederik Benzing, Simon Schug, Robert Meier, Johannes Von~Oswald, Yassir Akram, Nicolas Zucchet, Laurence Aitchison, and Angelika Steger.
+\newblock Random initialisations performing above chance and how to find them.
+\newblock {\em arXiv preprint arXiv:2209.07509}, 2022.
+
+\bibitem[CJvdS23]{curth2023u}
+Alicia Curth, Alan Jeffares, and Mihaela van~der Schaar.
+\newblock A u-turn on double descent: Rethinking parameter counting in statistical learning.
+\newblock {\em Advances in Neural Information Processing Systems}, 36, 2023.
+
+\bibitem[CJvdS24]{curth2024random}
+Alicia Curth, Alan Jeffares, and Mihaela van~der Schaar.
+\newblock Why do random forests work? understanding tree ensembles as self-regularizing adaptive smoothers.
+\newblock {\em arXiv preprint arXiv:2402.01502}, 2024.
+
+\bibitem[CL21]{chatterji2021finite}
+Niladri~S Chatterji and Philip~M Long.
+\newblock Finite-sample analysis of interpolating linear classifiers in the overparameterized regime.
+\newblock {\em The Journal of Machine Learning Research}, 22(1):5721--5750, 2021.
+
+\bibitem[CMBK21]{chen2021multiple}
+Lin Chen, Yifei Min, Mikhail Belkin, and Amin Karbasi.
+\newblock Multiple descent: Design your own generalization curve.
+\newblock {\em Advances in Neural Information Processing Systems}, 34:8898--8912, 2021.
+
+\bibitem[COB19]{chizat2019lazy}
+Lenaic Chizat, Edouard Oyallon, and Francis Bach.
+\newblock On lazy training in differentiable programming.
+\newblock {\em Advances in neural information processing systems}, 32, 2019.
+
+\bibitem[Cur24]{curth2024classical}
+Alicia Curth.
+\newblock Classical statistical (in-sample) intuitions don't generalize well: A note on bias-variance tradeoffs, overfitting and moving from fixed to random designs.
+\newblock {\em arXiv preprint arXiv:2409.18842}, 2024.
+
+\bibitem[CVSK22]{choshen2022fusing}
+Leshem Choshen, Elad Venezian, Noam Slonim, and Yoav Katz.
+\newblock Fusing finetuned models for better pretraining.
+\newblock {\em arXiv preprint arXiv:2204.03044}, 2022.
+
+\bibitem[Die02]{dietterich2002ensemble}
+Thomas~G Dietterich.
+\newblock Ensemble learning.
+\newblock {\em The handbook of brain theory and neural networks}, 2(1):110--125, 2002.
+
+\bibitem[DLL{\etalchar{+}}19]{du2019gradient}
+Simon Du, Jason Lee, Haochuan Li, Liwei Wang, and Xiyu Zhai.
+\newblock Gradient descent finds global minima of deep neural networks.
+\newblock In {\em International conference on machine learning}, pages 1675--1685. PMLR, 2019.
+
+\bibitem[DLM20]{derezinski2020exact}
+Michal Derezinski, Feynman~T Liang, and Michael~W Mahoney.
+\newblock Exact expressions for double descent and implicit regularization via surrogate random design.
+\newblock {\em Advances in neural information processing systems}, 33:5152--5164, 2020.
+
+\bibitem[Dom20]{domingos2020every}
+Pedro Domingos.
+\newblock Every model learned by gradient descent is approximately a kernel machine.
+\newblock {\em arXiv preprint arXiv:2012.00152}, 2020.
+
+\bibitem[dRBK20]{d2020double}
+St{\'e}phane d’Ascoli, Maria Refinetti, Giulio Biroli, and Florent Krzakala.
+\newblock Double trouble in double descent: Bias and variance (s) in the lazy regime.
+\newblock In {\em International Conference on Machine Learning}, pages 2280--2290. PMLR, 2020.
+
+\bibitem[DVSH18]{draxler2018essentially}
+Felix Draxler, Kambis Veschgini, Manfred Salmhofer, and Fred Hamprecht.
+\newblock Essentially no barriers in neural network energy landscape.
+\newblock In {\em International conference on machine learning}, pages 1309--1318. PMLR, 2018.
+
+\bibitem[ESSN21]{entezari2021role}
+Rahim Entezari, Hanie Sedghi, Olga Saukh, and Behnam Neyshabur.
+\newblock The role of permutation invariance in linear mode connectivity of neural networks.
+\newblock {\em arXiv preprint arXiv:2110.06296}, 2021.
+
+\bibitem[FB16]{freeman2016topology}
+C~Daniel Freeman and Joan Bruna.
+\newblock Topology and geometry of half-rectified network optimization.
+\newblock {\em arXiv preprint arXiv:1611.01540}, 2016.
+
+\bibitem[FDP{\etalchar{+}}20]{fort2020deep}
+Stanislav Fort, Gintare~Karolina Dziugaite, Mansheej Paul, Sepideh Kharaghani, Daniel~M Roy, and Surya Ganguli.
+\newblock Deep learning versus kernel learning: an empirical study of loss landscape geometry and the time evolution of the neural tangent kernel.
+\newblock {\em Advances in Neural Information Processing Systems}, 33:5850--5861, 2020.
+
+\bibitem[FDRC20]{frankle2020linear}
+Jonathan Frankle, Gintare~Karolina Dziugaite, Daniel Roy, and Michael Carbin.
+\newblock Linear mode connectivity and the lottery ticket hypothesis.
+\newblock In {\em International Conference on Machine Learning}, pages 3259--3269. PMLR, 2020.
+
+\bibitem[FHL19]{fort2019deep}
+Stanislav Fort, Huiyi Hu, and Balaji Lakshminarayanan.
+\newblock Deep ensembles: A loss landscape perspective.
+\newblock {\em arXiv preprint arXiv:1912.02757}, 2019.
+
+\bibitem[Fri01]{friedman2001greedy}
+Jerome~H Friedman.
+\newblock Greedy function approximation: a gradient boosting machine.
+\newblock {\em Annals of statistics}, pages 1189--1232, 2001.
+
+\bibitem[GBD92]{geman1992neural}
+Stuart Geman, Elie Bienenstock, and Ren{\'e} Doursat.
+\newblock Neural networks and the bias/variance dilemma.
+\newblock {\em Neural computation}, 4(1):1--58, 1992.
+
+\bibitem[GIP{\etalchar{+}}18]{garipov2018loss}
+Timur Garipov, Pavel Izmailov, Dmitrii Podoprikhin, Dmitry~P Vetrov, and Andrew~G Wilson.
+\newblock Loss surfaces, mode connectivity, and fast ensembling of dnns.
+\newblock {\em Advances in neural information processing systems}, 31, 2018.
+
+\bibitem[GK24]{greydanus2020scaling}
+Samuel~James Greydanus and Dmitry Kobak.
+\newblock Scaling down deep learning with mnist-1d.
+\newblock In {\em Forty-first International Conference on Machine Learning}, 2024.
+
+\bibitem[GMMM19]{ghorbani2019limitations}
+Behrooz Ghorbani, Song Mei, Theodor Misiakiewicz, and Andrea Montanari.
+\newblock Limitations of lazy training of two-layers neural network.
+\newblock {\em Advances in Neural Information Processing Systems}, 32, 2019.
+
+\bibitem[GOV22]{grinsztajn2022tree}
+L{\'e}o Grinsztajn, Edouard Oyallon, and Ga{\"e}l Varoquaux.
+\newblock Why do tree-based models still outperform deep learning on typical tabular data?
+\newblock {\em Advances in neural information processing systems}, 35:507--520, 2022.
+
+\bibitem[GPK22]{golikov2022neural}
+Eugene Golikov, Eduard Pokonechnyy, and Vladimir Korviakov.
+\newblock Neural tangent kernel: A survey.
+\newblock {\em arXiv preprint arXiv:2208.13614}, 2022.
+
+\bibitem[GSJW20]{geiger2020disentangling}
+Mario Geiger, Stefano Spigler, Arthur Jacot, and Matthieu Wyart.
+\newblock Disentangling feature and lazy training in deep neural networks.
+\newblock {\em Journal of Statistical Mechanics: Theory and Experiment}, 2020(11):113301, 2020.
+
+\bibitem[HHLS24]{haas2024mind}
+Moritz Haas, David Holzm{\"u}ller, Ulrike Luxburg, and Ingo Steinwart.
+\newblock Mind the spikes: Benign overfitting of kernels and neural networks in fixed dimension.
+\newblock {\em Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[HMRT22]{hastie2022surprises}
+Trevor Hastie, Andrea Montanari, Saharon Rosset, and Ryan~J Tibshirani.
+\newblock Surprises in high-dimensional ridgeless least squares interpolation.
+\newblock {\em The Annals of Statistics}, 50(2):949--986, 2022.
+
+\bibitem[HT90]{hastie1990GAM}
+Trevor Hastie and Robert Tibshirani.
+\newblock Generalized additive models.
+\newblock {\em Monographs on statistics and applied probability. Chapman \& Hall}, 43:335, 1990.
+
+\bibitem[HTF09]{hastie2009elements}
+Trevor Hastie, Robert Tibshirani, and Jerome~H Friedman.
+\newblock {\em The elements of statistical learning: data mining, inference, and prediction}, volume~2.
+\newblock Springer, 2009.
+
+\bibitem[HXZQ22]{he2022sparse}
+Zheng He, Zeke Xie, Quanzhi Zhu, and Zengchang Qin.
+\newblock Sparse double descent: Where network pruning aggravates overfitting.
+\newblock In {\em International Conference on Machine Learning}, pages 8635--8659. PMLR, 2022.
+
+\bibitem[HZRS16]{he2016deep}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and pattern recognition}, pages 770--778, 2016.
+
+\bibitem[Ide]{Idelbayev18a}
+Yerlan Idelbayev.
+\newblock Proper {ResNet} implementation for {CIFAR10/CIFAR100} in {PyTorch}.
+\newblock \url{https://github.com/akamaster/pytorch_resnet_cifar10}.
+\newblock Accessed: 2024-05-15.
+
+\bibitem[IPG{\etalchar{+}}18]{izmailov2018averaging}
+Pavel Izmailov, Dmitrii Podoprikhin, Timur Garipov, Dmitry Vetrov, and Andrew~Gordon Wilson.
+\newblock Averaging weights leads to wider optima and better generalization.
+\newblock {\em arXiv preprint arXiv:1803.05407}, 2018.
+
+\bibitem[IWG{\etalchar{+}}22]{ilharco2022patching}
+Gabriel Ilharco, Mitchell Wortsman, Samir~Yitzhak Gadre, Shuran Song, Hannaneh Hajishirzi, Simon Kornblith, Ali Farhadi, and Ludwig Schmidt.
+\newblock Patching open-vocabulary models by interpolating weights.
+\newblock {\em Advances in Neural Information Processing Systems}, 35:29262--29277, 2022.
+
+\bibitem[JGH18]{jacot2018neural}
+Arthur Jacot, Franck Gabriel, and Cl{\'e}ment Hongler.
+\newblock Neural tangent kernel: Convergence and generalization in neural networks.
+\newblock {\em Advances in neural information processing systems}, 31, 2018.
+
+\bibitem[JLCvdS24]{jeffares2024joint}
+Alan Jeffares, Tennison Liu, Jonathan Crabb{\'e}, and Mihaela van~der Schaar.
+\newblock Joint training of deep ensembles fails due to learner collusion.
+\newblock {\em Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[KAF{\etalchar{+}}24]{kwok2024dataset}
+Devin Kwok, Nikhil Anand, Jonathan Frankle, Gintare~Karolina Dziugaite, and David Rolnick.
+\newblock Dataset difficulty and the role of inductive bias.
+\newblock {\em arXiv preprint arXiv:2401.01867}, 2024.
+
+\bibitem[KB14]{kingma2014adam}
+Diederik~P Kingma and Jimmy Ba.
+\newblock Adam: A method for stochastic optimization.
+\newblock {\em arXiv preprint arXiv:1412.6980}, 2014.
+
+\bibitem[KBGP24]{kumargrokking}
+Tanishq Kumar, Blake Bordelon, Samuel~J Gershman, and Cengiz Pehlevan.
+\newblock Grokking as the transition from lazy to rich training dynamics.
+\newblock In {\em The Twelfth International Conference on Learning Representations}, 2024.
+
+\bibitem[KH{\etalchar{+}}09]{krizhevsky2009learning}
+Alex Krizhevsky, Geoffrey Hinton, et~al.
+\newblock Learning multiple layers of features from tiny images.
+\newblock 2009.
+
+\bibitem[KSH12]{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock {\em Advances in neural information processing systems}, 25, 2012.
+
+\bibitem[LBBH98]{lecun1998gradient}
+Yann LeCun, L{\'e}on Bottou, Yoshua Bengio, and Patrick Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock {\em Proceedings of the IEEE}, 86(11):2278--2324, 1998.
+
+\bibitem[LBBS24]{levi2023grokking}
+Noam Levi, Alon Beck, and Yohai Bar-Sinai.
+\newblock Grokking in linear estimators--a solvable model that groks without understanding.
+\newblock {\em International Conference on Learning Representations}, 2024.
+
+\bibitem[LD21]{lin2021causes}
+Licong Lin and Edgar Dobriban.
+\newblock What causes the test error? going beyond bias-variance via anova.
+\newblock {\em The Journal of Machine Learning Research}, 22(1):6925--7006, 2021.
+
+\bibitem[LH17]{loshchilov2017decoupled}
+Ilya Loshchilov and Frank Hutter.
+\newblock Decoupled weight decay regularization.
+\newblock {\em arXiv preprint arXiv:1711.05101}, 2017.
+
+\bibitem[LJ06]{lin2006random}
+Yi~Lin and Yongho Jeon.
+\newblock Random forests and adaptive nearest neighbors.
+\newblock {\em Journal of the American Statistical Association}, 101(474):578--590, 2006.
+
+\bibitem[LJL{\etalchar{+}}24]{lyu2023dichotomy}
+Kaifeng Lyu, Jikai Jin, Zhiyuan Li, Simon~Shaolei Du, Jason~D Lee, and Wei Hu.
+\newblock Dichotomy of early and late phase implicit biases can provably induce grokking.
+\newblock In {\em The Twelfth International Conference on Learning Representations}, 2024.
+
+\bibitem[LKN{\etalchar{+}}22]{liu2022towards}
+Ziming Liu, Ouail Kitouni, Niklas~S Nolte, Eric Michaud, Max Tegmark, and Mike Williams.
+\newblock Towards understanding grokking: An effective theory of representation learning.
+\newblock {\em Advances in Neural Information Processing Systems}, 35:34651--34663, 2022.
+
+\bibitem[LMT22]{liu2022omnigrok}
+Ziming Liu, Eric~J Michaud, and Max Tegmark.
+\newblock Omnigrok: Grokking beyond algorithmic data.
+\newblock In {\em The Eleventh International Conference on Learning Representations}, 2022.
+
+\bibitem[LPB17]{lakshminarayanan2017simple}
+Balaji Lakshminarayanan, Alexander Pritzel, and Charles Blundell.
+\newblock Simple and scalable predictive uncertainty estimation using deep ensembles.
+\newblock {\em Advances in neural information processing systems}, 30, 2017.
+
+\bibitem[LSP{\etalchar{+}}20]{lee2020finite}
+Jaehoon Lee, Samuel Schoenholz, Jeffrey Pennington, Ben Adlam, Lechao Xiao, Roman Novak, and Jascha Sohl-Dickstein.
+\newblock Finite versus infinite neural networks: an empirical study.
+\newblock {\em Advances in Neural Information Processing Systems}, 33:15156--15172, 2020.
+
+\bibitem[LVM{\etalchar{+}}20]{loog2020brief}
+Marco Loog, Tom Viering, Alexander Mey, Jesse~H Krijthe, and David~MJ Tax.
+\newblock A brief prehistory of double descent.
+\newblock {\em Proceedings of the National Academy of Sciences}, 117(20):10625--10626, 2020.
+
+\bibitem[LXS{\etalchar{+}}19]{lee2019wide}
+Jaehoon Lee, Lechao Xiao, Samuel Schoenholz, Yasaman Bahri, Roman Novak, Jascha Sohl-Dickstein, and Jeffrey Pennington.
+\newblock Wide neural networks of any depth evolve as linear models under gradient descent.
+\newblock {\em Advances in neural information processing systems}, 32, 2019.
+
+\bibitem[LZB20]{liu2020linearity}
+Chaoyue Liu, Libin Zhu, and Misha Belkin.
+\newblock On the linearity of large non-linear models: when and why the tangent kernel is constant.
+\newblock {\em Advances in Neural Information Processing Systems}, 33:15954--15964, 2020.
+
+\bibitem[Mac91]{mackay1991bayesian}
+David MacKay.
+\newblock Bayesian model comparison and backprop nets.
+\newblock {\em Advances in neural information processing systems}, 4, 1991.
+
+\bibitem[MBB18]{ma2018power}
+Siyuan Ma, Raef Bassily, and Mikhail Belkin.
+\newblock The power of interpolation: Understanding the effectiveness of sgd in modern over-parametrized learning.
+\newblock In {\em International Conference on Machine Learning}, pages 3325--3334. PMLR, 2018.
+
+\bibitem[MBS23]{mohamadi2023fast}
+Mohamad~Amin Mohamadi, Wonho Bae, and Danica~J Sutherland.
+\newblock A fast, well-founded approximation to the empirical neural tangent kernel.
+\newblock In {\em International Conference on Machine Learning}, pages 25061--25081. PMLR, 2023.
+
+\bibitem[MBW20]{maddox2020rethinking}
+Wesley~J Maddox, Gregory Benton, and Andrew~Gordon Wilson.
+\newblock Rethinking parameter counting in deep models: Effective dimensionality revisited.
+\newblock {\em arXiv preprint arXiv:2003.02139}, 2020.
+
+\bibitem[MKV{\etalchar{+}}23]{mcelfresh2024neural}
+Duncan McElfresh, Sujay Khandagale, Jonathan Valverde, Vishak Prasad~C, Ganesh Ramakrishnan, Micah Goldblum, and Colin White.
+\newblock When do neural nets outperform boosted trees on tabular data?
+\newblock {\em Advances in Neural Information Processing Systems}, 36, 2023.
+
+\bibitem[MOB24]{miller2023grokking}
+Jack Miller, Charles O'Neill, and Thang Bui.
+\newblock Grokking beyond neural networks: An empirical exploration with model complexity.
+\newblock {\em Transactions on Machine Learning Research (TMLR)}, 2024.
+
+\bibitem[Moo91]{moody1991effective}
+John Moody.
+\newblock The effective number of parameters: An analysis of generalization and regularization in nonlinear learning systems.
+\newblock {\em Advances in neural information processing systems}, 4, 1991.
+
+\bibitem[MSA{\etalchar{+}}22]{mallinar2022benign}
+Neil Mallinar, James Simon, Amirhesam Abedsoltan, Parthe Pandit, Misha Belkin, and Preetum Nakkiran.
+\newblock Benign, tempered, or catastrophic: Toward a refined taxonomy of overfitting.
+\newblock {\em Advances in Neural Information Processing Systems}, 35:1182--1195, 2022.
+
+\bibitem[NCL{\etalchar{+}}23]{nanda2023progress}
+Neel Nanda, Lawrence Chan, Tom Lieberum, Jess Smith, and Jacob Steinhardt.
+\newblock Progress measures for grokking via mechanistic interpretability.
+\newblock {\em arXiv preprint arXiv:2301.05217}, 2023.
+
+\bibitem[Nea19]{neal2019bias}
+Brady Neal.
+\newblock On the bias-variance tradeoff: Textbooks need an update.
+\newblock {\em arXiv preprint arXiv:1912.08286}, 2019.
+
+\bibitem[NKB{\etalchar{+}}21]{nakkiran2021deep}
+Preetum Nakkiran, Gal Kaplun, Yamini Bansal, Tristan Yang, Boaz Barak, and Ilya Sutskever.
+\newblock Deep double descent: Where bigger models and more data hurt.
+\newblock {\em Journal of Statistical Mechanics: Theory and Experiment}, 2021(12):124003, 2021.
+
+\bibitem[NMB{\etalchar{+}}18]{neal2018modern}
+Brady Neal, Sarthak Mittal, Aristide Baratin, Vinayak Tantia, Matthew Scicluna, Simon Lacoste-Julien, and Ioannis Mitliagkas.
+\newblock A modern take on the bias-variance tradeoff in neural networks.
+\newblock {\em arXiv preprint arXiv:1810.08591}, 2018.
+
+\bibitem[NSZ20]{neyshabur2020being}
+Behnam Neyshabur, Hanie Sedghi, and Chiyuan Zhang.
+\newblock What is being transferred in transfer learning?
+\newblock {\em Advances in neural information processing systems}, 33:512--523, 2020.
+
+\bibitem[NVKM20]{nakkiran2020optimal}
+Preetum Nakkiran, Prayaag Venkat, Sham Kakade, and Tengyu Ma.
+\newblock Optimal regularization can mitigate double descent.
+\newblock {\em arXiv preprint arXiv:2003.01897}, 2020.
+
+\bibitem[NWC{\etalchar{+}}11]{netzer2011reading}
+Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Baolin Wu, Andrew~Y Ng, et~al.
+\newblock Reading digits in natural images with unsupervised feature learning.
+\newblock In {\em NIPS workshop on deep learning and unsupervised feature learning}, volume 2011, page~7. Granada, Spain, 2011.
+
+\bibitem[OJFF24]{ortiz2024task}
+Guillermo Ortiz-Jimenez, Alessandro Favero, and Pascal Frossard.
+\newblock Task arithmetic in the tangent space: Improved editing of pre-trained models.
+\newblock {\em Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[OJMDF21]{ortiz2021can}
+Guillermo Ortiz-Jim{\'e}nez, Seyed-Mohsen Moosavi-Dezfooli, and Pascal Frossard.
+\newblock What can linearized neural networks actually say about generalization?
+\newblock {\em Advances in Neural Information Processing Systems}, 34:8998--9010, 2021.
+
+\bibitem[PBE{\etalchar{+}}22]{power2022grokking}
+Alethea Power, Yuri Burda, Harri Edwards, Igor Babuschkin, and Vedant Misra.
+\newblock Grokking: Generalization beyond overfitting on small algorithmic datasets.
+\newblock {\em arXiv preprint arXiv:2201.02177}, 2022.
+
+\bibitem[Pri23]{prince2023understanding}
+Simon~JD Prince.
+\newblock {\em Understanding Deep Learning}.
+\newblock MIT press, 2023.
+
+\bibitem[PVG{\etalchar{+}}11]{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel, M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos, D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
+
+\bibitem[RKR{\etalchar{+}}22]{rame2022diverse}
+Alexandre Rame, Matthieu Kirchmeyer, Thibaud Rahier, Alain Rakotomamonjy, Patrick Gallinari, and Matthieu Cord.
+\newblock Diverse weight averaging for out-of-distribution generalization.
+\newblock {\em Advances in Neural Information Processing Systems}, 35:10821--10836, 2022.
+
+\bibitem[SGd{\etalchar{+}}18]{spigler2018jamming}
+Stefano Spigler, Mario Geiger, St{\'e}phane d'Ascoli, Levent Sagun, Giulio Biroli, and Matthieu Wyart.
+\newblock A jamming transition from under-to over-parametrization affects loss landscape and generalization.
+\newblock {\em arXiv preprint arXiv:1810.09665}, 2018.
+
+\bibitem[SIvdS23]{seedat2023dissecting}
+Nabeel Seedat, Fergus Imrie, and Mihaela van~der Schaar.
+\newblock Dissecting sample hardness: Fine-grained analysis of hardness characterization methods.
+\newblock In {\em The Twelfth International Conference on Learning Representations}, 2023.
+
+\bibitem[SJ20]{singh2020model}
+Sidak~Pal Singh and Martin Jaggi.
+\newblock Model fusion via optimal transport.
+\newblock {\em Advances in Neural Information Processing Systems}, 33:22045--22055, 2020.
+
+\bibitem[SKR{\etalchar{+}}23]{schaeffer2023double}
+Rylan Schaeffer, Mikail Khona, Zachary Robertson, Akhilan Boopathy, Kateryna Pistunova, Jason~W Rocks, Ila~Rani Fiete, and Oluwasanmi Koyejo.
+\newblock Double descent demystified: Identifying, interpreting \& ablating the sources of a deep learning puzzle.
+\newblock {\em arXiv preprint arXiv:2303.14151}, 2023.
+
+\bibitem[TLZ{\etalchar{+}}22]{thilak2022slingshot}
+Vimal Thilak, Etai Littwin, Shuangfei Zhai, Omid Saremi, Roni Paiss, and Joshua Susskind.
+\newblock The slingshot mechanism: An empirical study of adaptive optimizers and the grokking phenomenon.
+\newblock {\em arXiv preprint arXiv:2206.04817}, 2022.
+
+\bibitem[Vap95]{vapnik1999nature}
+Vladimir Vapnik.
+\newblock {\em The nature of statistical learning theory}.
+\newblock Springer science \& business media, 1995.
+
+\bibitem[VCR89]{vallet1989linear}
+F~Vallet, J-G Cailton, and Ph~Refregier.
+\newblock Linear and nonlinear extension of the pseudo-inverse solution for learning boolean functions.
+\newblock {\em Europhysics Letters}, 9(4):315, 1989.
+
+\bibitem[VSK{\etalchar{+}}23]{varma2023explaining}
+Vikrant Varma, Rohin Shah, Zachary Kenton, J{\'a}nos Kram{\'a}r, and Ramana Kumar.
+\newblock Explaining grokking through circuit efficiency.
+\newblock {\em arXiv preprint arXiv:2309.02390}, 2023.
+
+\bibitem[VvRBT13]{OpenML2013}
+Joaquin Vanschoren, Jan~N. van Rijn, Bernd Bischl, and Luis Torgo.
+\newblock Openml: networked science in machine learning.
+\newblock {\em SIGKDD Explorations}, 15(2):49--60, 2013.
+
+\bibitem[WIG{\etalchar{+}}22]{wortsman2022model}
+Mitchell Wortsman, Gabriel Ilharco, Samir~Ya Gadre, Rebecca Roelofs, Raphael Gontijo-Lopes, Ari~S Morcos, Hongseok Namkoong, Ali Farhadi, Yair Carmon, Simon Kornblith, et~al.
+\newblock Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time.
+\newblock In {\em International Conference on Machine Learning}, pages 23965--23998. PMLR, 2022.
+
+\bibitem[WOBM17]{wyner2017explaining}
+Abraham~J Wyner, Matthew Olson, Justin Bleich, and David Mease.
+\newblock Explaining the success of adaboost and random forests as interpolating classifiers.
+\newblock {\em Journal of Machine Learning Research}, 18(48):1--33, 2017.
+
+\bibitem[YHT{\etalchar{+}}21]{yang2021taxonomizing}
+Yaoqing Yang, Liam Hodgkinson, Ryan Theisen, Joe Zou, Joseph~E Gonzalez, Kannan Ramchandran, and Michael~W Mahoney.
+\newblock Taxonomizing local versus global structure in neural network loss landscapes.
+\newblock {\em Advances in Neural Information Processing Systems}, 34:18722--18733, 2021.
+
+\end{thebibliography}

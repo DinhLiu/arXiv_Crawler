@@ -1,0 +1,329 @@
+\begin{thebibliography}{61}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ansuini et~al.(2019)Ansuini, Laio, Macke, and Zoccolan]{ansuini2019intrinsic}
+Alessio Ansuini, Alessandro Laio, Jakob~H Macke, and Davide Zoccolan.
+\newblock Intrinsic dimension of data representations in deep neural networks.
+\newblock \emph{Advances in Neural Information Processing Systems}, 32, 2019.
+
+\bibitem[Balasubramanian et~al.(2024)Balasubramanian, Basu, and Feizi]{balasubramanian2024decomposing}
+Sriram Balasubramanian, Samyadeep Basu, and Soheil Feizi.
+\newblock Decomposing and interpreting image representations via text in vits beyond {CLIP}.
+\newblock In \emph{ICML 2024 Workshop on Mechanistic Interpretability}, 2024.
+\newblock URL \url{https://openreview.net/forum?id=DwhvppIZsD}.
+
+\bibitem[Bhalla et~al.(2024)Bhalla, Oesterling, Srinivas, Calmon, and Lakkaraju]{bhalla2024interpreting}
+Usha Bhalla, Alex Oesterling, Suraj Srinivas, Flavio~P Calmon, and Himabindu Lakkaraju.
+\newblock Interpreting clip with sparse linear concept embeddings (splice).
+\newblock \emph{arXiv preprint arXiv:2402.10376}, 2024.
+
+\bibitem[Björck \& Golub(1973)Björck and Golub]{principal_angles}
+Åke Björck and Gene~H. Golub.
+\newblock Numerical methods for computing angles between linear subspaces.
+\newblock \emph{Mathematics of Computation}, 27\penalty0 (123):\penalty0 579--594, 1973.
+\newblock ISSN 00255718, 10886842.
+\newblock URL \url{http://www.jstor.org/stable/2005662}.
+
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam, Sastry, Askell, et~al.]{brown2020language}
+Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared~D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et~al.
+\newblock Language models are few-shot learners.
+\newblock \emph{Advances in neural information processing systems}, 33:\penalty0 1877--1901, 2020.
+
+\bibitem[Cancedda(2024)]{cancedda2024spectralfiltersdarksignals}
+Nicola Cancedda.
+\newblock Spectral filters, dark signals, and attention sinks, 2024.
+\newblock URL \url{https://arxiv.org/abs/2402.09221}.
+
+\bibitem[Chattopadhyay et~al.(2024)Chattopadhyay, Pilgrim, and Vidal]{chattopadhyay2024information}
+Aditya Chattopadhyay, Ryan Pilgrim, and Rene Vidal.
+\newblock Information maximization perspective of orthogonal matching pursuit with applications to explainable ai.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[Cheng et~al.(2023)Cheng, Kervadec, and Baroni]{cheng2023bridging}
+Emily Cheng, Corentin Kervadec, and Marco Baroni.
+\newblock Bridging information-theoretic and geometric compression in language models.
+\newblock In \emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, pp.\  12397--12420, 2023.
+
+\bibitem[Cheng et~al.(2017)Cheng, Han, and Lu]{cheng2017remote}
+Gong Cheng, Junwei Han, and Xiaoqiang Lu.
+\newblock Remote sensing image scene classification: Benchmark and state of the art.
+\newblock \emph{Proceedings of the IEEE}, 105\penalty0 (10):\penalty0 1865--1883, 2017.
+
+\bibitem[Cherti et~al.(2023)Cherti, Beaumont, Wightman, Wortsman, Ilharco, Gordon, Schuhmann, Schmidt, and Jitsev]{cherti2023reproducible}
+Mehdi Cherti, Romain Beaumont, Ross Wightman, Mitchell Wortsman, Gabriel Ilharco, Cade Gordon, Christoph Schuhmann, Ludwig Schmidt, and Jenia Jitsev.
+\newblock Reproducible scaling laws for contrastive language-image learning.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pp.\  2818--2829, 2023.
+
+\bibitem[Chughtai et~al.(2024)Chughtai, Cooney, and Nanda]{chughtai2024summing}
+Bilal Chughtai, Alan Cooney, and Neel Nanda.
+\newblock Summing up the facts: Additive mechanisms behind factual recall in llms.
+\newblock \emph{arXiv preprint arXiv:2402.07321}, 2024.
+
+\bibitem[Cimpoi et~al.(2014)Cimpoi, Maji, Kokkinos, Mohamed, and Vedaldi]{cimpoi2014describing}
+Mircea Cimpoi, Subhransu Maji, Iasonas Kokkinos, Sammy Mohamed, and Andrea Vedaldi.
+\newblock Describing textures in the wild.
+\newblock In \emph{Proceedings of the IEEE conference on computer vision and pattern recognition}, pp.\  3606--3613, 2014.
+
+\bibitem[Defazio et~al.(2024)Defazio, Yang, Mehta, Mishchenko, Khaled, and Cutkosky]{defazio2024road}
+Aaron Defazio, Xingyu Yang, Harsh Mehta, Konstantin Mishchenko, Ahmed Khaled, and Ashok Cutkosky.
+\newblock The road less scheduled, 2024.
+
+\bibitem[Dosovitskiy et~al.(2021)Dosovitskiy, Beyer, Kolesnikov, Weissenborn, Zhai, Unterthiner, Dehghani, Minderer, Heigold, Gelly, Uszkoreit, and Houlsby]{dosovitskiy2021an}
+Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby.
+\newblock An image is worth 16x16 words: Transformers for image recognition at scale.
+\newblock In \emph{International Conference on Learning Representations}, 2021.
+\newblock URL \url{https://openreview.net/forum?id=YicbFdNTTy}.
+
+\bibitem[Elhage et~al.(2021)Elhage, Nanda, Olsson, Henighan, Joseph, Mann, Askell, Bai, Chen, Conerly, DasSarma, Drain, Ganguli, Hatfield-Dodds, Hernandez, Jones, Kernion, Lovitt, Ndousse, Amodei, Brown, Clark, Kaplan, McCandlish, and Olah]{elhage2021mathematical}
+Nelson Elhage, Neel Nanda, Catherine Olsson, Tom Henighan, Nicholas Joseph, Ben Mann, Amanda Askell, Yuntao Bai, Anna Chen, Tom Conerly, Nova DasSarma, Dawn Drain, Deep Ganguli, Zac Hatfield-Dodds, Danny Hernandez, Andy Jones, Jackson Kernion, Liane Lovitt, Kamal Ndousse, Dario Amodei, Tom Brown, Jack Clark, Jared Kaplan, Sam McCandlish, and Chris Olah.
+\newblock A mathematical framework for transformer circuits.
+\newblock \emph{Transformer Circuits Thread}, 2021.
+\newblock https://transformer-circuits.pub/2021/framework/index.html.
+
+\bibitem[Espeholt et~al.(2022)Espeholt, Agrawal, S{\o}nderby, Kumar, Heek, Bromberg, Gazen, Carver, Andrychowicz, Hickey, et~al.]{espeholt2022deep}
+Lasse Espeholt, Shreya Agrawal, Casper S{\o}nderby, Manoj Kumar, Jonathan Heek, Carla Bromberg, Cenk Gazen, Rob Carver, Marcin Andrychowicz, Jason Hickey, et~al.
+\newblock Deep learning for twelve hour precipitation forecasts.
+\newblock \emph{Nature communications}, 13\penalty0 (1):\penalty0 1--10, 2022.
+
+\bibitem[Facco et~al.(2017)Facco, d’Errico, Rodriguez, and Laio]{facco2017estimating}
+Elena Facco, Maria d’Errico, Alex Rodriguez, and Alessandro Laio.
+\newblock Estimating the intrinsic dimension of datasets by a minimal neighborhood information.
+\newblock \emph{Scientific reports}, 7\penalty0 (1):\penalty0 12140, 2017.
+
+\bibitem[Falcon \& {The PyTorch Lightning team}(2019)Falcon and {The PyTorch Lightning team}]{Falcon_PyTorch_Lightning_2019}
+William Falcon and {The PyTorch Lightning team}.
+\newblock {PyTorch Lightning}, March 2019.
+\newblock URL \url{https://github.com/Lightning-AI/lightning}.
+
+\bibitem[Gandelsman et~al.(2024)Gandelsman, Efros, and Steinhardt]{gandelsman2024interpreting}
+Yossi Gandelsman, Alexei~A Efros, and Jacob Steinhardt.
+\newblock Interpreting clip's image representation via text-based decomposition.
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2024.
+
+\bibitem[Gavrikov \& Keuper(2022)Gavrikov and Keuper]{gavrikov2022cnn}
+Paul Gavrikov and Janis Keuper.
+\newblock Cnn filter db: An empirical investigation of trained convolutional filters.
+\newblock In \emph{Proceedings of the IEEE/CVF conference on computer vision and pattern recognition}, pp.\  19066--19076, 2022.
+
+\bibitem[Helber et~al.(2019)Helber, Bischke, Dengel, and Borth]{helber2019eurosat}
+Patrick Helber, Benjamin Bischke, Andreas Dengel, and Damian Borth.
+\newblock Eurosat: A novel dataset and deep learning benchmark for land use and land cover classification.
+\newblock \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, 12\penalty0 (7):\penalty0 2217--2226, 2019.
+
+\bibitem[Hyvärinen \& Pajunen(1999)Hyvärinen and Pajunen]{HYVARINEN1999429}
+Aapo Hyvärinen and Petteri Pajunen.
+\newblock Nonlinear independent component analysis: Existence and uniqueness results.
+\newblock \emph{Neural Networks}, 12\penalty0 (3):\penalty0 429--439, 1999.
+\newblock ISSN 0893-6080.
+\newblock \doi{https://doi.org/10.1016/S0893-6080(98)00140-3}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0893608098001403}.
+
+\bibitem[Jiang et~al.(2024)Jiang, Rajendran, Ravikumar, Aragam, and Veitch]{jiang2024on}
+Yibo Jiang, Goutham Rajendran, Pradeep~Kumar Ravikumar, Bryon Aragam, and Victor Veitch.
+\newblock On the origins of linear representations in large language models.
+\newblock In \emph{Forty-first International Conference on Machine Learning}, 2024.
+\newblock URL \url{https://openreview.net/forum?id=otuTw4Mghk}.
+
+\bibitem[Jumper et~al.(2021)Jumper, Evans, Pritzel, Green, Figurnov, Ronneberger, Tunyasuvunakool, Bates, {\v{Z}}{\'\i}dek, Potapenko, et~al.]{jumper2021highly}
+John Jumper, Richard Evans, Alexander Pritzel, Tim Green, Michael Figurnov, Olaf Ronneberger, Kathryn Tunyasuvunakool, Russ Bates, Augustin {\v{Z}}{\'\i}dek, Anna Potapenko, et~al.
+\newblock Highly accurate protein structure prediction with alphafold.
+\newblock \emph{Nature}, 596\penalty0 (7873):\penalty0 583--589, 2021.
+
+\bibitem[Krause et~al.(2013)Krause, Stark, Deng, and Fei-Fei]{krause20133d}
+Jonathan Krause, Michael Stark, Jia Deng, and Li~Fei-Fei.
+\newblock 3d object representations for fine-grained categorization.
+\newblock In \emph{Proceedings of the IEEE international conference on computer vision workshops}, pp.\  554--561, 2013.
+
+\bibitem[Krizhevsky(2009)]{krizhevsky2009learning}
+Alex Krizhevsky.
+\newblock Learning multiple layers of features from tiny images.
+\newblock 2009.
+
+\bibitem[L\"ahner \& Moeller(2024)L\"ahner and Moeller]{pmlr-v243-lahner24a}
+Zorah L\"ahner and Michael Moeller.
+\newblock On the direct alignment of latent spaces.
+\newblock In Marco Fumero, Emanuele Rodolá, Clementine Domine, Francesco Locatello, Karolina Dziugaite, and Caron Mathilde (eds.), \emph{Proceedings of UniReps: the First Workshop on Unifying Representations in Neural Models}, volume 243 of \emph{Proceedings of Machine Learning Research}, pp.\  158--169. PMLR, 15 Dec 2024.
+\newblock URL \url{https://proceedings.mlr.press/v243/lahner24a.html}.
+
+\bibitem[LeCun et~al.(1998)LeCun, Bottou, Bengio, and Haffner]{lecun1998gradient}
+Yann LeCun, L{\'e}on Bottou, Yoshua Bengio, and Patrick Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock \emph{Proceedings of the IEEE}, 86\penalty0 (11):\penalty0 2278--2324, 1998.
+
+\bibitem[Lei~Ba et~al.(2016)Lei~Ba, Kiros, and Hinton]{lei2016layer}
+Jimmy Lei~Ba, Jamie~Ryan Kiros, and Geoffrey~E Hinton.
+\newblock Layer normalization.
+\newblock \emph{ArXiv e-prints}, pp.\  arXiv--1607, 2016.
+
+\bibitem[Lewis et~al.(2024)Lewis, Nayak, Yu, Merullo, Yu, Bach, and Pavlick]{lewis2024does}
+Martha Lewis, Nihal Nayak, Peilin Yu, Jack Merullo, Qinan Yu, Stephen Bach, and Ellie Pavlick.
+\newblock Does clip bind concepts? probing compositionality in large image models.
+\newblock In \emph{Findings of the Association for Computational Linguistics: EACL 2024}, pp.\  1487--1500, 2024.
+
+\bibitem[Li et~al.(2023)Li, Wang, Zhang, Zhang, and Zong]{li2023interpreting}
+Chong Li, Shaonan Wang, Yunhao Zhang, Jiajun Zhang, and Chengqing Zong.
+\newblock Interpreting and exploiting functional specialization in multi-head attention under multi-task learning.
+\newblock In \emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, pp.\  16460--16476, 2023.
+
+\bibitem[Li et~al.(2017)Li, Yang, Song, and Hospedales]{li2017deeper}
+Da~Li, Yongxin Yang, Yi-Zhe Song, and Timothy~M Hospedales.
+\newblock Deeper, broader and artier domain generalization.
+\newblock In \emph{Proceedings of the IEEE international conference on computer vision}, pp.\  5542--5550, 2017.
+
+\bibitem[Li et~al.(2022)Li, Li, Xiong, and Hoi]{li2022blip}
+Junnan Li, Dongxu Li, Caiming Xiong, and Steven Hoi.
+\newblock Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation.
+\newblock In \emph{International conference on machine learning}, pp.\  12888--12900. PMLR, 2022.
+
+\bibitem[Liang et~al.(2022)Liang, Zhang, Kwon, Yeung, and Zou]{liang2022mind}
+Weixin Liang, Yuhui Zhang, Yongchan Kwon, Serena Yeung, and James Zou.
+\newblock Mind the gap: Understanding the modality gap in multi-modal contrastive representation learning.
+\newblock In \emph{NeurIPS}, 2022.
+\newblock URL \url{https://openreview.net/forum?id=S7Evzt9uit3}.
+
+\bibitem[Locatello et~al.(2019)Locatello, Bauer, Lucic, Raetsch, Gelly, Sch{\"o}lkopf, and Bachem]{locatello2019challenging}
+Francesco Locatello, Stefan Bauer, Mario Lucic, Gunnar Raetsch, Sylvain Gelly, Bernhard Sch{\"o}lkopf, and Olivier Bachem.
+\newblock Challenging common assumptions in the unsupervised learning of disentangled representations.
+\newblock In \emph{international conference on machine learning}, pp.\  4114--4124. PMLR, 2019.
+
+\bibitem[Lv et~al.(2024)Lv, Zhang, Chen, Wang, Liu, Wen, Xie, and Yan]{lv2024interpreting}
+Ang Lv, Kaiyi Zhang, Yuhan Chen, Yulong Wang, Lifeng Liu, Ji-Rong Wen, Jian Xie, and Rui Yan.
+\newblock Interpreting key mechanisms of factual recall in transformer-based language models.
+\newblock \emph{arXiv preprint arXiv:2403.19521}, 2024.
+
+\bibitem[Maiorca et~al.(2024)Maiorca, Moschella, Norelli, Fumero, Locatello, and Rodol{\`a}]{maiorca2024latent}
+Valentino Maiorca, Luca Moschella, Antonio Norelli, Marco Fumero, Francesco Locatello, and Emanuele Rodol{\`a}.
+\newblock Latent space translation via semantic alignment.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[Mallat \& Zhang(1993)Mallat and Zhang]{mallat1993matching}
+St{\'e}phane~G Mallat and Zhifeng Zhang.
+\newblock Matching pursuits with time-frequency dictionaries.
+\newblock \emph{IEEE Transactions on signal processing}, 41\penalty0 (12):\penalty0 3397--3415, 1993.
+
+\bibitem[Merchant et~al.(2023)Merchant, Batzner, Schoenholz, Aykol, Cheon, and Cubuk]{merchant2023scaling}
+Amil Merchant, Simon Batzner, Samuel~S Schoenholz, Muratahan Aykol, Gowoon Cheon, and Ekin~Dogus Cubuk.
+\newblock Scaling deep learning for materials discovery.
+\newblock \emph{Nature}, 624\penalty0 (7990):\penalty0 80--85, 2023.
+
+\bibitem[Michel et~al.(2019)Michel, Levy, and Neubig]{michel2019sixteen}
+Paul Michel, Omer Levy, and Graham Neubig.
+\newblock Are sixteen heads really better than one?
+\newblock \emph{Advances in Neural Information Processing Systems}, 32, 2019.
+
+\bibitem[Moschella et~al.(2023)Moschella, Maiorca, Fumero, Norelli, Locatello, and Rodol{\`a}]{moschella2023relative}
+Luca Moschella, Valentino Maiorca, Marco Fumero, Antonio Norelli, Francesco Locatello, and Emanuele Rodol{\`a}.
+\newblock Relative representations enable zero-shot latent space communication.
+\newblock In \emph{The Eleventh International Conference on Learning Representations}, 2023.
+\newblock URL \url{https://openreview.net/forum?id=SrC-nwieGJ}.
+
+\bibitem[Netzer et~al.(2011)Netzer, Wang, Coates, Bissacco, Wu, Ng, et~al.]{netzer2011reading}
+Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Baolin Wu, Andrew~Y Ng, et~al.
+\newblock Reading digits in natural images with unsupervised feature learning.
+\newblock In \emph{NIPS workshop on deep learning and unsupervised feature learning}, volume 2011, pp.\ ~4. Granada, 2011.
+
+\bibitem[Norelli et~al.(2023)Norelli, Fumero, Maiorca, Moschella, Rodol\`{a}, and Locatello]{asif}
+Antonio Norelli, Marco Fumero, Valentino Maiorca, Luca Moschella, Emanuele Rodol\`{a}, and Francesco Locatello.
+\newblock Asif: Coupled data turns unimodal models to multimodal without training.
+\newblock In A.~Oh, T.~Naumann, A.~Globerson, K.~Saenko, M.~Hardt, and S.~Levine (eds.), \emph{Advances in Neural Information Processing Systems}, volume~36, pp.\  15303--15319. Curran Associates, Inc., 2023.
+\newblock URL \url{https://proceedings.neurips.cc/paper_files/paper/2023/file/3186591903d9db31770ad131adb5ceb4-Paper-Conference.pdf}.
+
+\bibitem[nostalgebraist(2020)]{nostalgebraist2020interpreting}
+nostalgebraist.
+\newblock interpreting gpt: the logit lens.
+\newblock \emph{LessWrong}, 2020.
+\newblock URL \url{https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens}.
+
+\bibitem[Oquab et~al.(2024)Oquab, Darcet, Moutakanni, Vo, Szafraniec, Khalidov, Fernandez, HAZIZA, Massa, El-Nouby, Assran, Ballas, Galuba, Howes, Huang, Li, Misra, Rabbat, Sharma, Synnaeve, Xu, Jegou, Mairal, Labatut, Joulin, and Bojanowski]{oquab2024dinov}
+Maxime Oquab, Timoth{\'e}e Darcet, Th{\'e}o Moutakanni, Huy~V. Vo, Marc Szafraniec, Vasil Khalidov, Pierre Fernandez, Daniel HAZIZA, Francisco Massa, Alaaeldin El-Nouby, Mido Assran, Nicolas Ballas, Wojciech Galuba, Russell Howes, Po-Yao Huang, Shang-Wen Li, Ishan Misra, Michael Rabbat, Vasu Sharma, Gabriel Synnaeve, Hu~Xu, Herve Jegou, Julien Mairal, Patrick Labatut, Armand Joulin, and Piotr Bojanowski.
+\newblock {DINO}v2: Learning robust visual features without supervision.
+\newblock \emph{Transactions on Machine Learning Research}, 2024.
+\newblock ISSN 2835-8856.
+\newblock URL \url{https://openreview.net/forum?id=a68SUt6zFt}.
+
+\bibitem[Park et~al.()Park, Choe, and Veitch]{park2024the}
+Kiho Park, Yo~Joong Choe, and Victor Veitch.
+\newblock The linear representation hypothesis and the geometry of large language models.
+\newblock In \emph{Forty-first International Conference on Machine Learning}.
+
+\bibitem[Pati et~al.(1993)Pati, Rezaiifar, and Krishnaprasad]{pati1993orthogonal}
+Yagyensh~Chandra Pati, Ramin Rezaiifar, and Perinkulam~Sambamurthy Krishnaprasad.
+\newblock Orthogonal matching pursuit: Recursive function approximation with applications to wavelet decomposition.
+\newblock In \emph{Proceedings of 27th Asilomar conference on signals, systems and computers}, pp.\  40--44. IEEE, 1993.
+
+\bibitem[Radford et~al.(2021)Radford, Kim, Hallacy, Ramesh, Goh, Agarwal, Sastry, Askell, Mishkin, Clark, et~al.]{radford2021learning}
+Alec Radford, Jong~Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, et~al.
+\newblock Learning transferable visual models from natural language supervision.
+\newblock In \emph{International conference on machine learning}, pp.\  8748--8763. PMLR, 2021.
+
+\bibitem[Russakovsky et~al.(2015)Russakovsky, Deng, Su, Krause, Satheesh, Ma, Huang, Karpathy, Khosla, Bernstein, et~al.]{russakovsky2015imagenet}
+Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma, Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, et~al.
+\newblock Imagenet large scale visual recognition challenge.
+\newblock \emph{International journal of computer vision}, 115:\penalty0 211--252, 2015.
+
+\bibitem[Smith(2017)]{smith2017cyclicallearningratestraining}
+Leslie~N. Smith.
+\newblock Cyclical learning rates for training neural networks.
+\newblock In \emph{2017 IEEE Winter Conference on Applications of Computer Vision (WACV)}, 2017.
+
+\bibitem[Snell et~al.(2017)Snell, Swersky, and Zemel]{snell2017prototypical}
+Jake Snell, Kevin Swersky, and Richard Zemel.
+\newblock Prototypical networks for few-shot learning.
+\newblock \emph{Advances in neural information processing systems}, 30, 2017.
+
+\bibitem[Stallkamp et~al.(2011)Stallkamp, Schlipsing, Salmen, and Igel]{stallkamp2011german}
+Johannes Stallkamp, Marc Schlipsing, Jan Salmen, and Christian Igel.
+\newblock The german traffic sign recognition benchmark: a multi-class classification competition.
+\newblock In \emph{The 2011 international joint conference on neural networks}, pp.\  1453--1460. IEEE, 2011.
+
+\bibitem[Touvron et~al.(2023)Touvron, Lavril, Izacard, Martinet, Lachaux, Lacroix, Rozi{\`e}re, Goyal, Hambro, Azhar, et~al.]{touvron2023llama}
+Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timoth{\'e}e Lacroix, Baptiste Rozi{\`e}re, Naman Goyal, Eric Hambro, Faisal Azhar, et~al.
+\newblock Llama: Open and efficient foundation language models.
+\newblock \emph{arXiv preprint arXiv:2302.13971}, 2023.
+
+\bibitem[Tropp et~al.(2006)Tropp, Gilbert, and Strauss]{tropp2006algorithms}
+Joel~A Tropp, Anna~C Gilbert, and Martin~J Strauss.
+\newblock Algorithms for simultaneous sparse approximation. part i: Greedy pursuit.
+\newblock \emph{Signal processing}, 86\penalty0 (3):\penalty0 572--588, 2006.
+
+\bibitem[Valeriani et~al.(2024)Valeriani, Doimo, Cuturello, Laio, Ansuini, and Cazzaniga]{valeriani2024geometry}
+Lucrezia Valeriani, Diego Doimo, Francesca Cuturello, Alessandro Laio, Alessio Ansuini, and Alberto Cazzaniga.
+\newblock The geometry of hidden representations of large transformer models.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin]{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N Gomez, {\L}ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock \emph{Advances in neural information processing systems}, 30, 2017.
+
+\bibitem[Voita et~al.(2019)Voita, Talbot, Moiseev, Sennrich, and Titov]{voita2019analyzing}
+Elena Voita, David Talbot, Fedor Moiseev, Rico Sennrich, and Ivan Titov.
+\newblock Analyzing multi-head self-attention: Specialized heads do the heavy lifting, the rest can be pruned.
+\newblock In \emph{Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics}, pp.\  5797--5808, 2019.
+
+\bibitem[Wang et~al.(2019)Wang, Li, Xiao, Zhu, Li, Wong, and Chao]{wang2019learning}
+Qiang Wang, Bei Li, Tong Xiao, Jingbo Zhu, Changliang Li, Derek~F Wong, and Lidia~S Chao.
+\newblock Learning deep transformer models for machine translation.
+\newblock In \emph{Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics}, pp.\  1810--1822, 2019.
+
+\bibitem[Wolff et~al.(2023)Wolff, Brendel, and Wolff]{wolff2023the}
+Max Wolff, Wieland Brendel, and Stuart Wolff.
+\newblock The independent compositional subspace hypothesis for the structure of {CLIP}'s last layer.
+\newblock In \emph{ICLR 2023 Workshop on Mathematical and Empirical Understanding of Foundation Models}, 2023.
+\newblock URL \url{https://openreview.net/forum?id=MmhGK8YkUKO}.
+
+\bibitem[Xiao et~al.(2016)Xiao, Ehinger, Hays, Torralba, and Oliva]{xiao2016sun}
+Jianxiong Xiao, Krista~A Ehinger, James Hays, Antonio Torralba, and Aude Oliva.
+\newblock Sun database: Exploring a large collection of scene categories.
+\newblock \emph{International Journal of Computer Vision}, 119:\penalty0 3--22, 2016.
+
+\bibitem[Yosinski et~al.(2014)Yosinski, Clune, Bengio, and Lipson]{yosinski2014transferable}
+Jason Yosinski, Jeff Clune, Yoshua Bengio, and Hod Lipson.
+\newblock How transferable are features in deep neural networks?
+\newblock \emph{Advances in neural information processing systems}, 27, 2014.
+
+\end{thebibliography}

@@ -1,0 +1,13 @@
+\begin{abstract}
+The state of health (SOH) of a Li-ion battery is a critical parameter that determines the remaining capacity and the remaining lifetime of the battery.
+
+In this paper, we propose \modelname{} a novel structured state space model (SSM) for predicting the state of health of Li-ion batteries. The proposed SSM is based on the MambaMixer architecture, which is designed to handle multi-variate time signals. 
+
+We evaluate our model on the NASA battery discharge dataset and show that our model outperforms the state-of-the-art on this dataset. 
+
+We further introduce a novel anchor-based resampling method which ensures time signals are of the expected length while also serving as augmentation technique. Finally, we condition prediction on the sample time and the cycle time difference using positional encodings to improve the performance of our model and to learn recuperation effects. Our results proof that our model is able to predict the SOH of Li-ion batteries with high accuracy and robustness.
+
+\end{abstract}
+\begin{IEEEkeywords}
+Li-ion battery, mamba, state space model, state of health prediction, multi-variate time series, deep learning
+\end{IEEEkeywords}

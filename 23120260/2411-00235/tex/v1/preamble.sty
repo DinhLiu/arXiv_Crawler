@@ -1,0 +1,318 @@
+%preamble file for lattice theory paper
+
+%!TEX root = ms.tex
+
+%BIBILIOGRAPHY
+
+
+%\PassOptionsToPackage{compress}{natbib}
+%\usepackage[numbers]{natbib}
+
+% PACKAGES
+\usepackage {amsmath}
+\usepackage{graphicx}
+\usepackage{braket}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tensor}
+\usepackage{xcolor}
+\usetikzlibrary{decorations}
+\usetikzlibrary{patterns}
+\newtheorem{name}{Printed output}
+
+
+
+\newtheorem{mydef}{Definition}
+\newtheorem{them}{Theorem}
+\newtheorem{lem}{Lemma}
+
+\newtheorem{claim}{Claim}
+\newtheorem{cor}{Corollary}
+\newtheorem{prop}{Proposition}
+\newtheorem{prot}{Protocol}
+\newtheorem{Example}{Example}
+\declaretheoremstyle[headfont=\normalfont]{normalhead}
+\newtheorem*{remark}{Remark}
+\usepackage[colorlinks=true,urlcolor=blue, linkcolor=blue, citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{wasysym}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{tcolorbox}
+
+
+\usepackage{enumitem}
+
+% COMMANDS
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\del}[0]{\ensuremath{\vec{\nabla}}}
+\providecommand{\partialder}[2]{\ensuremath{\frac{\partial #1}{\partial#2}}}
+\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
+\providecommand{\hilight}[1]{\colorbox{yellow}{#1}}
+\renewcommand{\abstractname}{}
+
+\def\({\left(}
+\def\){\right)}
+\def\av#1{\left\langle #1\right\rangle}
+\def\bs#1{\boldsymbol{#1}}
+\def\d#1{#1^\dagger}
+\def\eq#1{Eq.~(\ref{eq:#1})}
+\def\Eq#1{Equation~(\ref{eq:#1})}
+\def\eqs#1#2{Eqs.~(\ref{eq:#1}) \& (\ref{eq:#2})}
+\def\eqlist#1#2{Eqs.~(\ref{eq:#1}-\ref{eq:#2})}
+\def\Eqs#1#2{Equations~(\ref{eq:#1}) \& (\ref{eq:#2})}
+\def\Eqlist#1#2{Equations~(\ref{eq:#1}-\ref{eq:#2})}
+\def\fig#1{Fig.~\ref{fig:#1}}
+\def\figs#1#2{Figs.~\ref{fig:#1} \& \ref{fig:#2}}
+\def\Fig#1{Figure~\ref{fig:#1}}
+\def\Figs#1#2{Figures~\ref{fig:#1} \& \ref{fig:#2}}
+\def\sec#1{Sec.~\ref{sec:#1}}
+\def\secs#1#2{Sec.~\ref{sec:#1} \& \ref{sec:#2}}
+\def\Sec#1{Section~\ref{sec:#1}}
+\def\Secs#1#2{Sections~\ref{sec:#1} \& \ref{sec:#2}}
+\def\scalprod#1#2{\left\langle\,#1\,\right|\left.\,#2\,\right\rangle}
+
+
+
+% MATH OPERATORS
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\Imtext}{Im}
+\DeclareMathOperator{\Retext}{Re}
+\renewcommand{\Im}{\Imtext}
+\renewcommand{\Re}{\Retext}
+\DeclareMathOperator{\disc}{disc}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\HNF}{HNF}
+\DeclareMathOperator{\optCVP}{optCVP}
+\DeclareMathOperator{\CVP}{CVP}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\wt}{wt}
+
+% VECTORS, MATRICES, OPERATORS AND COMBINATIONS
+
+\usepackage{bm}
+%\usepackage{mathtools}
+
+
+
+\renewcommand{\vec}[1]{\bm{\mathrm{#1}}}
+%\renewcommand{\vec}[1]{\bm{#1}}
+
+\newcommand{\tp}{\mathrm{T}}
+\newcommand{\herm}{\mathrm{H}}
+
+% OTHER
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\wholenums}{\mathbb{N}_0}
+
+\newcommand{\group}[1]{\mathrm{#1}}
+
+
+
+% PATH TO GRAPHICS FILES
+
+\graphicspath{ {./Figures/} }
+
+
+% REFERENCE EXISTING FOOTNOTES
+
+
+\makeatletter
+\newenvironment{tablehere}
+  {\def\@captype{table}}
+  {}
+\makeatother
+
+
+% NOTE: THIS OVERRIDES THE COLON AT THE END OF THE DESCRIPTION ENVIRONMENT
+\def\descriptionlabel#1{%
+  \normalfont\bfseries #1\unskip%
+}%
+%\renewenvironment{description}{%
+% \list{}{%
+%    \labelwidth0pt
+%    \let\makelabel\descriptionlabelnocolon
+% }%
+%}
+\setlist[description]{leftmargin=0pt}
+
+%Nick's definitions
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\TR}{TR}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\spur}{sp}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Herm}{Herm}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\Prob}{Prob}
+\DeclareMathOperator{\spec}{spec}
+\DeclareMathOperator{\sinc}{sinc}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+
+
+
+
+\newcommand{\op}[1]{\hat{#1}}
+\newcommand{\ope}[1]{\hat{#1}}
+%
+\newcommand{\opvec}[1]{\op{\vec{#1}}}
+\newcommand{\opmat}[1]{\op{\mat{#1}}}
+%
+\newcommand{\id}[0]{I}
+\newcommand{\supop}[1]{\mathcal{#1}}
+
+
+\newcommand{\mat}[1]{\bm{\mathrm{#1}}}
+\newcommand{\barmat}[1]{\bar{\mat{#1}}}
+\newcommand{\tildemat}[1]{\tilde{\mat{#1}}}
+%
+\newcommand{\barvec}[1]{\bar{\vec{#1}}}
+\newcommand{\tildevec}[1]{\tilde{\vec{#1}}}
+
+\renewcommand{\vec}[1]{\bm{\mathrm{#1}}}
+%
+
+\newcommand{\controlled}[1]{\op{\mathrm{C}}_{#1}}
+\newcommand{\CZ}[0]{\controlled Z}
+\newcommand{\CX}[0]{\controlled X}
+\newcommand{\CZct}[0]{\controlled Z^\rightarrow}
+\newcommand{\CXct}[0]{\controlled X^\rightarrow}
+\newcommand{\CZtc}[0]{\controlled Z^\leftarrow}
+\newcommand{\CXtc}[0]{\controlled X^\leftarrow}
+
+\newcommand{\opCZ}[0]{\op{\mathrm{C}}_{Z}}
+
+\newcommand{\cH}[0]{\mathcal{H}}
+
+
+
+\newcommand{\diffd}{\mathrm{d}}
+
+
+\newcommand{\grn}{\color{green!60!black}}
+\newcommand{\red}{\color{red!90!black}}
+\newcommand{\blu}{\color{blue!70!cyan}}
+\newcommand{\blk}{\color{black}}
+\newcommand{\gra}{\color{gray!50!white}}
+\newcommand{\prp}{\color{purple!70!black}}
+\newcommand{\org}{\color{orange!80!black}}
+\newcommand{\pnk}{\color{pink}}
+
+
+\newcommand{\psiout}{\tilde{\psi}_{\rm out}}
+\newcommand{\logicsub}{L}
+\newcommand{\logic}[1]{ {#1}_\logicsub}
+%
+\newcommand{\gkpproj}{\op{\Pi}_{\rm GKP}}
+
+% 
+\newcommand{\czero}{
+	\frac{1}{2 \pi} e^{- \frac{1}{2} ( z^2 - \Re{[z]}^2)}
+    \vartheta_{3}\left( 
+    -\frac{\sqrt{\pi}}{2}z, e^{-\frac{\pi}{2}} \right) }
+
+\newcommand{\cone}{
+	\frac{1}{2 \pi} e^{- \frac{1}{2} ( z^2 - \Re{[z]}^2)}
+    \vartheta_{3}\left( 
+    -\frac{\sqrt{\pi}}{2}\left( z + \sqrt{\pi} \right) , e^{-\frac{\pi}{2}} \right) }
+
+%\newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\includegraphics[width=8pt]{orcid}}}
+
+\newcommand{\prlsection}[1]{\vspace{0.5ex}\textbf{#1}}
+\newcommand{\GKP}{\mathrm{GKP}}
+\newcommand{\EC}{\mathrm{EC}}
+\newcommand{\logPauli}{\op{\sigma}_\logicsub^\mu}
+\DeclareMathOperator{\pdf}{pdf}
+
+\newcommand{\ketbra}[1]{\ket{#1}\bra{#1}}
+\let\arrow\vec
+\usepackage{xcolor}
+
+
+\newcommand{\lr}[1]{\left( #1 \right)}
+\newcommand{\lrq}[1]{\left[ #1 \right]}
+\newcommand{\lrc}[1]{\left\{ #1 \right\}}
+
+
+\newcommand{\ba}[1]{\begin{array}{#1}}
+\newcommand{\ea}{\end{array}}
+
+\newcommand{\CB}{\mathcal{B}}
+\newcommand{\CR}{\mathcal{R}}
+\newcommand{\CL}{\mathcal{L}}
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CF}{\mathcal{F}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CD}{\mathcal{D}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CU}{\mathcal{U}}
+\newcommand{\CH}{\mathcal{H}}
+\newcommand{\CG}{\mathcal{G}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\PP}{\mathbb{P}}
+
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\PSL}{\mathrm{PSL}}
+\newcommand{\hh}{\mathfrak{h}}
+\newcommand{\Dec}{\mathtt{Dec}}
+
+\def\apropto{%
+  \def\p{%
+    \setbox0=\vbox{\hbox{$\propto$}}%
+    \ht0=0.6ex \box0 }%
+  \def\s{%
+    \vbox{\hbox{$\sim$}}%
+  }%
+  \mathrel{\raisebox{0.7ex}{%
+      \mbox{$\underset{\s}{\p}$}%
+    }}%
+}
+
+\DeclareMathSymbol{\mhexagon}{\mathord}{wasy}{57}
+\DeclarePairedDelimiter{\nint}\lfloor\rceil
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+
+\newcommand{\lowertriangle}{
+\begin{tikzpicture}[scale=0.18]
+\filldraw (0,0)--(0.8,0)--(0,0.8)--(0,0);
+\end{tikzpicture}}
+
+
+%\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\GL}{GL}
+%\DeclareMathOperator{\SL}{SL}
+
+\newcommand{\Cl}{\mathrm{Cl}}
+
+
+%\newcommand{\lr}{\left( #1 \right)}
+%\newcommand{\bs}{\mathbf{#1}}
+%\newcommand{\lrq}{\left[ #1 \right]}
+%\newcommand{\lrc}{\left\{ #1 \right\}}

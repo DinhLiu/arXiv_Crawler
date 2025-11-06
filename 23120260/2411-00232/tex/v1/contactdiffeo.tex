@@ -1,0 +1,118 @@
+\section{Fibers of contact diffeomorphisms}\label{sec:FiberContact}
+
+Let $B$ be the closed unit ball in $\HH$. In this section we will prove Theorem~\ref{thm:multiscale-maps} by constructing contact diffeomorphisms $\beta\from B\to B$ which are arbitrarily close to the identity map and have the property that the average of the $\mathcal{H}^2$-measure of the fibers of $\pi\circ\beta$ is arbitrarily small. Here $\pi\from \HH\to\mathbb R^2$ is the projection onto the horizontal plane.
+
+For an open set $U\subset \HH$, we say that a smooth map $\beta\from U\to \HH$ is a \emph{contact map} if it preserves the contact structure of $\HH$, i.e., $D\beta_v(\langle X,Y\rangle) \subset \langle X,Y\rangle$ for all $v\in U$. For a diffeomorphism $f\from A\to A$, let $\supp f = \closure \{x\in A\mid f(x)\ne x\}$; we say that $f$ is supported on a ball $B$ if $\supp f \subset \inter(B)$.
+
+We will need a few preliminaries in order to prove Theorem \ref{thm:multiscale-maps}. For a smooth map $f\from \HH \to \R^2$, the differential $Df_v$ sends $\mathfrak{h}$ to $\R^2$. We define the \emph{horizontal Jacobian} $J^H_f(v) := \det(Df_v|_{\langle X,Y\rangle})$ to be the determinant of $Df_v|_{\langle X, Y\rangle}$. The following co-area formula was proved for the first time in \cite{MagnaniCoarea}. For generalizations, see \cite{KarmanovaVodopyanov, Kozhevnikov, MagnaniStepanovTrevisan}.
+\begin{thm}\label{thm:Coarea}
+  There is a $c>0$ such that if $f\from \HH \to \R^2$ is a smooth map and $U\subset \HH$ is a measurable set, then
+  \begin{equation}\label{eq:coarea}
+    \int_{\R^2} \cH^2(f^{-1}(v)\cap U) \ud v = c \int_U \left|J^H_f(g)\right| \ud g.
+  \end{equation}
+\end{thm}
+
+If $\beta\from \HH\to \HH$ is a contact map, then $D\beta_v|_{\langle X,Y\rangle}$ is a map from $\langle X,Y \rangle$ to $\langle X,Y \rangle$ for all $v$, and we define the horizontal Jacobian of $\beta$ as $J^H_\beta(v) := \det(D\beta_v|_{\langle X,Y\rangle})$. By the coarea formula, to prove Theorem~\ref{thm:multiscale-maps}.(\ref{it:small-fibers}), it suffices to find $\beta$ such that
+\begin{equation}\label{eq:jacobian-bound}
+  \int_{B}\left| J^H_{\pi\circ \beta}(v)\right|\ud v = \int_{B}\left| J^H_\beta(v)\right|\ud v < \epsilon.
+\end{equation}
+We will show that one can reduce the left-hand side of \eqref{eq:jacobian-bound} by composing $\beta$ with a contact diffeomorphism supported on a small ball, then use the Vitali Covering Theorem to prove Theorem~\ref{thm:multiscale-maps}. 
+
+\begin{lemma}\label{lem:reduction}
+  There is a $\kappa >0$ with the following property. Let $\beta\from \HH \to \HH$ be a contact map and let $p\in \HH$ be a point such that $J^H_\beta(p)\ne 0$. There is an $r_0 > 0$ such that for any $0<r<r_0$, there is a contact diffeomorphism $\alpha\from \HH \to \HH$ supported on $B(p,r)$ such that
+  \begin{equation}\label{eq:reduction}
+    \int_{B(p,r)}\left| J^H_{\beta\circ \alpha}(v)\right|\ud v \le (1 - \kappa) \int_{B(p,r)}\left| J^H_\beta(v)\right|\ud v.
+  \end{equation}
+\end{lemma}
+\begin{proof}
+  We first construct a contact diffeomorphism $\alpha_0\from \HH \to \HH$ supported on $B:=B(\0,1)$ such that 
+  $$\int_{B}\left| J^H_{\alpha_0}(v)\right|\ud v < \vol(B).$$
+  In fact, it suffices to choose any $\alpha_0$ which is not volume-preserving.
+  
+  Recall that any smooth compactly-supported function $\psi\in C^\infty_c(\HH)$ corresponds to a vector field 
+  $$V_\psi := Y[\psi] X - X[\psi] Y + \psi Z$$
+  such that $V_\psi$ generates a contact flow, i.e., a flow $\Psi_\psi^t\from \HH \to \HH$ such that each map $\Psi_\psi^t$ is a contact diffeomorphism \cite{KoranyiReimann}. Fix some nonzero $\psi\in C^\infty_c(B)$, so that for all $t$, $\Psi_\psi^t$ is a contact diffeomorphism supported on $B$.
+
+  Since $X$, $Y$, and $Z$ are divergence-free,
+  $$
+  \mathrm{div} V_\psi = X[Y\psi] - Y[X\psi] + Z[\psi] = 2Z[\psi].
+  $$
+  Therefore, when $t$ is small, we can approximate the Jacobian determinant of $\Psi_\psi^t$ by
+  $$J_{\Psi_\psi^t}(v) = 1 + 2Z[\psi](v) t + O(t^2)$$
+  for all $v\in \HH$, and we can choose $t$ so that $\Psi_\psi^t$ is not volume-preserving. Let $\alpha_0 = \Psi_\psi^t$.
+
+  Since $\alpha_0$ is a contact diffeomorphism, we have $D_v\alpha_0(\langle X,Y\rangle) = \langle X,Y\rangle$ for all $v$; let
+  $$D_v^H\alpha_0 = \begin{pmatrix} a(v) & c(v) \\
+    b(v) & d(v) 
+  \end{pmatrix} \in M^{2\times 2}(\R).$$
+  be the corresponding matrix. Then
+  $$(\alpha_0)_*(Z) = [(\alpha_0)_*(X), (\alpha_0)_*(Y)] = [a X + b Y, c X + d Y].$$
+  Since $[fV,gW] = fg[V,W] + fV[g] W - gW[f] V$, this has $Z$--component
+  $$(\alpha_0)_*(Z)_Z = ad - bc = J^H_{\alpha_0}(v),$$
+  and
+  \begin{equation}\label{eq:squares}
+    J_{\alpha_0}(v) = J^H_{\alpha_0}(v)\cdot (\alpha_0)_*(Z)_Z = J^H_{\alpha_0}(v)^2.
+  \end{equation}
+  Furthermore, since $\alpha_0$ is a diffeomorphism, we have $J_{\alpha_0}(v)>0$ for all $v$ and thus $J^H_{\alpha_0}(v)>0$ for all $v$.
+
+  Since $\alpha_0$ fixes $\partial B$ pointwise, the coarea formula for smooth maps implies that
+  $$\int_B J_{\alpha_0}(v) \ud v = \int_B \ud v = \vol(B).$$
+  By Jensen's inequality,
+  $$\frac{1}{\vol(B)} \int_B J^H_{\alpha_0}(v) \ud v = \frac{1}{\vol(B)} \int_B \sqrt{J_{\alpha_0}(v)} \ud v \le \sqrt{\frac{1}{\vol(B)} \int_B J_{\alpha_0}(v) \ud v} = 1.$$
+  Since $J_{\alpha_0}$ is not constant on $B$, this inequality is strict, and
+  $$\int_B J^H_{\alpha_0}(v) \ud v < \vol(B).$$
+
+  Let
+  $$\kappa = \frac{1}{2}\left(1 - \frac{\int_B J^H_{\alpha_0}(v) \ud v}{\vol(B)}\right),$$
+  so that 
+  $$\int_{B}J^H_{\alpha_0}(v)\ud v = (1-2\kappa)\vol(B).$$
+  
+  Let $\beta\from \HH \to \HH$ be a contact map and let $p\in \HH$ be a point such that $J^H_\beta(p)\ne 0$. For $r>0$, let
+  $$\alpha_{p,r}(v) = p\cdot (s_r\circ \alpha_0\circ s_r^{-1})(p^{-1} v),$$
+  so that $\alpha_{p,r}$ is a contact diffeomorphism supported on $B(p,r)$. Then, making the substitution $w = s_r^{-1}(p^{-1} v)$, 
+  \begin{multline*}
+    \int_{B(p,r)} J^H_{\beta\circ \alpha_{p,r}}(v) \ud v = \int_{B(p,r)} J^H_{\beta}(\alpha_{p,r}(v)) J^H_{\alpha_{p,r}}(v)  \ud v \\
+    = r^4 \int_{B} J^H_{\beta}(p\cdot s_r(\alpha_0(w))) J^H_{\alpha_{0}}(w) \ud w.
+  \end{multline*}
+  By the continuity of $J^H_{\beta}$, 
+  $$\lim_{r\to 0} r^{-4} \int_{B(p,r)} J^H_{\beta\circ \alpha_{p,r}}(v) \ud v = \int_{B} J^H_{\beta}(p) J^H_{\alpha_{0}}(w) \ud w = (1-2\kappa) J^H_{\beta}(p)\vol(B)$$
+  and
+  $$\lim_{r\to 0} r^{-4} \int_{B(p,r)} J^H_{\beta}(v) \ud v = J^H_{\beta}(p)\vol(B).$$
+  Therefore, when $r$ is sufficiently small, 
+  $$\int_{B(p,r)} J^H_{\beta\circ \alpha_{p,r}}(v) \ud v \le (1 - \kappa) \int_{B(p,r)} J^H_\beta(v),$$
+  as desired.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:multiscale-maps}]
+  We construct $\beta$ inductively. Let $\kappa$ be as in Lemma~\ref{lem:reduction} and let $B\subset \HH$ be the closed unit ball. Let $\beta_0 = \id_{\HH}$. We will define a sequence $A_0,A_1,A_2,\dots\from \HH \to\HH$ of contact diffeomorphisms such that if $\beta_{i+1} = \beta_i \circ A_i$ for all $i$ and 
+  $$F_i := \int_{\R^2} \cH^2((\pi\circ \beta_i)^{-1}(v) \cap B) \ud v = c \int_B \left|J^H_{\beta_i}(v)\right| \ud v,$$
+  then
+  \begin{enumerate}
+  \item There is a finite union $U_i$ of disjoint balls, each of radius at most $\epsilon 2^{-i-1}$ such that $\supp A_i \subset \inter(U_i)$ and $U_i\subset \inter(B)$.
+  \item $F_{i+1} \le (1 - \frac{\kappa}{2}) F_i$ for all $i$.
+  \end{enumerate}
+
+  For each $i$, we use the Vitali Covering Theorem to construct $U_i$. For each $p\in \HH$, let $r_0(p)$ be as in Lemma~\ref{lem:reduction} applied to $\beta_i$. For $p\in \inter(B)$, let
+  $$0 < r(p) < \min\{d(p,\partial B), r_0(p), \epsilon 2^{-i-1}\}.$$
+  The balls of the form $B(p,r(p))$ form a Vitali covering of $\inter(B)$, so by the Vitali Covering Theorem, there is a sequence of points $p_1,p_2,\dots\in \HH$ such that the balls $B(p_j,r(p_j))$ are all disjoint and $B\setminus \bigcup_j B(p_j,r(p_j))$ has measure zero. Let $U_{i,N} = \bigcup_{j=1}^N B(p_j,r(p_j))$. Then 
+  $$\lim_{N\to \infty} \int_{U_{i,N}} \left|J^H_{\beta_i}(v)\right| \ud v = F_i;$$
+  we choose $N$ large enough that $\int_{U_{i,N}} \left|J^H_{\beta_i}(v)\right| \ud v \ge \frac{F_i}{2}$ and let $U_i = U_{i,N}$. 
+
+  For $j=1,\dots, N$, let $\alpha_j$ be as in Lemma~\ref{lem:reduction}, so that $\alpha_j$ is supported on $B(p_j,r(p_j))$ and
+  \begin{equation}\label{eq:apply-reduce}
+    \int_{B(p_j,r_j)}\left| J^H_{\beta_i\circ \alpha_j}(v)\right|\ud v \le (1-\kappa) \int_{B(p_j,r_j)}\left| J^H_{\beta_i}(v)\right|\ud v.
+  \end{equation}
+  Let $A_i\from \HH\to \HH$,
+  $$A_i(v) =\begin{cases}
+    \alpha_j(v) & v\in B(p_j,r(p_j)) \text{ for some } 1\le j \le n \\
+    v & \text{otherwise}.
+  \end{cases}$$
+  Then $U_i$ and $A_i$ satisfy condition (1). Let $\beta_{i+1} = \beta_i \circ A_i$. By \eqref{eq:apply-reduce}, for $j=1,\dots, N$,
+  $$\int_{B(p_j,r_j)}\left| J^H_{\beta_i}(v)\right| - \left| J^H_{\beta_{i+1}}(v)\right|\ud v \ge \kappa \int_{B(p_j,r_j)}\left| J^H_{\beta_i}(v)\right|\ud v.$$
+  It follows that
+  \begin{multline*}
+    F_i - F_{i+1} = \int_B \left|J^H_{\beta_i}(v)\right| - \left|J^H_{\beta_{i+1}}(v)\right| \ud v \\ = \sum_{j=1}^N  \int_{B(p_j,r(p_j))} \left|J^H_{\beta_i}(v)\right| - \left|J^H_{\beta_{i+1}}(v)\right| \ud v \ge \kappa \int_{U_i} \left|J^H_{\beta_i}(v)\right|\ud v 
+    \ge \frac{\kappa}{2} F_i.
+  \end{multline*}
+  and thus $F_{i+1} \le (1 - \frac{\kappa}{2}) F_i$ as desired.
+\end{proof}

@@ -1,0 +1,559 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{AMiLip}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bc694af74427d0d33c0cdf02d92faf25}{%
+           family={Antonelli},
+           familyi={A\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=f62910e0f77b9d53978ea93be22571c8}{%
+           family={Merlo},
+           familyi={M\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{970564e5064b5bfb84108bf78b66a0e7}
+      \strng{fullhash}{970564e5064b5bfb84108bf78b66a0e7}
+      \strng{bibnamehash}{970564e5064b5bfb84108bf78b66a0e7}
+      \strng{authorbibnamehash}{970564e5064b5bfb84108bf78b66a0e7}
+      \strng{authornamehash}{970564e5064b5bfb84108bf78b66a0e7}
+      \strng{authorfullhash}{970564e5064b5bfb84108bf78b66a0e7}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2737-0690,2737-114X}
+      \field{journaltitle}{Ann. Fenn. Math.}
+      \field{number}{1}
+      \field{title}{Intrinsically {L}ipschitz functions with normal target in {C}arnot groups}
+      \field{volume}{46}
+      \field{year}{2021}
+      \field{pages}{571\bibrangedash 579}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.5186/aasfm.2021.4638
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5186/aasfm.2021.4638
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5186/aasfm.2021.4638
+      \endverb
+    \endentry
+    \entry{FSSCILip}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ae40c77240ec95a84a46cb674e43d158}{%
+           family={Franchi},
+           familyi={F\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=978e200a3e4dc18e5303f95a1525cfab}{%
+           family={Serapioni},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e2ba36d10e06b946af7fcaf6fff2ac88}{%
+           family={Serra\bibnamedelima Cassano},
+           familyi={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{3707bb9801e80ac89457d88a6ec8983b}
+      \strng{fullhash}{3707bb9801e80ac89457d88a6ec8983b}
+      \strng{bibnamehash}{3707bb9801e80ac89457d88a6ec8983b}
+      \strng{authorbibnamehash}{3707bb9801e80ac89457d88a6ec8983b}
+      \strng{authornamehash}{3707bb9801e80ac89457d88a6ec8983b}
+      \strng{authorfullhash}{3707bb9801e80ac89457d88a6ec8983b}
+      \field{extraname}{1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1345-4773,1880-5221}
+      \field{journaltitle}{J. Nonlinear Convex Anal.}
+      \field{number}{3}
+      \field{title}{Intrinsic {L}ipschitz graphs in {H}eisenberg groups}
+      \field{volume}{7}
+      \field{year}{2006}
+      \field{pages}{423\bibrangedash 441}
+      \range{pages}{19}
+    \endentry
+    \entry{FSSCiLip2}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ae40c77240ec95a84a46cb674e43d158}{%
+           family={Franchi},
+           familyi={F\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=978e200a3e4dc18e5303f95a1525cfab}{%
+           family={Serapioni},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e2ba36d10e06b946af7fcaf6fff2ac88}{%
+           family={Serra\bibnamedelima Cassano},
+           familyi={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{3707bb9801e80ac89457d88a6ec8983b}
+      \strng{fullhash}{3707bb9801e80ac89457d88a6ec8983b}
+      \strng{bibnamehash}{3707bb9801e80ac89457d88a6ec8983b}
+      \strng{authorbibnamehash}{3707bb9801e80ac89457d88a6ec8983b}
+      \strng{authornamehash}{3707bb9801e80ac89457d88a6ec8983b}
+      \strng{authorfullhash}{3707bb9801e80ac89457d88a6ec8983b}
+      \field{extraname}{2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1050-6926,1559-002X}
+      \field{journaltitle}{J. Geom. Anal.}
+      \field{number}{4}
+      \field{title}{Differentiability of intrinsic {L}ipschitz functions within {H}eisenberg groups}
+      \field{volume}{21}
+      \field{year}{2011}
+      \field{pages}{1044\bibrangedash 1084}
+      \range{pages}{41}
+      \verb{doi}
+      \verb 10.1007/s12220-010-9178-4
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s12220-010-9178-4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s12220-010-9178-4
+      \endverb
+    \endentry
+    \entry{FSIlip}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ae40c77240ec95a84a46cb674e43d158}{%
+           family={Franchi},
+           familyi={F\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=cd846060c9dd4d79fae47f4ed42c8498}{%
+           family={Serapioni},
+           familyi={S\bibinitperiod},
+           given={R.\bibnamedelimi P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe73e817a0d68337578706f1cf651c09}
+      \strng{fullhash}{fe73e817a0d68337578706f1cf651c09}
+      \strng{bibnamehash}{fe73e817a0d68337578706f1cf651c09}
+      \strng{authorbibnamehash}{fe73e817a0d68337578706f1cf651c09}
+      \strng{authornamehash}{fe73e817a0d68337578706f1cf651c09}
+      \strng{authorfullhash}{fe73e817a0d68337578706f1cf651c09}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1050-6926,1559-002X}
+      \field{journaltitle}{J. Geom. Anal.}
+      \field{number}{3}
+      \field{title}{Intrinsic {L}ipschitz graphs within {C}arnot groups}
+      \field{volume}{26}
+      \field{year}{2016}
+      \field{pages}{1946\bibrangedash 1994}
+      \range{pages}{49}
+      \verb{doi}
+      \verb 10.1007/s12220-015-9615-5
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s12220-015-9615-5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s12220-015-9615-5
+      \endverb
+    \endentry
+    \entry{KarmanovaVodopyanov}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b0d051cfab457112d93de8a2cf1f19ab}{%
+           family={Karmanova},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=700505539a8e1277da964fc7a0cc7d14}{%
+           family={Vodopyanov},
+           familyi={V\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf7e5d264835f47a52f6fa500955f33a}
+      \strng{fullhash}{cf7e5d264835f47a52f6fa500955f33a}
+      \strng{bibnamehash}{cf7e5d264835f47a52f6fa500955f33a}
+      \strng{authorbibnamehash}{cf7e5d264835f47a52f6fa500955f33a}
+      \strng{authornamehash}{cf7e5d264835f47a52f6fa500955f33a}
+      \strng{authorfullhash}{cf7e5d264835f47a52f6fa500955f33a}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0167-8019,1572-9036}
+      \field{journaltitle}{Acta Appl. Math.}
+      \field{title}{A coarea formula for smooth contact mappings of {C}arnot-{C}arathéodory spaces}
+      \field{volume}{128}
+      \field{year}{2013}
+      \field{pages}{67\bibrangedash 111}
+      \range{pages}{45}
+      \verb{doi}
+      \verb 10.1007/s10440-013-9822-7
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10440-013-9822-7
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10440-013-9822-7
+      \endverb
+    \endentry
+    \entry{KoranyiReimann}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1d4549062d28ef636122153cf56d2e13}{%
+           family={Korányi},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1d10906bac4449be0ba2ac8849bf83cd}{%
+           family={Reimann},
+           familyi={R\bibinitperiod},
+           given={H.\bibnamedelimi M.},
+           giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e7457487fde56682cd578fbf8a13847c}
+      \strng{fullhash}{e7457487fde56682cd578fbf8a13847c}
+      \strng{bibnamehash}{e7457487fde56682cd578fbf8a13847c}
+      \strng{authorbibnamehash}{e7457487fde56682cd578fbf8a13847c}
+      \strng{authornamehash}{e7457487fde56682cd578fbf8a13847c}
+      \strng{authorfullhash}{e7457487fde56682cd578fbf8a13847c}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-8708,1090-2082}
+      \field{journaltitle}{Adv. Math.}
+      \field{number}{1}
+      \field{title}{Foundations for the theory of quasiconformal mappings on the {H}eisenberg group}
+      \field{volume}{111}
+      \field{year}{1995}
+      \field{pages}{1\bibrangedash 87}
+      \range{pages}{87}
+      \verb{doi}
+      \verb 10.1006/aima.1995.1017
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1006/aima.1995.1017
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1006/aima.1995.1017
+      \endverb
+    \endentry
+    \entry{KozhevnikovArticle}{article}{}
+      \name{author}{1}{}{%
+        {{hash=845dcf9d58975c5c811acc826d1e6c68}{%
+           family={Kozhevnikov},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{845dcf9d58975c5c811acc826d1e6c68}
+      \strng{fullhash}{845dcf9d58975c5c811acc826d1e6c68}
+      \strng{bibnamehash}{845dcf9d58975c5c811acc826d1e6c68}
+      \strng{authorbibnamehash}{845dcf9d58975c5c811acc826d1e6c68}
+      \strng{authornamehash}{845dcf9d58975c5c811acc826d1e6c68}
+      \strng{authorfullhash}{845dcf9d58975c5c811acc826d1e6c68}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv:1110.3634}
+      \field{title}{Roughness of level sets of differentiable maps on {H}eisenberg group}
+      \field{year}{2011}
+    \endentry
+    \entry{Kozhevnikov}{article}{}
+      \name{author}{1}{}{%
+        {{hash=845dcf9d58975c5c811acc826d1e6c68}{%
+           family={Kozhevnikov},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{845dcf9d58975c5c811acc826d1e6c68}
+      \strng{fullhash}{845dcf9d58975c5c811acc826d1e6c68}
+      \strng{bibnamehash}{845dcf9d58975c5c811acc826d1e6c68}
+      \strng{authorbibnamehash}{845dcf9d58975c5c811acc826d1e6c68}
+      \strng{authornamehash}{845dcf9d58975c5c811acc826d1e6c68}
+      \strng{authorfullhash}{845dcf9d58975c5c811acc826d1e6c68}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Géométrie métrique [math.MG]. Université Paris Sud - Paris XI, (2015)}
+      \field{title}{{P}ropriétés métriques des ensembles de niveau des applications différentiables sur les groupes de {C}arnot}
+      \field{year}{2015}
+    \endentry
+    \entry{LeonardiMagnani}{article}{}
+      \name{author}{2}{}{%
+        {{hash=82a3af82acd79d179b20beaa949221e0}{%
+           family={Leonardi},
+           familyi={L\bibinitperiod},
+           given={G.\bibnamedelimi P.},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=a7f8466b384f435be6f63c4b6a8b0b02}{%
+           family={Magnani},
+           familyi={M\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{609b2eded769bf180eefba61f367e17a}
+      \strng{fullhash}{609b2eded769bf180eefba61f367e17a}
+      \strng{bibnamehash}{609b2eded769bf180eefba61f367e17a}
+      \strng{authorbibnamehash}{609b2eded769bf180eefba61f367e17a}
+      \strng{authornamehash}{609b2eded769bf180eefba61f367e17a}
+      \strng{authorfullhash}{609b2eded769bf180eefba61f367e17a}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-247X,1096-0813}
+      \field{journaltitle}{J. Math. Anal. Appl.}
+      \field{number}{1}
+      \field{title}{Intersections of intrinsic submanifolds in the {H}eisenberg group}
+      \field{volume}{378}
+      \field{year}{2011}
+      \field{pages}{98\bibrangedash 108}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/j.jmaa.2010.12.052
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.jmaa.2010.12.052
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.jmaa.2010.12.052
+      \endverb
+    \endentry
+    \entry{LyonsVictoir}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7b8449c3e24d235550a751eb22f8a0ea}{%
+           family={Lyons},
+           familyi={L\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f80132482b47aa4e16e4d9f5ae2249be}{%
+           family={Victoir},
+           familyi={V\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{5e831a419cb1b5fda3316e9f3462d7f2}
+      \strng{fullhash}{5e831a419cb1b5fda3316e9f3462d7f2}
+      \strng{bibnamehash}{5e831a419cb1b5fda3316e9f3462d7f2}
+      \strng{authorbibnamehash}{5e831a419cb1b5fda3316e9f3462d7f2}
+      \strng{authornamehash}{5e831a419cb1b5fda3316e9f3462d7f2}
+      \strng{authorfullhash}{5e831a419cb1b5fda3316e9f3462d7f2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0294-1449,1873-1430}
+      \field{journaltitle}{Ann. Inst. H. Poincaré{} C Anal. Non Linéaire}
+      \field{number}{5}
+      \field{title}{An extension theorem to rough paths}
+      \field{volume}{24}
+      \field{year}{2007}
+      \field{pages}{835\bibrangedash 847}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.anihpc.2006.07.004
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.anihpc.2006.07.004
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.anihpc.2006.07.004
+      \endverb
+    \endentry
+    \entry{MagnaniCoarea}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a7f8466b384f435be6f63c4b6a8b0b02}{%
+           family={Magnani},
+           familyi={M\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7f8466b384f435be6f63c4b6a8b0b02}
+      \strng{fullhash}{a7f8466b384f435be6f63c4b6a8b0b02}
+      \strng{bibnamehash}{a7f8466b384f435be6f63c4b6a8b0b02}
+      \strng{authorbibnamehash}{a7f8466b384f435be6f63c4b6a8b0b02}
+      \strng{authornamehash}{a7f8466b384f435be6f63c4b6a8b0b02}
+      \strng{authorfullhash}{a7f8466b384f435be6f63c4b6a8b0b02}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0214-1493,2014-4350}
+      \field{journaltitle}{Publ. Mat.}
+      \field{number}{2}
+      \field{title}{Note on coarea formulae in the {H}eisenberg group}
+      \field{volume}{48}
+      \field{year}{2004}
+      \field{pages}{409\bibrangedash 422}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.5565/PUBLMAT\_48204\_07
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5565/PUBLMAT_48204_07
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5565/PUBLMAT_48204_07
+      \endverb
+    \endentry
+    \entry{MagnaniStepanovTrevisan}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a7f8466b384f435be6f63c4b6a8b0b02}{%
+           family={Magnani},
+           familyi={M\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=f85a5a9367237cdc3529ccff7c42643c}{%
+           family={Stepanov},
+           familyi={S\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=87a21fdb3ff9f47f146842c817e3a080}{%
+           family={Trevisan},
+           familyi={T\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{3283d2d2c7010a2617b83701fb63e4c5}
+      \strng{fullhash}{3283d2d2c7010a2617b83701fb63e4c5}
+      \strng{bibnamehash}{3283d2d2c7010a2617b83701fb63e4c5}
+      \strng{authorbibnamehash}{3283d2d2c7010a2617b83701fb63e4c5}
+      \strng{authornamehash}{3283d2d2c7010a2617b83701fb63e4c5}
+      \strng{authorfullhash}{3283d2d2c7010a2617b83701fb63e4c5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0024-6107,1469-7750}
+      \field{journaltitle}{J. Lond. Math. Soc. (2)}
+      \field{number}{3}
+      \field{title}{A rough calculus approach to level sets in the {H}eisenberg group}
+      \field{volume}{97}
+      \field{year}{2018}
+      \field{pages}{495\bibrangedash 522}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1112/jlms.12115
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1112/jlms.12115
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1112/jlms.12115
+      \endverb
+    \endentry
+    \entry{NY-VvsH}{article}{}
+      \name{author}{2}{}{%
+        {{hash=983f41dbcb8e586f8e971f381eaf8559}{%
+           family={Naor},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ee7a82173eda625a238cb2a77e2baa5f}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{5944ed75f126467d6e205209eb5b0178}
+      \strng{fullhash}{5944ed75f126467d6e205209eb5b0178}
+      \strng{bibnamehash}{5944ed75f126467d6e205209eb5b0178}
+      \strng{authorbibnamehash}{5944ed75f126467d6e205209eb5b0178}
+      \strng{authornamehash}{5944ed75f126467d6e205209eb5b0178}
+      \strng{authorfullhash}{5944ed75f126467d6e205209eb5b0178}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-486X,1939-8980}
+      \field{journaltitle}{Ann. of Math. (2)}
+      \field{number}{1}
+      \field{title}{Vertical perimeter versus horizontal perimeter}
+      \field{volume}{188}
+      \field{year}{2018}
+      \field{pages}{171\bibrangedash 279}
+      \range{pages}{109}
+      \verb{doi}
+      \verb 10.4007/annals.2018.188.1.4
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4007/annals.2018.188.1.4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4007/annals.2018.188.1.4
+      \endverb
+    \endentry
+    \entry{VittoneiLip}{article}{}
+      \name{author}{1}{}{%
+        {{hash=afe572fc1ce5415198cf5ec53e6d74e6}{%
+           family={Vittone},
+           familyi={V\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{afe572fc1ce5415198cf5ec53e6d74e6}
+      \strng{fullhash}{afe572fc1ce5415198cf5ec53e6d74e6}
+      \strng{bibnamehash}{afe572fc1ce5415198cf5ec53e6d74e6}
+      \strng{authorbibnamehash}{afe572fc1ce5415198cf5ec53e6d74e6}
+      \strng{authornamehash}{afe572fc1ce5415198cf5ec53e6d74e6}
+      \strng{authorfullhash}{afe572fc1ce5415198cf5ec53e6d74e6}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2050-5094}
+      \field{journaltitle}{Forum Math. Sigma}
+      \field{title}{Lipschitz graphs and currents in {H}eisenberg groups}
+      \field{volume}{10}
+      \field{year}{2022}
+      \field{pages}{Paper No. e6\bibrangessep 104}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1017/fms.2021.84
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1017/fms.2021.84
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1017/fms.2021.84
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

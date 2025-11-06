@@ -1,0 +1,81 @@
+\section{Rodeo Algorithm}
+\label{sec:rodeo}
+
+The recently proposed rodeo algorithm (RA)~\cite{Choi:2020pdg, Qian:2021arx, BeeLindgren2022} is a promising method that uses a stochastic cosine filter to isolate eigenstates of a given Hamiltonian. It can be used to extract the energy spectrum of a Hamiltonian, and it can also be used as a state-preparation algorithm. One of its biggest advantages is that it allows one to prepare a system in any eigenstate of the Hamiltonian, not just the ground state.
+
+The rodeo algorithm uses one or more ancilla qubits to control the time evolution of the initial object state $\ket{\psi_I}$ by the object Hamiltonian $H$. In the general case, the $M$-cycle RA uses a set of $M$ ancilla qubits. However, for quantum computers that allow mid-circuit measurements, a single ancilla qubit may be used repeatedly~\cite{Qian:2021arx}. The algorithm starts with all ancilla qubits in the same state e.g. $\ket{1}$. A Hadamard gate is applied to fully mix each ancilla qubit. Then for the $m$th control/ancilla qubit, a controlled time evolution $e^{-i\hat{H}t_m}$ is applied to the object system, followed by a phase rotation $P(Et_m)$ applied to the ancilla qubit. In the end, a Hadamard gate is applied to each ancilla qubit, and it is measured.
+
+\begin{figure}[!hbpt]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/rodeo.eps}
+    \caption{\footnotesize Gate representation of the rodeo algorithm.}
+    \label{fig:rodeo-algorithm}
+\end{figure}
+
+Let us consider a single rodeo cycle. Starting from the initial state $\ket{1}\ket{\psi_I}$, after performing one cycle of the RA and inserting a complete set of energy eigenstates, the system is in the state
+\begin{align}
+    \begin{split}
+        &          \frac12 \sum_j \braket{E_j|\psi_I } \left(1- e^{-i(E_j- E)t_1} \right) \ket{0} \ket{E_j} \\
+        & \qquad + \frac12 \sum_j \braket{E_j|\psi_I } \left(1+ e^{-i(E_j- E)t_1} \right) \ket{1} \ket{E_j}
+    \end{split}
+\end{align}
+The probability, as a function of $E$, of measuring the ancilla qubit in the original state $\ket{1}$ is
+\begin{equation}
+    P_{\ket{1}}(E) = \sum_j \left|\braket{E_j|\psi_I }\right|^2 \cos^2\left([E-E_j]\frac{t_1}{2}\right) .
+\end{equation}
+Thus, if we take random values of the evolution time $t_m$, we have a cosine filter for the energy, which can be tuned to exponentially suppress eigenstates outside an energy range. For large $M$, the spectral weight for any eigenstate with $E_j \neq E$ is suppressed by a factor of $1/4^M$.
+
+The RA can be used to extract the spectrum of the Hamiltonian $H$. If we label the eigenstates of $H$ as $\ket{E_j}$, we can define the initial-state spectral overlap function as $S(E) = |\braket{E_j|\psi_I}|^2$ for $E=E_j$ and $S(E)=0$ for $E\neq E_j$. In practice, one runs the RA at some fixed energy $E$ and random value $t_m$ for each rodeo cycle. This is repeated with a set of Gaussian random values for the times $t_m$, and the results are averaged over to get the value of $S$ at $E$. The function $S(E)$ is constructed by repeating this procedure for a range of values $E$. An example for the Schwinger model is shown in Fig.~\ref{fig:rodeo_spectrum}.
+
+\begin{figure}[!hbpt]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/rodeo-8_10101010.pdf}
+    \caption{\footnotesize Spectral overlap factors for the $\ket{10101010}$ initial state from the rodeo algorithm.}
+    \label{fig:rodeo_spectrum}
+\end{figure}
+
+The RA however has limitations for NISQ machines. First, it requires an additional number of qubits, the ancilla, that are not available for the simulation after the state is prepared. Furthermore, the stochastic values for the controlled time evolution have to be chosen from a distribution with a certain width $\sigma$. This unphysical parameter controls the width of the cosine filters that are effectively applied. If a too small value is chosen the filtering effect is not sufficient to isolate the different peak corresponding to distinct eigenvalues. But choosing a too large value necessitates simulating large times with a time evolution operator, increasing the necessary Trotter steps.
+
+\subsection{Rodeo Algorithm for State Preparation}
+\label{subec:rodeo_state_prep}
+
+The RA suppresses eigenstates whose eigenvalues differ from $E$ and thereby effectively amplifies any eigenstate whose energy is close to $E$. This means the RA can be used for state preparation.
+
+If the exact energy $E_k$ of the target eigenstate $\ket{E_k}$ is known, then one simply performs some number $M$ of rodeo cycles at the energy $E=E_k$. In the end, if all ancilla qubits are measured to be in the state $\ket{1}$, then the object state is $\ket{E_k}$ with a probability which ranges from the initial state overlap probability $|\braket{E_k|\psi_I}|^2$ when $M=0$ to 1 in the limit of large $M$. If any ancilla qubits are measured to be in the state $\ket{0}$, then the state is discarded and one restarts the algorithm. There are two probabilities to keep in mind: the probability of measuring all ancilla qubits to be in the state $\ket{1}$, and the conditional probability that the object state is $\ket{E_k}$ given that all ancillas are in the state $\ket{1}$. In the limit of large $M$, the first probability is equal to the initial state overlap probability, and the second is equal to one. The cost, in terms of gates and circuit depth, of the RA for state preparation depends on several factors including the initial state overlap with the desired eigenstate, and the number of rodeo cycles $M$. The controlled time evolution can be realized through Toffoli gates, which extend CNOT gates to have 2 control qubits. These in turn can be decomposed in a series of 6 CNOT gates and single qubit rotations. In general, the cost of the RA for our Schwinger Hamiltonian, with first-order trotterization, is then: $6M[4(N-1) + (N-1)(N-2)]$. 
+
+If the energy $E_k$ of the target eigenstate $\ket{E_k}$ is not known, then the RA can be used to scan for the precise energy by trying a range of energies $E$ as in Fig.~\ref{fig:rodeo_spectrum}. Once the relevant peak is isolated in the spectral overlap function, its precise location can be extracted using a Gaussian fit as shown in Fig.~\ref{fig:rodeo_peak}. The algorithm is then repeated at this energy.
+
+\begin{figure}[!hbpt]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/rodeo-narrowing-8.pdf}
+    \caption{\footnotesize Gaussian fit to the data of the ground state peak from Fig.~\ref{fig:rodeo_spectrum}.}
+    \label{fig:rodeo_peak}
+\end{figure}
+
+\subsection{Preconditioning the Rodeo Algorithm with QAOA}
+The RA efficiency greatly improves when the overlap of the initial state with the desired state is large. In particular, the number of required cycles in the RA and their total time evolution length, and hence the overall length of the algorithm, can be reduced. One can then use a state coming from the blocked QAOA presented in Section~\ref{sec:blocked-qaoa}, which is cheap to prepare, and use it as initial state for the RA.\
+
+The procedure is as follows: first, a classical optimization of the blocked QAOA model is made on a small system, in our case we used the $N=4$ Schwinger model, the same of Table~\ref{tab:qaoa-block}. Secondly, the state coming from the QAOA ansatz for a larger system is prepared. As seen in the table, for the $N=8$ the overlap $\approx 96\%$, which is considerably better as an initial guess when compared to the alternating chain of spins up and down, see Fig.~\ref{fig:initial-comparison}.
+Finally, one can perform just 3 cycles of the RA with a small time evolution step, in practice, we restrict the random times $t_m$ to have a root-mean-square value of $t_\mathrm{rms=1,2}$, and perform a scan of the energies close to the ground state and use the fitting 
+procedure outlined in Sec.~\ref{subec:rodeo_state_prep}. Keeping the time short is crucial to reduce the number of Trotter steps required to perform the  controlled time evolution. In particular, since the values of $t_m$ are stochastic, we fix a value for the time steps of $\delta t = 0.25$, with the last step being shorter depending on the exact value of $t_m$. 
+
+\begin{figure}[!hbpt]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/initial_overlap_rodeo.pdf}
+    \caption{\footnotesize Comparison of the eigenstate overlaps between the QAOA ansatz and the simple alternating spin initial state.}
+    \label{fig:initial-comparison}
+\end{figure}
+
+As seen in Fig.~\ref{fig:rodeo_peak_qaoa}, the ground state energy can be determined 
+with a good degree of accuracy with very few cycles and a short time evolution.
+
+\begin{figure}[!hbpt]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/rodeo-narrowing-8_qaoa.pdf}
+    \caption{\footnotesize Gaussian fit to the data of the ground state peak from located starting from the blocked QAOA ansatz for $N=8$ and $t_{rms}=1,2$.}
+    \label{fig:rodeo_peak_qaoa}
+\end{figure}
+
+The advantage of combining the blocked QAOA and the RA is that one can perform the classical-hybrid optimization for large systems in QAOA and correct for the error coming from the mistuned parameters using the RA, which in turn benefits in efficiency from the improved initial ansatz. 
+The total algorithm for the blocked QAOA preconditioned RA for $N=8$ cannot be estimated exactly as the length depends on the random choices for the various $t_m$. However, with $t_{rms}=1$ and $\delta t = 0.25$ and $3$ cycles one can expect that on average the CNOT count will be on the order of 12 time evolution steps plus the initial QAOA preconditioning. Considering the decomposition of the Toffoli gates, we find that on average the total count of CNOT gates per qubit is 661, which corresponds to 75 adiabatic steps, while reproducing the ground state with 99.5\% accuracy.
+It should be noted that this procedure retains the requirement to check the values of the ancilla qubits of the RA to determine whether the state prepared is valid or not.

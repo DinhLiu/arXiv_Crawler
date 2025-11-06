@@ -1,0 +1,167 @@
+\section{Proposed Method}\label{sec:proposed_method}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem Formulation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Problem Formulation}\label{subsec:proposed_method_problem_formulation}
+Let $\mathbb{N}_B=\{0, 1, \dots, \Psi-1\}$ be the indices of $\Psi$ different Li-ion batteries $B=\{b_{\psi} | \psi \in \mathbb{N}_B\}$ and $\mathbb{N}_{K}^{\psi}=\{0, 1, \dots, K^{\psi}-1\}$ be the indices of $K^{\psi}$ different discharge cycles $C^{\psi}=\{k| k \in \mathbb{N}_{K}^{\psi}\}$ for each of the $\Psi$ different Li-ion batteries in $B$. Each discharge cycle $k$ consists of a sequence of measured samples of the current signal $I_{k}$, voltage signal $V_{k}$, temperature signal $T_{k}$ and sample time $S_{k}$. All signals are measured at the battery's terminal.
+\begin{equation}
+    I_{k} = \{i_{t}^{(k)}\},V_{k} = \{v_{t}^{(k)}\}, T_{k} = \{\tau_{t}^{(k)}\}, S_{k} = \{s_{t}^{(k)}\},
+\end{equation}
+where $t \in [0, L_{k}^{\psi}) \subset \mathbb{N}$ is the index of individual samples, with $L_{k}^{\psi}$ being the total number of samples in cycle $k$ of battery $b_{\psi}$. Note that $S_{k}$ is the sample time in seconds, where $s_{t=0}^{(k)}$ always starts at 0\,s.
+
+Through our anchor-based resampling introduced in section \ref{subsubsec:proposed_method_anchor_based_resampling} we ensure that for all cycles in $C^{\psi}$ the total number of samples are equal $L_{k}^{\psi} = L$.
+
+By concatenating the input signals, we get the input tensor $P_{k} \in \mathbb{R}^{L \times 4}$ for cycle $k$ of battery $b_{\psi}$:
+\begin{equation}
+    P_{k} = I_{k} \mathbin\Vert V_{k} \mathbin\Vert T_{k} \mathbin\Vert S_{k},
+\end{equation}
+
+where $\mathbin\Vert$ denotes the concatenation operation. The objective of \modelname{} is to learn a parameterized function $f_{\Theta}$ that maps the input tensor $P_{k}$ to the state of health $SOH_{k}$ for a given cycle $k$ of a given battery $b_{\psi}$:
+\begin{equation}
+    f_{\Theta}: P_{k} \mapsto SOH_{k}.
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Model Architecture
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The \modelname{} Model Architecture}\label{subsec:proposed_method_architecture}
+
+A top-level view of our \modelname{}'s model architecture is depicted in Fig. \ref{fig:architecture}. It consists of five main components: Resampling, input projection, position encoding, encoder backbone and the prediction head.
+
+We input a multi-variate time series of current, voltage, temperature and sample time of a single discharge cycle $k$ of a single battery $b_{\psi}$. Our \modelname{} model then predicts the state of health $SOH_{k}$ for that cycle.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.8\textwidth]{illustrations/architecture.png}
+\caption{\modelname{} architecture. We input a multi-variate time series of current, voltage, temperature and sample time. We first first resample the time signals using our anchor-based resampling technique. We then feed the resampled sample time into the sample time positional encoding layer. We further feed the time difference between two discharge cycles in hours into the cycle time difference positional encoding layer. The other signals, i.e. current, voltage and temperature are fed into the input projection. The projected signals are added to the sample time embeddings and the cycle time difference embeddings. Optionally, a CLS token can be inserted at any position. The embedded tokens are then fed into the \modelname{} Encoder. The \modelname{} Encoder consists of $M$ stacked \modelname{} Encoder blocks. The output of the encoder is finally fed into the head, which predicts the state of health of the current cycle $k$ for battery $b_{\psi}$.}
+\label{fig:architecture}
+\end{figure*}
+
+
+%% Anchor-Based Resampling of Time Signals
+\subsubsection{Anchor-Based Resampling of Time Signals}\label{subsubsec:proposed_method_anchor_based_resampling}
+
+As said earlier, we use the discharge cycles of a battery to determine its state of health. Since those cycles become shorter with the battery aging and because different sample rates are chosen to sample the data, the number of samples from different discharge cycles and batteries vary drastically. Further, more samples result in a wider model which consequently also means more resources are required to train it. Depending on the discharge mode, the required number of samples varies a lot. For example, in a constant current discharge mode, the current is nearly constant and the voltage drops continuously. Hence, a few number of samples might suffice. On the other hand, high frequency discharge profiles might require more samples to avoid anti-aliasing effects and to be able the model the dynamics of the systems.
+
+To conclude, there are many reasons why we need to be able to change the number of samples. We resample and interpolate the time signals to ensure we always have the same number of samples, using our anchor-based resampling technique.
+
+Generally speaking, we define a resampling function $f_R$ that resamples the sample time sequence $S_k$ of length $L_{k}^{\psi}$. $L_{k}^{\psi}$ varies for each cycle $k$ and battery $b_{\psi}$. The result is the resampled sample-time sequence $S_{k}^{*}$ which has the the same length $L$ for all cycles and batteries.
+\begin{equation}
+    f_R: S_{k} \in \mathbb{R}^{L_{k}^{\psi}} \mapsto S_{k}^{*} \in \mathbb{R}^{L}.
+\end{equation}
+
+Once we have $S_{k}^{*}$, we linearly interpolate the current, voltage and temperature signal.
+
+We experiment with three different approaches for the resampling function $f_R$: linear resampling, random resampling and our anchor-based resampling. Results are presented in section \ref{subsubsec:ablation_resampling}.
+
+For the linear resampling $f_R^{l}$, we simply take $L$ equidistant samples between the min and max value of $S_k$.
+\begin{equation}
+    f_R^{l}(S_k) := linspace(\min(S_k), \max(S_k), L).
+\end{equation}
+
+For the random resampling $f_R^{r}$, we draw $L$ samples from a uniform distribution $\mathcal{U}$.
+\begin{equation}
+    f_R^{r}(S_k) := \{ s_t^{k}\}_{t=0}^{L}, \, with \, s_t^k \sim \mathcal{U}_{[\min(S_k), \max(S_k)]}.
+\end{equation}
+
+For our proposed anchor-based resampling $f_R^{a}$, we first define the anchors by using linear resampling $f_R^{l}$ and then add some noise $z$ to each anchor.
+\begin{equation}
+    f_R^{a}(S_k) := f_R^{l}(S_k) + \{z_t\}_{t=0}^{L}, \, with \, z_t \sim \mathcal{U}_{[-\frac{w}{2}, \frac{w}{2}]},
+\end{equation}
+
+where $w$ is the interval width between two linearly resampled samples.
+In Figure \ref{fig:resample} we illustrate the resulting sample time for those three resample techniques.
+
+\begin{figure}[t]
+    \includegraphics[width=\linewidth]{illustrations/resample.png}
+    \caption{Resample techniques. Original: The original sample time sequence with $L_{k}^{\psi}$ samples. Linear: linear resampling with $L$ equidistant samples. Random: random resampling with $L$ samples drawn from a uniform distribution. Anchor: anchor-based resampling with random uniform noise $z$ added to $L$ equidistant samples.}
+    \label{fig:resample}
+\end{figure}
+
+%% Input Projection
+\subsubsection{Input Projection}\label{subsubsec:proposed_method_input_projection}
+We feed the resampled voltage, current, and temperature signals into our input projection. We use a simple linear projection layer to project the multi-variate time signal of $\mathbb{R}^{L \times 3}$ into $\mathbb{R}^{L \times d_{\texttt{model}}}$.
+
+%% Sample Time Positional Embeddings
+\subsubsection{Sample Time Position Embeddings}\label{subsubsec:proposed_method_sample_time_position_embeddings}
+As shown in our top-level architecture in Fig. \ref{fig:architecture}, we use time information in our positional encoding layer to obtain position embeddings $PE^{(k)} \in \mathbb{R}^{L \times d_{\texttt{model}}}$ for cycle $k$ that are then added to the projected tokens.
+
+In the original transformer by \cite{vaswani_attention_2017}, position embeddings were added since the transformer would otherwise has no knowledge of the order if its inputs because it has neither recurrence nor any convolutions. Among many possible techniques to either encode absolute or relative position, the sinusoidal position embedding like introduced by the transformer is still frequently used. It encodes the samples depending on their absolute position $p$ in the sequence.
+\begin{align} \nonumber\label{eq:proposed_method_sinusodial_pe}
+    & PE_{orig}\,[p, 2i]  & = \sin\left(p / 10.000^{2i/d_{\texttt{model}}}\right), \\
+    & PE_{orig}\,[p, 2i+1] & = \cos\left(p / 10.000^{2i/d_{\texttt{model}}}\right).
+\end{align}
+
+An SSM on the other hand is a recurrent model and inside the Mamba block we also have a convolution. Even so, in VisionMamba by \cite{zhu_vision_2024}, position embeddings were still added to make sense of the spatial position of image patches. In this work, even though having a SSM applied on causal time signals, we still add position embeddings. 
+
+Instead of encoding the position of the sample like in equation \ref{eq:proposed_method_sinusodial_pe}, we encode the sample time $s_{t}^{(k)}$ of cycle $k$ at position $p$ resulting in the positional embeddings $PE_{st}^{(k)}$.
+\begin{align} \nonumber\label{eq:proposed_method_sample_time_pe}
+    & PE_{st}^{(k)}\,[p, 2i]   & = \sin\left(s_{t=p}^{(k)} / 10.000^{2i/d_{\texttt{model}}}\right), \\
+    & PE_{st}^{(k)}\,[p, 2i + 1] & = \cos\left(s_{t=p}^{(k)} / 10.000^{2i/d_{\texttt{model}}}\right).
+\end{align}
+
+Because we resampled the time signals to be all of equal length $L$, the distance between two samples is constant even though the sample time for the same position in different cycles $k$ of different batteries $b_{\psi}$ might be different.
+
+The choice of our sample time based position encoding can be interpreted as an additional condition to the model, allowing it to learn from temporal information (e.g. how long it takes to discharge a battery) and making it robust against different sample rates and number of samples. 
+
+Further, Li-ion batteries recuperate their capacity over time if not used. This means that the SOH of a cycle $k$ is not only dependent on the start time $t^{(k)}$ of the current cycle $k$, but also on the time difference $\Delta t^{(k)}$ in hours to the start time $t^{(k-1)}$ of the previous cycle $(k-1)$. 
+\begin{equation}
+    \Delta t^{(k)}:= t^{(k)} - t^{(k-1)}.
+\end{equation}
+
+We therefore add a second positional encoding to encode the time difference $\Delta t^{(k)}$ in hours between the start time $t^{(k)}$ of the current discharge cycle $k$ and the start time $t^{(k-1)}$ of the previous cycle $(k-1)$ so that the model can learn the recuperation of the battery's capacity over time. We obtain the positional embeddings $PE_{\Delta}^{(k)}$ for cycle $k$ at position $p$ as follows:
+\begin{align} \nonumber\label{eq:proposed_method_sample_time_pe}
+    & PE_{\Delta}^{(k)}\,[p, 2i]   & = \sin\left(\Delta t^{(k)} / 10.000^{2i/d_{\texttt{model}}}\right), \\
+    & PE_{\Delta}^{(k)}\,[p,2i+1] & = \cos\left(\Delta t^{(k)} / 10.000^{2i/d_{\texttt{model}}}\right).
+\end{align}
+
+Our final positional embedding $PE^{(k)}$ for cycle $k$ is then the sum of the sample time positional embedding $PE_{st}^{(k)}$ and the cycle time difference positional embedding $PE_{\Delta}^{(k)}$:
+\begin{equation}
+    PE^{(k)} = PE_{st}^{(k)} + PE_{\Delta}^{(k)}.
+\end{equation}
+
+Note that the cycle time difference positional embedding $PE_{\Delta}^{(k)}$ is constant within a single cycle $k$ while the sample time positional embedding $PE_{st}^{(k)}$ is different for each sample $t$ in the cycle $k$.
+
+We ablate different positional encoding methods in section \ref{subsubsec:ablation_positional_encoding}.
+
+%% Encoder Backbone
+\subsubsection{Encoder Backbone}\label{subsubsec:proposed_method_encoder_backbone}
+Our \modelname{} encoder backbone is strongly inspired by the TSM2 network of \cite{behrouz_mambamixer_2024}, which is a MambaMixer applied on time-series data. Since \cite{behrouz_mambamixer_2024} did not yet publish their implementation, we did implement it from scratch and give it the name \modelname{}.
+
+We stack $M$ \modelname{} blocks to obtain our \modelname{} encoder. The \modelname{} consists of a Time Mixer module and a Channel Mixer module, which both consists of one or more Mamba SSM layers with different scan directions. The Time Mixer module applies the SSM along the token axis. It consists of a single forward scanning SSM due to the causal nature of sequence data. The Channel Mixer module on the other hand, does apply its SSMs on the channel/feature axis, which does not has this causal nature, hence we apply forward and backward scanning SSMs.
+
+In addition to the Time Mixer and Channel Mixer, learnable weighted average layers incorporate results from previous layers as described in equation \ref{eq:preliminaries_weighted_average}.
+
+The \modelname{} encoder is a sequence to sequence model, meaning input and output dimension are equal. Optionally, a single learnable CLS token can be inserted before passing it through the encoder, meaning we would input and output a sequence of tokens of $\mathbb{R}^{d_{\texttt{model}} \times (L+1)}$. In section \ref{subsubsec:ablation_tokentype} we ablate different choices of CLS token types.
+
+%% Regression Head
+\subsubsection{Regression Head}\label{subsubsec:proposed_method_regression_head}
+The regression head inputs the encoded sequence of tokens from \modelname{} encoder. 
+If a CLS token is used, the regression head selects the the token representing the encoded CLS token and projects it from $\mathbb{R}^{d_{\texttt{model}}}$ into $\mathbb{R}$ using an MLP to obtain the final prediction of the state of health for a given cycle $k$. Note that the CLS could be at any position.
+
+If no CLS token is used, we apply a mean operation to average the encoded sequence of tokens to obtain a single token representing the entire sequence. This token is then projected from $\mathbb{R}^{d_{\texttt{model}}}$ into $\mathbb{R}$ using an MLP to obtain the final prediction of the state of health for a given cycle $k$.
+
+In section \ref{subsubsec:ablation_tokentype} we ablate different choices and positions of CLS token.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Model Training
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Training}\label{subsec:proposed_method_training}
+We train our \modelname{} model using the AdamW optimizer \citep{loshchilov_decoupled_2017} with a learning rate of $10^{-4}$, $\beta_1=0.9$ and $\beta_2=0.999$ and a weight decay of $5\cdot10^{-2}$. We use the mean squared error (MSE) loss function to train the model for 60 epochs. We use a step learning rate scheduler that halves the learning rate every 20 epochs. 
+We randomly sample a batch of 32 discharge cycles of random batteries to predict the SOH of theses cycles. 
+
+We apply drop-path regularization \citep{larsson_fractalnet_2016} with a drop-path rate of 0.2, where we occasionally drop entire mixer blocks. We further apply mixed precision training \citep{micikevicius_mixed_2017} to speed up the training.
+
+During training, we use the our proposed anchor-based resampling technique to ensure that all cycles have the same number of samples while also acting as an augmentation technique. During sampling, we use linear resampling.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Model Sampling
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Sampling}\label{subsec:proposed_method_sampling}
+
+To recall, our \modelname{} model inputs a multi-variate time series of current, voltage, temperature and sample time of a single discharge cycle $k$ of a battery along with the time difference to the previous cycle $k-1$ and predicts the state of health $SOH_{k}$ of that cycle. We use the trained model to predict the SOH of a given cycle $k$ of a given battery $b_{\psi}$. To predict the complete capacity degradation of a battery, we iteratively predict the SOH of all cycles of a battery. 
+
+In contrast to training, we use linear resampling to obtain time signals of the same length.
+
+We highlight that in our sampling schema, the prediction of the SOH of a cycle $k$ is independent of the prediction of the SOH of the previous cycle $k-1$. This implies that the quality of the predictions is independent of the battery's history like number of cycles its has been charged and discharged and the profile of the discharge cycle. This choice is made to ensure that the model performs well in a realistic scenario where the battery's history is unknown.

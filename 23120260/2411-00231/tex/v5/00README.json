@@ -1,0 +1,16 @@
+{
+   "stamp" : true,
+   "sources" : [
+      {
+         "usage" : "toplevel",
+         "filename" : "SPF_arxiv_v4.tex"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "SPF_arxiv_v4.bib"
+      }
+   ],
+   "process" : {
+      "compiler" : "pdflatex"
+   }
+}

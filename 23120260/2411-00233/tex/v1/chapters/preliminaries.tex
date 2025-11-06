@@ -1,0 +1,110 @@
+\section{Preliminaries}\label{sec:preliminaries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% State of Health of Li-ion Batteries
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{State-of-Health of Li-ion Batteries}\label{subsec:preliminaries_soh}
+Lithium-ion (Li-ion) batteries are widely used in portable electronics, electric vehicles, and renewable energy storage systems due to their high energy density, long cycle life, and low self-discharge rate. The degradation of the battery's performance is often shown by the battery's state of health (SOH) which decreases over time as a result of a variety of internal and external factors which we will detail later in this section. 
+The SOH of a battery is a measure of its ability to deliver the rated capacity and power compared to its initial state. 
+
+The state of health $SOH_{k}\,[\%]$ of a Li-ion battery in percentage is defined as
+\begin{equation}
+    \label{eq:soh}
+    SOH_{k}[\%] = \frac{Q_{k}}{Q_{r}} \cdot 100,
+\end{equation}
+where $Q_{k}$ is the battery's current capacity at cycle $k$ and $Q_{r}$ its rated capacity.
+
+As the battery is used and repeatedly charged and discharged, its SOH decreases with each cycle, which can be observed in the measured voltage, current and temperature profiles. Figure \ref{fig:battery_aging} depicts an example.
+
+The EOL of a battery is defined as the point at which the battery can no longer deliver the rated capacity and power and is considered to be at the end of its useful life. The EOL of a battery is typically reached when the SOH of the battery drops below a certain threshold, e.g., 70\% of the rated capacity. It is important to note that due to recuperation effects, the SOH of a battery can increase again hence passing the EOL threshold multiple times. In this work, we set the EOL indicator to the first cycle after the SOH drops below the threshold for the last time.
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{illustrations/battery_aging.png}
+    \caption{Effect of battery aging on the measured voltage, current and temperature of various discharge cycles of a Li-ion battery. Battery \#5 of NASA's battery dataset \citep{saha2007nasa}.}
+    \label{fig:battery_aging}
+\end{figure*}
+
+As previously stated, there are internal factors and external factors that contribute to the aging of Li-ion batteries \citep{Liu2023}. Internal factors are concerned with the chemical properties and external factors with for example manufacturing, environment and the usage of the battery, to name a few.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Internal Factors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Internal Factors}\label{subsec:preliminaries_internal_factors}
+\cite{Zeng2023} identifies 21 possible internal factors causing a degradation in a Li-ion battery's state of health. 
+These factors can be grouped into three fundamental concepts: loss of lithium inventory (LLI), loss of active material (LAM) and increase in internal resistance. Within these three groups, the loss of lithium inventory is one of the most impactful on the aging process \citep{Li2019}.
+
+LLI factors include lithium precipitation and SEI formation. Lithium precipitation occurs at the anode during charging, where lithium ions form dendrites that can puncture the separator, causing short circuits \citep{Yang2017}. SEI formation happens during the first charge, reducing available lithium ions and affecting their dynamics \citep{Kekes2016}.
+
+LAM factors primarily involve lithium oxide degradation at the cathode, leading to gas generation and increased internal resistance \citep{Wang2021}.
+
+Increased internal resistance is also caused by electrode corrosion \citep{Yamada2020}, electrolyte decomposition \citep{Wang2012}, and diaphragm degradation \citep{Yang2016}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% External Factors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{External Factors}\label{subsec:preliminaries_external_factors}
+External factors are categorized based on the battery's temperature, charge rate, overcharge/overdischarge level and mechanical stresses \citep{Tian2020, Vetter2005}. 
+
+Using a battery outside its specified temperature range, too high and too low temperatures can both affect the battery's performance in different ways. High temperatures can lead to the formation of solid electrolyte interface, degradation of the cathode, and ultimately thermal runaway \citep{Waldmann2014, Finegan2015}. Too low temperatures slow down the transport of lithium ions, increase internal resistance, and affect the battery's capacity \citep{Zichen2021}.
+
+Charging a battery at a high rate, meaning with high charging current, can lead to the precipitation of ions on the anode, which is favored by the increase in temperature due to the Joule effect \citep{Gao2017, Jaguemont2016}. Similarly, overcharging a battery can lead to irreversible structural changes in the cathode and an increase in internal resistance \citep{He2011, Ouyang2015}. Overdischarging a battery can result in the dissolution of the anode material into $Cu$ ions, which can generate dendrites in the charging process \citep{Yamada2020}.
+
+To conclude, a vast number of internal and external factors can contribute to the degradation of a Li-ion battery's state of health, making it a complex and challenging problem to model.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Structured State Space Models
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Structured State Space Models}\label{subsec:preliminaries_ssm}
+A state space model (SSM) describes the relationship between an input signal $x(t)$ and an output signal $y(t)$ through a hidden state $h(t)$, which evolves over time according to a linear dynamical system. The SSM is defined by the following equations:
+\begin{align}\nonumber
+    h'(t) &= \mathbf{A} h(t) + \mathbf{B} x(t), \\ \label{eq:ssm_continuous_time}
+    y(t) &= \mathbf{C} h(t) + \mathbf{D} x(t).
+\end{align}
+
+Matrix $\mathbf{D}$ transforms the input $x(t)$ directly to the output $y(t)$ and is usually pulled from the SSM and modeled as a skip connection.
+Since most applications deal with discrete signals (e.g. discretized analog time signals or text tokens) and the fact that the above differential equation is not directly solvable, the SSM is discretized, resulting in the following discrete-time SSM:
+\begin{align}\nonumber
+    h_t &= \bar{\mathbf{A}} h_{t-1} + \bar{\mathbf{B}} x_t,\\ \label{eq:ssm_discrete_time}
+    y_t &= \mathbf{C} h_t,
+\end{align}
+
+where $\bar{\mathbf{A}}$ and $\bar{\mathbf{B}}$ are the discretized state matrix and input matrix, respectively. Many discretization techniques have been applied, with the ZOH (Zero order hold) discretization technique being the most prominent one in recent works:
+\begin{align}\nonumber
+    \bar{\mathbf{A}} &= e^{\boldsymbol{\Delta} \mathbf{A}},\\ \label{eq:zoh}
+    \bar{\mathbf{B}} &= \left( \boldsymbol{\Delta} \mathbf{A} \right)^{-1} \left(\bar{\mathbf{A}}- I \right) \: \boldsymbol{\Delta} \mathbf{B}.
+\end{align}
+
+In other words, the discrete SSM maps an input sequence $x \in \mathbb{R}^{L \times D} = \{x_t| t \in \mathbb{N}_L\}$ to an output sequence $y \in \mathbb{R}^{L \times D} = \{y_t| t \in \mathbb{N}_L\}$ with $\mathbb{N}_L$ being the indices of the sequence with $L$ samples and $D$ the dimensionality of individual data points. Since matrices $\bar{\mathbf{A}}$, $\bar{\mathbf{B}}$ and $\mathbf{C}$ are constant over time, the SSM is said to be a linear time-invariant (LTI) system. In an LTI system, the recurrent representation of the SSM can be written in form of a convolution:
+\begin{align}\nonumber
+    \bar{\mathbf{K}} &= \left( {\mathbf{C}} \bar{\mathbf{B}}, {\mathbf{C}} \bar{\mathbf{A}} \bar{\mathbf{B}}, \dots, {\mathbf{C}} \bar{\mathbf{A}}^{L-1} \bar{\mathbf{B}} \right),\\ \label{eq:ssm_convolution_representation}
+    y &= x \ast \bar{\mathbf{K}}.
+\end{align}
+
+Note that the convolution kernel $\bar{\mathbf{K}}$ is a function of the SSM matrices and contains $L$ elements, which is quite expensive to compute for large $L$ and dense matrices $\bar{\mathbf{A}} \in \mathbb{R}^{N \times N}$. \cite{gu_s4_2022} restricted matrix $\mathbf{A}$ to be a diagonal plus low rank (DPLR) matrix with $\mathbf{A}=\Lambda-PP^{*}$, which allows for a more efficient computation of of the convolution kernel $\bar{\mathbf{K}}$.
+
+To further increase the performance of the SSM, \cite{gu_mamba_2024} presented Mamba which added selectivity to the SSM, by making matrices $\mathbf{B}_{t}$, $\mathbf{C}_{t}$ and $\mathbf{\Delta}_{t}$ time-variant, meaning each token is processed by its own matrix.
+
+\cite{behrouz_mambamixer_2024} highlighted that Mamba's selectivity only applies on token level, but not on channel level, meaning information cannot be passed between channels. To address this issue, they proposed the MambaMixer, which adds channel-wise selectivity to the SSM, making it well suited for multi-channel data such as images or multi-variate time series.
+
+A little simplified, the MambaMixer consists of two mixing operations, the token mixer $M_{\texttt{token}}$ and the channel mixer $M_{\texttt{channel}}$, which are defined as follows:
+\begin{align}\nonumber
+    M_{\texttt{token}} & : \mathbb{R}^{L \times D} \mapsto \mathbb{R}^{L \times D}, \\
+    M_{\texttt{channel}} & : \mathbb{R}^{D \times L} \mapsto \mathbb{R}^{D \times L}.
+\end{align}
+
+Those mixers are build from one or more Mamba-like blocks. To obtain the output $y$ of a single MambaMixer block, the input $x$ is first processed by the token mixer $M_{\texttt{token}}$ and then by the channel mixer $M_{\texttt{channel}}$:
+\begin{align}\nonumber
+    y_{\texttt{token}}   &= M_{\texttt{token}}(x_{\texttt{token}}), \\ \nonumber
+    y_{\texttt{channel}} &= M_{\texttt{channel}}(x_{\texttt{channel}}^T), \\
+    y                    &= y_{\texttt{channel}}^T.
+\end{align}
+
+Note that the transpose operation is necessary to make the channel mixer work on the channel dimension.
+
+Inspired by DenseNet \citep{huang2018denselyconnectedconvolutionalnetworks}, MambaMixer further implements a learned weighted averaging of earlier blocks' outputs to the current block's input, which is defined as follows:
+\begin{align} \nonumber \label{eq:preliminaries_weighted_average}
+    {x}_{\texttt{token}}^{(m)} &=  \sum_{i = 0}^{m - 1} \alpha_{m}^{(i)} \: y^{(i)}_{\texttt{token}} &+ \sum_{i = 0}^{m - 1} \beta_{m}^{(i)} \: y^{(i)}_{\texttt{channel}}, \\
+    {x}_{\texttt{channel}}^{(m)} &=  \sum_{i = 0}^{m} \theta_{m}^{(i)} \: y^{(i)}_{\texttt{token}} &+ \sum_{i = 0}^{m - 1} \gamma_{m}^{(i)} \: y^{(i)}_{\texttt{channel}},
+\end{align}
+where $m$ is the current index of the $M$ stacked MambaMixer blocks,  $\alpha_{m}^{(i)}$, $\beta_{m}^{(i)}$, $\theta_{m}^{(i)}$, and $\gamma_{m}^{(i)}$ are learnable parameters and $y^{(0)}_{\texttt{token}} = y^{(0)}_{\texttt{channel}} = x_{\texttt{embedd}}$, where $x_{\texttt{embedd}}$ is the input to the encoder model.
