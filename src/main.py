@@ -9,6 +9,7 @@ from .scholar_client import fetch_references
 from .output_manager import save_json, save_text
 from .utils import generate_id_list, format_paper_folder_id
 from .config import BASE_DATA_DIR, ARXIV_API_DELAY
+from .logger import logger
 
 
 def process_paper_references(paper_id: str, paper_dir: str) -> Dict[str, Any]:
@@ -22,12 +23,12 @@ def process_paper_references(paper_id: str, paper_dir: str) -> Dict[str, Any]:
     Returns:
         Dictionary of processed references
     """
-    print(f"\n--- Fetching Semantic Scholar references for {paper_id} ---")
+    logger.info(f"\n--- Fetching Semantic Scholar references for {paper_id} ---")
     raw_references = fetch_references(paper_id)
     crawled_references = {}
 
     if raw_references:
-        print(f"Found {len(raw_references)} raw references. Filtering and crawling...")
+        logger.info(f"Found {len(raw_references)} raw references. Filtering and crawling...")
         
         for ref in raw_references:
             if ref and ref.get('externalIds') and ref['externalIds'].get('ArXiv'):
@@ -37,20 +38,20 @@ def process_paper_references(paper_id: str, paper_dir: str) -> Dict[str, Any]:
                     continue
                 
                 try:
-                    ref_metadata = get_paper_metadata(ref_arxiv_id)
+                    ref_metadata = get_paper_metadata(ref_arxiv_id, fetch_all_versions=False)
                     
                     if ref_metadata:
                         ref_folder_id = format_paper_folder_id(ref_arxiv_id)
                         crawled_references[ref_folder_id] = ref_metadata
                         time.sleep(ARXIV_API_DELAY)
                 except Exception as e:
-                    print(f"  [Ref] Error processing reference {ref_arxiv_id}: {e}")
+                    logger.error(f"  [Ref] Error processing reference {ref_arxiv_id}: {e}")
                     continue
         
         save_json(crawled_references, os.path.join(paper_dir, "references.json"))
-        print(f"Processed and saved {len(crawled_references)} references.")
+        logger.info(f"Processed and saved {len(crawled_references)} references.")
     else:
-        print(f"No references found for {paper_id}.")
+        logger.info(f"No references found for {paper_id}.")
     
     return crawled_references
 
@@ -65,35 +66,43 @@ def process_single_paper(paper_id: str) -> bool:
     Returns:
         True if processing was successful, False otherwise
     """
-    print(f"\n===== PROCESSING PAPER: {paper_id} =====")
+    logger.info(f"\n{'='*80}")
+    logger.info(f"PROCESSING PAPER: {paper_id}")
+    logger.info(f"{'='*80}")
     
     paper_folder_id = format_paper_folder_id(paper_id)
     paper_dir = os.path.join(BASE_DATA_DIR, paper_folder_id)
     
     get_all_versions(paper_id, paper_dir)
 
-    print("\n--- Fetching Metadata (for metadata.json) ---")
+    logger.info("\n--- Fetching Metadata (for metadata.json) ---")
     metadata = get_paper_metadata(paper_id)
     if metadata:
         save_json(metadata, os.path.join(paper_dir, "metadata.json"))
 
-    print("\n--- Fetching BibTeX (for references.bib) ---")
+    logger.info("\n--- Fetching BibTeX (for references.bib) ---")
     bibtex = get_bibtex(paper_id)
     if bibtex:
         save_text(bibtex, os.path.join(paper_dir, "references.bib"))
 
     process_paper_references(paper_id, paper_dir)
 
-    print(f"===== COMPLETED PAPER: {paper_id} =====")
+    logger.info(f"{'='*80}")
+    logger.info(f"COMPLETED PAPER: {paper_id}")
+    logger.info(f"{'='*80}\n")
     time.sleep(ARXIV_API_DELAY)
     return True
 if __name__ == "__main__":
-    id_list = generate_id_list("2411", 245, 5221)
+    id_list = generate_id_list("1706", 3762, 3763)
     
-    print(f"--- STARTING CRAWL PROCESS WITH {len(id_list)} IDs ---")
-    print(f"--- DATA WILL BE SAVED TO: {BASE_DATA_DIR} ---")
+    logger.info(f"{'='*80}")
+    logger.info(f"STARTING CRAWL PROCESS WITH {len(id_list)} IDs")
+    logger.info(f"DATA WILL BE SAVED TO: {BASE_DATA_DIR}")
+    logger.info(f"{'='*80}\n")
 
     for paper_id in id_list:
         process_single_paper(paper_id)
     
-    print("\n--- ALL PROCESSING COMPLETE ---")
+    logger.info(f"\n{'='*80}")
+    logger.info("ALL PROCESSING COMPLETE")
+    logger.info(f"{'='*80}")

@@ -9,6 +9,7 @@ from .config import (
     SEMANTIC_SCHOLAR_RATE_LIMIT_WAIT,
     SEMANTIC_SCHOLAR_API_KEY
 )
+from .logger import logger
 
 
 API_URL = "https://api.semanticscholar.org/graph/v1/paper/arxiv:"
@@ -34,16 +35,16 @@ def fetch_references(arxiv_id: str) -> List[Dict]:
     headers = {}
     if SEMANTIC_SCHOLAR_API_KEY:
         headers["x-api-key"] = SEMANTIC_SCHOLAR_API_KEY
-        print(f"  [Scholar] Calling Semantic Scholar API (with API key) for: {arxiv_id}")
+        logger.info(f"  [Scholar] Calling Semantic Scholar API (with API key) for: {arxiv_id}")
     else:
-        print(f"  [Scholar] Calling Semantic Scholar API (without key) for: {arxiv_id}")
+        logger.info(f"  [Scholar] Calling Semantic Scholar API (without key) for: {arxiv_id}")
     
     time.sleep(SEMANTIC_SCHOLAR_API_DELAY)
     
     try:
         response = requests.get(url, params=params, headers=headers, timeout=30)
         if response.status_code == 429:
-            print(f"  [Scholar] Rate limit reached. Waiting {SEMANTIC_SCHOLAR_RATE_LIMIT_WAIT} seconds...")
+            logger.warning(f"  [Scholar] Rate limit reached. Waiting {SEMANTIC_SCHOLAR_RATE_LIMIT_WAIT} seconds...")
             time.sleep(SEMANTIC_SCHOLAR_RATE_LIMIT_WAIT)
             response = requests.get(url, params=params, headers=headers, timeout=30)
         
@@ -51,5 +52,5 @@ def fetch_references(arxiv_id: str) -> List[Dict]:
         data = response.json()
         return data.get("references", [])
     except requests.RequestException as e:
-        print(f"  [Scholar] Error calling API: {e}")
+        logger.error(f"  [Scholar] Error calling API: {e}")
         return []

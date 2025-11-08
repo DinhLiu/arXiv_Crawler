@@ -5,7 +5,8 @@ import tarfile
 import os
 import shutil
 from typing import List
-from .config import IMAGE_EXTENSIONS
+from .config import KEEP_FILES
+from .logger import logger
 
 
 def process_source_archive(tar_path: str, output_tex_dir: str) -> bool:
@@ -26,11 +27,11 @@ def process_source_archive(tar_path: str, output_tex_dir: str) -> bool:
 
     os.makedirs(temp_extract_dir)
 
-    print(f"  [Processing] Extracting {tar_path} to {temp_extract_dir}")
+    logger.info(f"  [Processing] Extracting {tar_path} to {temp_extract_dir}")
     
     # Check if file is a valid archive
     if not tarfile.is_tarfile(tar_path):
-        print(f"  [Processing] Warning: {tar_path} is not a valid tar archive")
+        logger.warning(f"  [Processing] Warning: {tar_path} is not a valid tar archive")
         
         if os.path.exists(temp_extract_dir):
             shutil.rmtree(temp_extract_dir)
@@ -44,7 +45,7 @@ def process_source_archive(tar_path: str, output_tex_dir: str) -> bool:
         with tarfile.open(tar_path) as tar:
             tar.extractall(path=temp_extract_dir)
     except Exception as e:
-        print(f"  [Processing] Extraction error: {e}")
+        logger.error(f"  [Processing] Extraction error: {e}")
 
         if os.path.exists(temp_extract_dir):
             shutil.rmtree(temp_extract_dir)
@@ -54,19 +55,19 @@ def process_source_archive(tar_path: str, output_tex_dir: str) -> bool:
 
         return False
     
-    print("  [Processing] Finding and removing image files...")
+    logger.info("  [Processing] Finding and removing image files...")
 
     for root, dirs, files in os.walk(temp_extract_dir):
         for file in files:
-            if any(file.lower().endswith(ext) for ext in IMAGE_EXTENSIONS):
+            if not any(file.lower().endswith(ext) for ext in KEEP_FILES):
                 file_path = os.path.join(root, file)
 
                 try:
                     os.remove(file_path)
                 except Exception as e:
-                    print(f"  [Processing] Warning: Could not remove {file_path}: {e}")
+                    logger.warning(f"  [Processing] Warning: Could not remove {file_path}: {e}")
 
-    print(f"  [Processing] Moving source files to {output_tex_dir}")
+    logger.info(f"  [Processing] Moving source files to {output_tex_dir}")
 
     if os.path.exists(output_tex_dir):
         shutil.rmtree(output_tex_dir)
@@ -76,6 +77,6 @@ def process_source_archive(tar_path: str, output_tex_dir: str) -> bool:
     if os.path.exists(tar_path):
         os.remove(tar_path)
 
-    print(f"  [Processing] Processing complete. Removed {tar_path}.")
+    logger.info(f"  [Processing] Processing complete. Removed {tar_path}.")
 
     return True

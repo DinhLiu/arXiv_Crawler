@@ -10,6 +10,7 @@ A Python-based crawler for downloading and processing arXiv papers, including me
 - Fetch BibTeX citations
 - Crawl paper references via Semantic Scholar API
 - Organized output structure
+- Comprehensive logging to file and console
 
 ## Project Structure
 
@@ -19,18 +20,21 @@ A Python-based crawler for downloading and processing arXiv papers, including me
 │   ├── __init__.py
 │   ├── main.py              # Main orchestrator
 │   ├── config.py            # Configuration settings
+│   ├── logger.py            # Logging configuration
 │   ├── arxiv_client.py      # arXiv API client
 │   ├── scholar_client.py    # Semantic Scholar API client
 │   ├── output_manager.py    # File saving utilities
 │   ├── processing.py        # Archive processing
 │   └── utils.py             # Utility functions
 ├── 23120260/                # Output directory
+│   ├── logs/                # Log files
+│   │   └── arxiv_crawler_YYYYMMDD_HHMMSS.log
 │   └── yyyymm-id/          # Paper folders
 │       ├── metadata.json
 │       ├── references.bib
 │       ├── references.json
-│       └── tex/
-│           └── v1/         # LaTeX sources by version
+│       ├── yyyymm-idv1/    # LaTeX sources for version 1
+│       └── yyyymm-idv2/    # LaTeX sources for version 2
 └── requirements.txt
 ```
 
@@ -73,7 +77,7 @@ Each paper is saved in format `yyyymm-id/`:
 - `metadata.json`: Paper title, authors, dates, venue
 - `references.bib`: BibTeX citation
 - `references.json`: Crawled references with metadata
-- `tex/v1/`, `tex/v2/`, etc.: LaTeX sources for each version
+- `yyyymm-idv1/`, `yyyymm-idv2/`, etc.: LaTeX sources for each version
 
 ## API Rate Limiting
 
@@ -86,3 +90,5 @@ The crawler includes built-in delays to respect API rate limits:
 - Large ID ranges may take considerable time
 - Images are automatically removed from LaTeX sources to save space
 - Failed downloads are logged but don't stop the crawler
+- All operations are logged to timestamped log files in `{STUDENT_ID}/logs/`
+- Log files include detailed timestamps and error tracking

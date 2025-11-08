@@ -4,6 +4,7 @@ File output manager for saving JSON and text files.
 import os
 import json
 from typing import Dict, Any
+from .logger import logger
 
 
 def save_json(data: Dict[str, Any], filepath: str) -> bool:
@@ -23,10 +24,10 @@ def save_json(data: Dict[str, Any], filepath: str) -> bool:
             os.makedirs(dir_path, exist_ok=True)
         with open(filepath, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=4, ensure_ascii=False)
-        print(f"  [Save] Saved: {filepath}")
+        logger.info(f"  [Save] Saved: {filepath}")
         return True
     except Exception as e:
-        print(f"  [Save] Error saving JSON: {e}")
+        logger.error(f"  [Save] Error saving JSON: {e}")
         return False
 
 
@@ -47,8 +48,8 @@ def save_text(data: str, filepath: str) -> bool:
             os.makedirs(dir_path, exist_ok=True)
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(data)
-        print(f"  [Save] Saved: {filepath}")
+        logger.info(f"  [Save] Saved: {filepath}")
         return True
     except Exception as e:
-        print(f"  [Save] Error saving text: {e}")
+        logger.error(f"  [Save] Error saving text: {e}")
         return False
