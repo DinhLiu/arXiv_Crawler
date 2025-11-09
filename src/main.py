@@ -73,17 +73,13 @@ def process_single_paper(paper_id: str) -> bool:
     paper_folder_id = format_paper_folder_id(paper_id)
     paper_dir = os.path.join(BASE_DATA_DIR, paper_folder_id)
     
+    # Download all versions (BibTeX files are saved per version)
     get_all_versions(paper_id, paper_dir)
 
     logger.info("\n--- Fetching Metadata (for metadata.json) ---")
     metadata = get_paper_metadata(paper_id)
     if metadata:
         save_json(metadata, os.path.join(paper_dir, "metadata.json"))
-
-    logger.info("\n--- Fetching BibTeX (for references.bib) ---")
-    bibtex = get_bibtex(paper_id)
-    if bibtex:
-        save_text(bibtex, os.path.join(paper_dir, "references.bib"))
 
     process_paper_references(paper_id, paper_dir)
 
@@ -93,7 +89,7 @@ def process_single_paper(paper_id: str) -> bool:
     time.sleep(ARXIV_API_DELAY)
     return True
 if __name__ == "__main__":
-    id_list = generate_id_list("1706", 3762, 3763)
+    id_list = generate_id_list("2411", 222, 5223)
     
     logger.info(f"{'='*80}")
     logger.info(f"STARTING CRAWL PROCESS WITH {len(id_list)} IDs")

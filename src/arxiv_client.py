@@ -8,6 +8,7 @@ import os
 import requests
 from typing import Optional, Dict, List
 from . import processing
+from . import output_manager
 from .config import ARXIV_API_DELAY
 from .logger import logger
 
@@ -57,10 +58,18 @@ def get_all_versions(base_id: str, paper_dir: str) -> None:
             paper.download_source(dirpath=output_dir, filename=output_filename)
             logger.info(f"  Download complete for {version_id}!")
             
-            # Format version folder name with dash instead of period (e.g., "1706-03762v1")
+            # Format version folder name 
             version_folder = f"{base_id.replace('.', '-')}v{v_num}"
-            final_tex_dir = os.path.join(paper_dir, version_folder)
+            final_tex_dir = os.path.join(paper_dir, "tex", version_folder)
             processing.process_source_archive(tar_path, final_tex_dir)
+            
+            # Fetch and save BibTeX for this version
+            logger.info(f"  Fetching BibTeX for {version_id}...")
+            bibtex = get_bibtex(version_id)
+            if bibtex:
+                bib_path = os.path.join(final_tex_dir, "references.bib")
+                output_manager.save_text(bibtex, bib_path)
+                logger.info(f"  BibTeX saved to {bib_path}")
             
             logger.info("-" * 20)
             time.sleep(ARXIV_API_DELAY)
