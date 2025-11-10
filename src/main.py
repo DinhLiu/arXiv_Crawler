@@ -4,101 +4,46 @@ Main orchestrator for arXiv paper crawling and processing.
 import os
 import time
 from typing import Dict, Any
-from .arxiv_client import get_all_versions, get_paper_metadata, get_bibtex
-from .scholar_client import fetch_references
-from .output_manager import save_json, save_text
-from .utils import generate_id_list, format_paper_folder_id
+from .arxiv_client import get_all_versions, get_paper_metadata
+from .output_manager import save_json
+from .utils import generate_id_list
 from .config import BASE_DATA_DIR, ARXIV_API_DELAY
 from .logger import logger
+from .runner import process_single_paper_task
+import argparse
+import concurrent.futures
 
 
-def process_paper_references(paper_id: str, paper_dir: str) -> Dict[str, Any]:
-    """
-    Fetch and process references from Semantic Scholar for a given paper.
-    
-    Args:
-        paper_id: Base arXiv ID
-        paper_dir: Directory to save references
-        
-    Returns:
-        Dictionary of processed references
-    """
-    logger.info(f"\n--- Fetching Semantic Scholar references for {paper_id} ---")
-    raw_references = fetch_references(paper_id)
-    crawled_references = {}
-
-    if raw_references:
-        logger.info(f"Found {len(raw_references)} raw references. Filtering and crawling...")
-        
-        for ref in raw_references:
-            if ref and ref.get('externalIds') and ref['externalIds'].get('ArXiv'):
-                ref_arxiv_id = ref['externalIds']['ArXiv'].split('v')[0]
-                
-                if ref_arxiv_id == paper_id or ref_arxiv_id in crawled_references:
-                    continue
-                
-                try:
-                    ref_metadata = get_paper_metadata(ref_arxiv_id, fetch_all_versions=False)
-                    
-                    if ref_metadata:
-                        ref_folder_id = format_paper_folder_id(ref_arxiv_id)
-                        crawled_references[ref_folder_id] = ref_metadata
-                        time.sleep(ARXIV_API_DELAY)
-                except Exception as e:
-                    logger.error(f"  [Ref] Error processing reference {ref_arxiv_id}: {e}")
-                    continue
-        
-        save_json(crawled_references, os.path.join(paper_dir, "references.json"))
-        logger.info(f"Processed and saved {len(crawled_references)} references.")
-    else:
-        logger.info(f"No references found for {paper_id}.")
-    
-    return crawled_references
-
-
-def process_single_paper(paper_id: str) -> bool:
-    """
-    Complete processing pipeline for a single paper.
-    
-    Args:
-        paper_id: Base arXiv ID to process
-        
-    Returns:
-        True if processing was successful, False otherwise
-    """
-    logger.info(f"\n{'='*80}")
-    logger.info(f"PROCESSING PAPER: {paper_id}")
-    logger.info(f"{'='*80}")
-    
-    paper_folder_id = format_paper_folder_id(paper_id)
-    paper_dir = os.path.join(BASE_DATA_DIR, paper_folder_id)
-    
-    # Download all versions (BibTeX files are saved per version)
-    get_all_versions(paper_id, paper_dir)
-
-    logger.info("\n--- Fetching Metadata (for metadata.json) ---")
-    metadata = get_paper_metadata(paper_id)
-    if metadata:
-        save_json(metadata, os.path.join(paper_dir, "metadata.json"))
-
-    process_paper_references(paper_id, paper_dir)
-
-    logger.info(f"{'='*80}")
-    logger.info(f"COMPLETED PAPER: {paper_id}")
-    logger.info(f"{'='*80}\n")
-    time.sleep(ARXIV_API_DELAY)
-    return True
+# Note: per-paper processing is implemented in `src/runner.py` as
+# `process_single_paper_task` which is picklable for ProcessPoolExecutor on Windows.
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="arXiv crawler - optional multiprocessing")
+    parser.add_argument("--workers", type=int, default=1, help="Number of worker processes (default: 1)")
+    args = parser.parse_args()
+
     id_list = generate_id_list("2411", 222, 5223)
-    
+
     logger.info(f"{'='*80}")
     logger.info(f"STARTING CRAWL PROCESS WITH {len(id_list)} IDs")
     logger.info(f"DATA WILL BE SAVED TO: {BASE_DATA_DIR}")
+    logger.info(f"Using workers: {args.workers}")
     logger.info(f"{'='*80}\n")
 
-    for paper_id in id_list:
-        process_single_paper(paper_id)
-    
+    if args.workers and args.workers > 1:
+        logger.info("Running in parallel with ProcessPoolExecutor")
+        try:
+            with concurrent.futures.ProcessPoolExecutor(max_workers=args.workers) as ex:
+                # map will preserve order and collect results
+                results = list(ex.map(process_single_paper_task, id_list))
+                logger.info(f"Processed {len(results)} papers with {args.workers} workers")
+        except KeyboardInterrupt:
+            logger.warning("Keyboard interrupt received, shutting down workers")
+        except Exception as e:
+            logger.error(f"Error running parallel workers: {e}")
+    else:
+        for paper_id in id_list:
+            result = process_single_paper_task(paper_id)
+
     logger.info(f"\n{'='*80}")
     logger.info("ALL PROCESSING COMPLETE")
     logger.info(f"{'='*80}")

@@ -1,0 +1,128 @@
+"""
+Worker functions for processing a single paper. Kept in a separate module so it can be
+imported by worker processes (pickleable on Windows).
+"""
+import os
+import time
+from typing import Dict, Any
+
+from .arxiv_client import get_all_versions, get_paper_metadata
+from .scholar_client import fetch_references
+from .output_manager import save_json
+from .utils import format_paper_folder_id
+from .config import BASE_DATA_DIR, ARXIV_API_DELAY
+from .logger import logger
+from .monitor import RamSampler
+from .monitor import repo_root
+
+
+def process_paper_references(paper_id: str, paper_dir: str) -> Dict[str, Any]:
+    """
+    Fetch and process references from Semantic Scholar for a given paper.
+    Kept as a helper inside this module so workers have everything they need.
+    """
+    logger.info(f"\n--- Fetching Semantic Scholar references for {paper_id} ---")
+    raw_references = fetch_references(paper_id)
+    crawled_references = {}
+
+    if raw_references:
+        logger.info(f"Found {len(raw_references)} raw references. Filtering and crawling...")
+
+        for ref in raw_references:
+            if ref and ref.get('externalIds') and ref['externalIds'].get('ArXiv'):
+                ref_arxiv_id = ref['externalIds']['ArXiv'].split('v')[0]
+
+                if ref_arxiv_id == paper_id or ref_arxiv_id in crawled_references:
+                    continue
+
+                try:
+                    ref_metadata = get_paper_metadata(ref_arxiv_id, fetch_all_versions=False)
+
+                    if ref_metadata:
+                        ref_folder_id = format_paper_folder_id(ref_arxiv_id)
+                        crawled_references[ref_folder_id] = ref_metadata
+                        time.sleep(ARXIV_API_DELAY)
+                except Exception as e:
+                    logger.error(f"  [Ref] Error processing reference {ref_arxiv_id}: {e}")
+                    continue
+
+        save_json(crawled_references, os.path.join(paper_dir, "references.json"))
+        logger.info(f"Processed and saved {len(crawled_references)} references.")
+    else:
+        logger.info(f"No references found for {paper_id}.")
+
+    return crawled_references
+
+
+def process_single_paper_task(paper_id: str) -> bool:
+    """
+    Complete processing pipeline for a single paper.
+
+    This function is intentionally top-level so it can be pickled and used by
+    ProcessPoolExecutor on Windows.
+    """
+    logger.info(f"\n{'='*80}")
+    logger.info(f"PROCESSING PAPER: {paper_id}")
+def process_single_paper_task(paper_id: str) -> dict:
+
+
+    paper_folder_id = format_paper_folder_id(paper_id)
+    paper_dir = os.path.join(BASE_DATA_DIR, paper_folder_id)
+    os.makedirs(paper_dir, exist_ok=True)
+
+    # Start RAM sampler (will be saved to repo root when stopped)
+    sampler = RamSampler(sample_interval=0.5)
+    sampler.start()
+
+    # Download all versions (BibTeX files are saved per version)
+    disk_stats_list = []
+    try:
+        disk_stats_list = get_all_versions(paper_id, paper_dir)
+    except Exception as e:
+        logger.error(f"Error downloading versions for {paper_id}: {e}")
+        sampler.stop()
+        # append RAM timeseries into root file (do not write into data dirs)
+        try:
+            sampler.save_to_root(paper_folder_id)
+        except Exception:
+            pass
+        return {
+            "paper_id": paper_id,
+            "success": False,
+            "error": str(e),
+            "disk_stats": [],
+        }
+
+    logger.info("\n--- Fetching Metadata (for metadata.json) ---")
+    try:
+        metadata = get_paper_metadata(paper_id)
+        if metadata:
+            save_json(metadata, os.path.join(paper_dir, "metadata.json"))
+    except Exception as e:
+        logger.error(f"Error fetching metadata for {paper_id}: {e}")
+
+    try:
+        process_paper_references(paper_id, paper_dir)
+    except Exception as e:
+        logger.error(f"Error processing references for {paper_id}: {e}")
+
+    # Stop sampler and save RAM timeseries
+    try:
+        sampler.stop()
+        # save RAM timeseries to root-level JSONL instead of per-paper data dir
+        sampler.save_to_root(paper_folder_id)
+    except Exception as e:
+        logger.warning(f"Failed to save RAM stats: {e}")
+
+    logger.info(f"{'='*80}")
+    logger.info(f"COMPLETED PAPER: {paper_id}")
+    logger.info(f"{'='*80}\n")
+
+    # Sleep to respect arXiv API delay, note: when running parallel workers this is per-worker.
+    time.sleep(ARXIV_API_DELAY)
+
+    return {
+        "paper_id": paper_id,
+        "success": True,
+        "disk_stats": disk_stats_list,
+    }

@@ -1,5 +1,6 @@
 venv
-23120260
+23120260/
 .env
 __pycache__/
 log.log
+venv
