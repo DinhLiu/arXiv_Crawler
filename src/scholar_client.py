@@ -32,13 +32,15 @@ def fetch_references(arxiv_id: str) -> List[Dict]:
     }
     
     # Add API key to headers if available
-    headers = {}
+    headers = {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    }
     if SEMANTIC_SCHOLAR_API_KEY:
         headers["x-api-key"] = SEMANTIC_SCHOLAR_API_KEY
         logger.info(f"  [Scholar] Calling Semantic Scholar API (with API key) for: {arxiv_id}")
     else:
         logger.info(f"  [Scholar] Calling Semantic Scholar API (without key) for: {arxiv_id}")
-    
+
     time.sleep(SEMANTIC_SCHOLAR_API_DELAY)
     
     try:

@@ -2,9 +2,6 @@
 Configuration settings for the arXiv crawler.
 """
 import os
-import dotenv
-
-dotenv.load_dotenv()
 
 STUDENT_ID = "23120260"
 BASE_DATA_DIR = f"./{STUDENT_ID}"
@@ -13,9 +10,9 @@ BASE_DATA_DIR = f"./{STUDENT_ID}"
 SEMANTIC_SCHOLAR_API_KEY = os.getenv("SEMANTIC_SCHOLAR_API_KEY", "")
 
 # API rate limiting delays (in seconds)
-ARXIV_API_DELAY = 0.1
-SEMANTIC_SCHOLAR_API_DELAY = 1.5
-SEMANTIC_SCHOLAR_RATE_LIMIT_WAIT = 15
+ARXIV_API_DELAY = 0.5
+SEMANTIC_SCHOLAR_API_DELAY = 0.5
+SEMANTIC_SCHOLAR_RATE_LIMIT_WAIT = 5
 
 # File extensions to remove from extracted archives
 KEEP_FILES = ['.json', '.bib', '.tex']

@@ -12,7 +12,8 @@ from .logger import logger
 from .runner import process_single_paper_task
 import argparse
 import concurrent.futures
-
+import time
+import random
 
 # Note: per-paper processing is implemented in `src/runner.py` as
 # `process_single_paper_task` which is picklable for ProcessPoolExecutor on Windows.
@@ -21,7 +22,7 @@ if __name__ == "__main__":
     parser.add_argument("--workers", type=int, default=1, help="Number of worker processes (default: 1)")
     args = parser.parse_args()
 
-    id_list = generate_id_list("2411", 222, 5223)
+    id_list = generate_id_list("2411", 2530, 5223)
 
     logger.info(f"{'='*80}")
     logger.info(f"STARTING CRAWL PROCESS WITH {len(id_list)} IDs")
@@ -30,9 +31,11 @@ if __name__ == "__main__":
     logger.info(f"{'='*80}\n")
 
     if args.workers and args.workers > 1:
+        time.sleep(random.uniform(0, 5))
         logger.info("Running in parallel with ProcessPoolExecutor")
         try:
             with concurrent.futures.ProcessPoolExecutor(max_workers=args.workers) as ex:
+              
                 # map will preserve order and collect results
                 results = list(ex.map(process_single_paper_task, id_list))
                 logger.info(f"Processed {len(results)} papers with {args.workers} workers")
