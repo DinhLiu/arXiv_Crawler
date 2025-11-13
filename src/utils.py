@@ -20,6 +20,7 @@ def generate_id_list(month_prefix: str, start_id: int, end_id: int) -> List[str]
     for i in range(start_id, end_id + 1):
         arxiv_id = f"{month_prefix}.{i:05d}"
         id_list.append(arxiv_id)
+    print(f'id_list: {id_list}')
     return id_list
 
 
@@ -34,6 +35,10 @@ def format_paper_folder_id(paper_id: str) -> str:
     Returns:
         Formatted folder ID (e.g., "2411-00222" or "math-0610595")
     """
+    # Defensive: if paper_id is None or not a string, return a placeholder
+    if paper_id is None:
+        return "unknown-id"
+
     # Handle old format with category prefix (e.g., math/0610595)
     if '/' in paper_id:
         category, number = paper_id.split('/')

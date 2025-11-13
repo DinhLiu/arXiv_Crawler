@@ -13,9 +13,9 @@ BASE_DATA_DIR = f"./{STUDENT_ID}"
 SEMANTIC_SCHOLAR_API_KEY = os.getenv("SEMANTIC_SCHOLAR_API_KEY", "")
 
 # API rate limiting delays (in seconds)
-ARXIV_API_DELAY = 0.1
+ARXIV_API_DELAY = 0.3
 SEMANTIC_SCHOLAR_API_DELAY = 1.5
-SEMANTIC_SCHOLAR_RATE_LIMIT_WAIT = 15
+SEMANTIC_SCHOLAR_RATE_LIMIT_WAIT = 8
 
 # File extensions to remove from extracted archives
 KEEP_FILES = ['.json', '.bib', '.tex']

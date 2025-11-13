@@ -54,7 +54,7 @@ def process_paper_references(paper_id: str, paper_dir: str) -> Dict[str, Any]:
     return crawled_references
 
 
-def process_single_paper_task(paper_id: str) -> bool:
+def process_single_paper_task(paper_id: str) -> dict:
     """
     Complete processing pipeline for a single paper.
 
@@ -63,8 +63,12 @@ def process_single_paper_task(paper_id: str) -> bool:
     """
     logger.info(f"\n{'='*80}")
     logger.info(f"PROCESSING PAPER: {paper_id}")
-def process_single_paper_task(paper_id: str) -> dict:
+    logger.info(f"{'='*80}")
 
+    # Defensive: ensure paper_id is valid
+    if not paper_id:
+        logger.error("process_single_paper_task called with empty paper_id")
+        return {"paper_id": paper_id, "success": False, "error": "empty paper_id"}
 
     paper_folder_id = format_paper_folder_id(paper_id)
     paper_dir = os.path.join(BASE_DATA_DIR, paper_folder_id)
