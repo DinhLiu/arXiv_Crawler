@@ -1,63 +1,67 @@
 """
-ArXiv API client for fetching papers and metadata.
-
-(Đã sửa đổi để tự động thử lại (retry) nếu gặp lỗi API)
+ArXiv API client for fetching papers and metadata with retry logic.
 """
 import arxiv
 import requests
 import time
 import re
 import os
-from typing import Optional, Dict, List
+from typing import Optional, Dict, List, Any
+
 from . import processing
 from .config import ARXIV_API_DELAY
 from .logger import logger
 
-# --- CẤU HÌNH THỬ LẠI (RETRY) ---
-MAX_RETRIES = 3  # Thử lại tối đa 3 lần
-RETRY_DELAY = 7  # Chờ 5 giây giữa các lần thử
-# ---------------------------------
+# Retry configuration
+MAX_RETRIES = 3
+RETRY_DELAY = 7
 
 
-def get_all_versions(base_id: str, paper_dir: str) -> List[dict]:
+def get_all_versions(base_id: str, paper_dir: str) -> Dict[str, Any]:
     """
-    Find and process all versions of a base arXiv ID. Returns a list of disk-stat
-    dictionaries (one per processed version) so callers can aggregate stats.
+    Find and process all versions of a base arXiv ID.
+    
+    Args:
+        base_id: The base arXiv ID (e.g., "2411.00222")
+        paper_dir: Directory to save downloaded files
+        
+    Returns:
+        True if successful, False otherwise
     """
-    # Defensive check
     if not base_id or base_id is None:
         logger.error(f"get_all_versions called with invalid base_id: {base_id}")
-        return []
+        return False
     
     logger.info(f"--- Finding all versions for ID: {base_id} ---")
     client = arxiv.Client()
-    
     latest_paper = None
     
-    # --- THỬ LẠI (RETRY) CHO VIỆC TÌM KIẾM BAN ĐẦU ---
+    # Retry logic for finding the latest version
     for attempt in range(MAX_RETRIES):
         try:
             search_latest = arxiv.Search(id_list=[base_id])
             latest_paper = next(client.results(search_latest))
-            break  # Thành công, thoát khỏi vòng lặp thử lại
+            break
         except StopIteration:
             logger.warning(f"Notice: Paper not found with ID: {base_id}")
-            return []  # Không tìm thấy, không cần thử lại
+            return {"success": False, "error": "paper not found"}
         except Exception as e:
             logger.warning(f"  [Retry {attempt + 1}/{MAX_RETRIES}] Error finding latest version for {base_id}: {e}. Retrying in {RETRY_DELAY}s...")
             time.sleep(RETRY_DELAY)
             
     if latest_paper is None:
         logger.error(f"Failed to find latest version for {base_id} after {MAX_RETRIES} attempts. Skipping.")
-        return []
-    # --------------------------------------------------
+        return {"success": False, "error": "failed to find latest version"}
 
     version_match = re.search(r'v(\d+)$', latest_paper.entry_id)
     max_version = int(version_match.group(1)) if version_match else 1
 
     logger.info(f"Found total of {max_version} versions. Processing each version...")
 
-    disk_stats_list: List[dict] = []
+    # Track processing statistics
+    version_stats = []
+
+    # Process each version
     for v_num in range(1, max_version + 1):
         version_id = f"{base_id}v{v_num}"
         success = False
@@ -116,9 +120,14 @@ def get_all_versions(base_id: str, paper_dir: str) -> List[dict]:
                 final_tex_dir = os.path.join(paper_dir, "tex", version_folder)
                 
                 try:
-                    stats = processing.process_source_archive(tar_path, final_tex_dir)
-                    if isinstance(stats, dict):
-                        disk_stats_list.append(stats)
+                    result = processing.process_source_archive(tar_path, final_tex_dir)
+                    if result.get("success"):
+                        version_stats.append({
+                            "version": v_num,
+                            "version_id": version_id,
+                            "tar_size_bytes": result.get("tar_size_bytes", 0),
+                            "final_size_bytes": result.get("final_size_bytes", 0)
+                        })
                 except Exception as e:
                     logger.warning(f"  [Processing] Warning: process_source_archive failed for {version_id}: {e}")
 
@@ -139,9 +148,12 @@ def get_all_versions(base_id: str, paper_dir: str) -> List[dict]:
         
         if not success:
             logger.error(f"Failed to process {version_id} after {MAX_RETRIES} attempts. Skipping.")
-        # ------------------------------------------------
 
-    return disk_stats_list
+    return {
+        "success": True,
+        "total_versions": max_version,
+        "version_stats": version_stats
+    }
 
 
 def get_paper_metadata(base_id: str, fetch_all_versions: bool = True) -> Optional[Dict[str, any]]:

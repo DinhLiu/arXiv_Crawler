@@ -12,7 +12,7 @@ from .output_manager import save_json
 from .utils import format_paper_folder_id
 from .config import BASE_DATA_DIR, ARXIV_API_DELAY
 from .logger import logger
-from .monitor import RamSampler
+from .monitor import RamSampler, save_disk_stats, get_directory_size
 from .monitor import repo_root
 
 
@@ -74,18 +74,20 @@ def process_single_paper_task(paper_id: str) -> dict:
     paper_dir = os.path.join(BASE_DATA_DIR, paper_folder_id)
     os.makedirs(paper_dir, exist_ok=True)
 
-    # Start RAM sampler (will be saved to repo root when stopped)
+    # Start RAM monitoring
     sampler = RamSampler(sample_interval=0.5)
     sampler.start()
 
-    # Download all versions (BibTeX files are saved per version)
-    disk_stats_list = []
+    # Download and process all versions
+    processing_stats = {}
     try:
-        disk_stats_list = get_all_versions(paper_id, paper_dir)
+        result = get_all_versions(paper_id, paper_dir)
+        if not result.get("success"):
+            raise Exception(result.get("error", "Failed to download versions"))
+        processing_stats = result
     except Exception as e:
         logger.error(f"Error downloading versions for {paper_id}: {e}")
         sampler.stop()
-        # append RAM timeseries into root file (do not write into data dirs)
         try:
             sampler.save_to_root(paper_folder_id)
         except Exception:
@@ -93,8 +95,7 @@ def process_single_paper_task(paper_id: str) -> dict:
         return {
             "paper_id": paper_id,
             "success": False,
-            "error": str(e),
-            "disk_stats": [],
+            "error": str(e)
         }
 
     logger.info("\n--- Fetching Metadata (for metadata.json) ---")
@@ -118,6 +119,24 @@ def process_single_paper_task(paper_id: str) -> dict:
     except Exception as e:
         logger.warning(f"Failed to save RAM stats: {e}")
 
+    # Save processing statistics
+    try:
+        total_tar_size = sum(v.get("tar_size_bytes", 0) for v in processing_stats.get("version_stats", []))
+        total_final_size = sum(v.get("final_size_bytes", 0) for v in processing_stats.get("version_stats", []))
+        paper_dir_size = get_directory_size(paper_dir)
+        
+        stats = {
+            "total_versions": processing_stats.get("total_versions", 0),
+            "total_tar_size_bytes": total_tar_size,
+            "total_processed_size_bytes": total_final_size,
+            "paper_directory_size_bytes": paper_dir_size,
+            "version_details": processing_stats.get("version_stats", [])
+        }
+        save_disk_stats(paper_folder_id, stats)
+        logger.info(f"  [Stats] Saved disk statistics: tar={total_tar_size:,} bytes, processed={total_final_size:,} bytes, total_dir={paper_dir_size:,} bytes")
+    except Exception as e:
+        logger.warning(f"Failed to save processing stats: {e}")
+
     logger.info(f"{'='*80}")
     logger.info(f"COMPLETED PAPER: {paper_id}")
     logger.info(f"{'='*80}\n")
@@ -127,6 +146,5 @@ def process_single_paper_task(paper_id: str) -> dict:
 
     return {
         "paper_id": paper_id,
-        "success": True,
-        "disk_stats": disk_stats_list,
+        "success": True
     }

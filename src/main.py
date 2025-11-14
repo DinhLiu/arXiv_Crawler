@@ -21,7 +21,7 @@ if __name__ == "__main__":
     parser.add_argument("--workers", type=int, default=1, help="Number of worker processes (default: 1)")
     args = parser.parse_args()
 
-    id_list = generate_id_list("2411", 222, 4919)
+    id_list = generate_id_list("2411", 222, 228)
 
     logger.info(f"{'='*80}")
     logger.info(f"STARTING CRAWL PROCESS WITH {len(id_list)} IDs")

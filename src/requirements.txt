@@ -1,4 +1,4 @@
 arxiv
-dotenv
+python-dotenv
 requests
 psutil

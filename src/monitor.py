@@ -1,13 +1,10 @@
-"""Monitoring helpers: clean implementation.
+"""Monitoring helpers: RAM monitoring implementation.
 
 This module provides:
 - RamSampler: samples the current process memory (RSS) and basic stats at a
   configurable interval and returns a list of samples. Each sample is a dict
   containing pid, ppid, process_name, timestamp, rss_bytes, proc_mem_percent,
   system_mem_percent.
-- dir_size(path): compute directory size in bytes.
-- append_disk_stats(...): append disk stats to `processing_stats.jsonl` in repo root.
-- append_ram_stats(record): append RAM stats record to `ram_stats.jsonl` in repo root.
 
 All writes are append-only JSONL at the repository root (parent of `src`).
 """
@@ -39,18 +36,29 @@ def _append_jsonl(filename: str, obj: Dict[str, Any]):
         print(f"[monitor] Failed to append to {path}: {e}", file=sys.stderr)
 
 
-def dir_size(path: str) -> int:
-    total = 0
-    if not os.path.exists(path):
-        return 0
-    for root, dirs, files in os.walk(path):
-        for f in files:
-            try:
-                fp = os.path.join(root, f)
-                total += os.path.getsize(fp)
-            except Exception:
-                continue
-    return total
+def get_directory_size(path: str) -> int:
+    """Calculate total size of a directory in bytes."""
+    total_size = 0
+    try:
+        for dirpath, dirnames, filenames in os.walk(path):
+            for filename in filenames:
+                filepath = os.path.join(dirpath, filename)
+                if os.path.exists(filepath):
+                    total_size += os.path.getsize(filepath)
+    except Exception:
+        pass
+    return total_size
+
+
+def save_disk_stats(paper_id: str, stats: Dict[str, Any]):
+    """Save disk size statistics to disk_stats.jsonl."""
+    obj = {
+        "type": "disk",
+        "paper_id": paper_id,
+        "timestamp": time.time(),
+        **stats
+    }
+    _append_jsonl("disk_stats.jsonl", obj)
 
 
 class RamSampler:
@@ -126,17 +134,3 @@ class RamSampler:
             "timestamp": time.time(),
         }
         _append_jsonl("ram_stats.jsonl", obj)
-
-
-def append_disk_stats(paper_folder_id: str, tar_path: str, size_before: int, images_removed_size: int, size_after: int):
-    obj = {
-        "type": "disk",
-        "paper_folder_id": paper_folder_id,
-        "tar_path": tar_path,
-        "size_before_bytes": size_before,
-        "images_removed_bytes": images_removed_size,
-        "size_after_bytes": size_after,
-        "timestamp": time.time(),
-    }
-    _append_jsonl("processing_stats.jsonl", obj)
-
