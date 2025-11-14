@@ -1,5 +1,0 @@
-.env
-src/__pycache__/
-log.log
-disk_stats.jsonl
-ram_stats.jsonl

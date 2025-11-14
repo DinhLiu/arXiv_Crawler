@@ -12,7 +12,6 @@ from . import processing
 from .config import ARXIV_API_DELAY
 from .logger import logger
 
-# Retry configuration
 MAX_RETRIES = 3
 RETRY_DELAY = 7
 
@@ -58,15 +57,12 @@ def get_all_versions(base_id: str, paper_dir: str) -> Dict[str, Any]:
 
     logger.info(f"Found total of {max_version} versions. Processing each version...")
 
-    # Track processing statistics
     version_stats = []
 
-    # Process each version
     for v_num in range(1, max_version + 1):
         version_id = f"{base_id}v{v_num}"
         success = False
 
-        # --- THỬ LẠI (RETRY) CHO TỪNG PHIÊN BẢN ---
         for attempt in range(MAX_RETRIES):
             try:
                 search_version = arxiv.Search(id_list=[version_id])
@@ -80,15 +76,11 @@ def get_all_versions(base_id: str, paper_dir: str) -> Dict[str, Any]:
 
                 os.makedirs(output_dir, exist_ok=True)
 
-                # Workaround for arxiv library bug: pdf_url property sometimes returns None
-                # even when PDF link exists in links list
                 if paper.pdf_url is not None:
-                    # Normal case: use library's download method
                     logger.info(f"  Downloading source to {output_dir}/{output_filename}...")
                     paper.download_source(dirpath=output_dir, filename=output_filename)
                     logger.info(f"  Download complete for {version_id}!")
                 else:
-                    # Workaround: manually construct source URL from links
                     logger.info(f"  [Workaround] pdf_url is None, manually constructing source URL...")
                     pdf_link = None
                     for link in paper.links:
@@ -135,14 +127,14 @@ def get_all_versions(base_id: str, paper_dir: str) -> Dict[str, Any]:
                 time.sleep(ARXIV_API_DELAY)
                 
                 success = True
-                break  # Thành công, thoát khỏi vòng lặp thử lại
+                break
                 
             except StopIteration:
                 logger.error(f"Error: Specific version not found: {version_id}")
-                break  # Không tìm thấy, không cần thử lại
+                break
             except Exception as e:
                 logger.warning(f"  [Retry {attempt + 1}/{MAX_RETRIES}] Error processing {version_id}: {e}. Retrying in {RETRY_DELAY}s...")
-                if attempt == 0:  # Log full traceback only on first error
+                if attempt == 0:
                     logger.exception(f"  Full traceback for {version_id}:")
                 time.sleep(RETRY_DELAY)
         
@@ -165,15 +157,14 @@ def get_paper_metadata(base_id: str, fetch_all_versions: bool = True) -> Optiona
     latest_paper = None
     client = arxiv.Client()
 
-    # --- THỬ LẠI (RETRY) CHO VIỆC TÌM KIẾM METADATA BAN ĐẦU ---
     for attempt in range(MAX_RETRIES):
         try:
             search_latest = arxiv.Search(id_list=[base_id])
             latest_paper = next(client.results(search_latest))
-            break  # Thành công
+            break
         except StopIteration:
             logger.error(f"  [Meta] Error: Metadata not found for {base_id}")
-            return None  # Không tìm thấy, không thử lại
+            return None
         except Exception as e:
             logger.warning(f"  [Meta] [Retry {attempt + 1}/{MAX_RETRIES}] Error fetching metadata for {base_id}: {e}. Retrying in {RETRY_DELAY}s...")
             time.sleep(RETRY_DELAY)
@@ -181,15 +172,12 @@ def get_paper_metadata(base_id: str, fetch_all_versions: bool = True) -> Optiona
     if latest_paper is None:
         logger.error(f"  [Meta] Failed to fetch metadata for {base_id} after {MAX_RETRIES} attempts.")
         return None
-    # --------------------------------------------------------
 
-    # (Phần code bên dưới này là logic gốc của bạn)
     paper_title = latest_paper.title
     authors = [author.name for author in latest_paper.authors]
     publication_venue = latest_paper.journal_ref
 
     if not fetch_all_versions:
-        # ... (logic gốc của bạn) ...
         submission_date = latest_paper.published.isoformat().split('T')[0]
         updated_date = latest_paper.updated.isoformat().split('T')[0]
         revised_dates = []
@@ -214,20 +202,18 @@ def get_paper_metadata(base_id: str, fetch_all_versions: bool = True) -> Optiona
         version_id = f"{base_id}v{v_num}"
         version_paper = None
         
-        # --- THỬ LẠI (RETRY) CHO VIỆC LẤY METADATA TỪNG PHIÊN BẢN ---
         for attempt in range(MAX_RETRIES):
             try:
                 search_version = arxiv.Search(id_list=[version_id])
                 version_paper = next(client.results(search_version))
-                break # Thành công
+                break
             except Exception as e:
                 logger.warning(f"  [Meta] [Retry {attempt + 1}/{MAX_RETRIES}] Warning: Could not fetch metadata for {version_id}: {e}. Retrying...")
                 time.sleep(RETRY_DELAY)
         
         if version_paper is None:
             logger.error(f"  [Meta] Failed to fetch metadata for {version_id} after {MAX_RETRIES} attempts. Skipping version.")
-            continue # Bỏ qua phiên bản này
-        # ------------------------------------------------------------
+            continue
 
         version_date = version_paper.updated.isoformat().split('T')[0]
         
@@ -237,7 +223,7 @@ def get_paper_metadata(base_id: str, fetch_all_versions: bool = True) -> Optiona
             if version_date not in revised_dates:
                 revised_dates.append(version_date)
         
-        time.sleep(0.5)  # Small delay between version requests
+        time.sleep(0.5)
 
     metadata = {
         "paper_title": paper_title,

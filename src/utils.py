@@ -27,7 +27,6 @@ def generate_id_list(month_prefix: str, start_id: int, end_id: int) -> List[str]
 def format_paper_folder_id(paper_id: str) -> str:
     """
     Format paper ID into folder name format: "yyyymm-id"
-    Handles both modern format (2411.00222) and old format (math/0610595)
     
     Args:
         paper_id: Full arXiv ID (e.g., "2411.00222" or "math/0610595")
@@ -35,19 +34,15 @@ def format_paper_folder_id(paper_id: str) -> str:
     Returns:
         Formatted folder ID (e.g., "2411-00222" or "math-0610595")
     """
-    # Defensive: if paper_id is None or not a string, return a placeholder
     if paper_id is None:
         return "unknown-id"
 
-    # Handle old format with category prefix (e.g., math/0610595)
     if '/' in paper_id:
         category, number = paper_id.split('/')
         return f"{category}-{number}"
     
-    # Handle modern format (e.g., 2411.00222)
     parts = paper_id.split('.')
     if len(parts) >= 2:
         return f"{parts[0]}-{parts[1]}"
     
-    # Fallback for unexpected formats
     return paper_id.replace('.', '-').replace('/', '-')

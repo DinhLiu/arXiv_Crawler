@@ -61,11 +61,10 @@ def process_single_paper_task(paper_id: str) -> dict:
     This function is intentionally top-level so it can be pickled and used by
     ProcessPoolExecutor on Windows.
     """
-    logger.info(f"\n{'='*80}")
+    logger.info(f"{'='*80}")
     logger.info(f"PROCESSING PAPER: {paper_id}")
     logger.info(f"{'='*80}")
 
-    # Defensive: ensure paper_id is valid
     if not paper_id:
         logger.error("process_single_paper_task called with empty paper_id")
         return {"paper_id": paper_id, "success": False, "error": "empty paper_id"}
@@ -141,7 +140,6 @@ def process_single_paper_task(paper_id: str) -> dict:
     logger.info(f"COMPLETED PAPER: {paper_id}")
     logger.info(f"{'='*80}\n")
 
-    # Sleep to respect arXiv API delay, note: when running parallel workers this is per-worker.
     time.sleep(ARXIV_API_DELAY)
 
     return {

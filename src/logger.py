@@ -18,31 +18,25 @@ def setup_logger(name: str = "arxiv_crawler") -> logging.Logger:
     logger = logging.getLogger(name)
     logger.setLevel(logging.INFO)
     
-    # Prevent duplicate handlers if logger already exists
     if logger.handlers:
         return logger
     
-    # Single log file in the project root
     log_file = "log.log"
     
-    # Create formatters
     detailed_formatter = logging.Formatter(
         '%(asctime)s - %(levelname)s - %(message)s',
         datefmt='%Y-%m-%d %H:%M:%S'
     )
     console_formatter = logging.Formatter('%(message)s')
     
-    # File handler - detailed logs to single file
     file_handler = logging.FileHandler(log_file, mode='a', encoding='utf-8')
     file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(detailed_formatter)
     
-    # Console handler - simple output
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.INFO)
     console_handler.setFormatter(console_formatter)
     
-    # Add handlers to logger
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)
     
@@ -53,5 +47,4 @@ def setup_logger(name: str = "arxiv_crawler") -> logging.Logger:
     return logger
 
 
-# Global logger instance
 logger = setup_logger()

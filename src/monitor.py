@@ -31,7 +31,6 @@ def _append_jsonl(filename: str, obj: Dict[str, Any]):
         with open(path, "a", encoding="utf-8") as fh:
             fh.write(json.dumps(obj, default=str) + "\n")
     except Exception as e:
-        # Log to stderr so we can debug write failures
         import sys
         print(f"[monitor] Failed to append to {path}: {e}", file=sys.stderr)
 
