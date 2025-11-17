@@ -95,7 +95,6 @@ def get_all_versions(base_id: str, paper_dir: str) -> Dict[str, Any]:
                     source_url = pdf_link.replace('/pdf/', '/src/')
                     logger.info(f"  Downloading source from {source_url} to {tar_path}...")
                     
-                    import requests
                     response = requests.get(source_url, stream=True)
                     
                     if response.status_code == 200:
