@@ -61,6 +61,9 @@ def process_single_paper_task(paper_id: str) -> dict:
     This function is intentionally top-level so it can be pickled and used by
     ProcessPoolExecutor on Windows.
     """
+    # Start timing
+    start_time = time.time()
+    
     logger.info(f"{'='*80}")
     logger.info(f"PROCESSING PAPER: {paper_id}")
     logger.info(f"{'='*80}")
@@ -91,10 +94,17 @@ def process_single_paper_task(paper_id: str) -> dict:
             sampler.save_to_root(paper_folder_id)
         except Exception:
             pass
+        
+        # Log partial processing time on error
+        error_time = time.time()
+        partial_duration = error_time - start_time
+        logger.info(f"  [Timing] Processing failed after {partial_duration:.2f} seconds")
+        
         return {
             "paper_id": paper_id,
             "success": False,
-            "error": str(e)
+            "error": str(e),
+            "processing_duration_seconds": round(partial_duration, 2)
         }
 
     logger.info("\n--- Fetching Metadata (for metadata.json) ---")
@@ -136,13 +146,41 @@ def process_single_paper_task(paper_id: str) -> dict:
     except Exception as e:
         logger.warning(f"Failed to save processing stats: {e}")
 
+    # Calculate processing time
+    end_time = time.time()
+    processing_duration = end_time - start_time
+    
     logger.info(f"{'='*80}")
     logger.info(f"COMPLETED PAPER: {paper_id}")
+    logger.info(f"Processing time: {processing_duration:.2f} seconds ({processing_duration/60:.2f} minutes)")
     logger.info(f"{'='*80}\n")
+
+    # Save timing statistics
+    try:
+        from datetime import datetime
+        timing_stats = {
+            "paper_id": paper_id,
+            "paper_folder_id": paper_folder_id,
+            "start_time": datetime.fromtimestamp(start_time).isoformat(),
+            "end_time": datetime.fromtimestamp(end_time).isoformat(),
+            "processing_duration_seconds": round(processing_duration, 2),
+            "processing_duration_minutes": round(processing_duration / 60, 2)
+        }
+        
+        # Save to root-level JSONL file (same pattern as RAM and disk stats)
+        timing_file = os.path.join(repo_root(), "timing_stats.jsonl")
+        with open(timing_file, "a", encoding="utf-8") as f:
+            import json
+            f.write(json.dumps(timing_stats) + "\n")
+        
+        logger.info(f"  [Timing] Saved timing statistics: {processing_duration:.2f}s")
+    except Exception as e:
+        logger.warning(f"Failed to save timing stats: {e}")
 
     time.sleep(ARXIV_API_DELAY)
 
     return {
         "paper_id": paper_id,
-        "success": True
+        "success": True,
+        "processing_duration_seconds": round(processing_duration, 2)
     }

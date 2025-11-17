@@ -20,7 +20,6 @@ def generate_id_list(month_prefix: str, start_id: int, end_id: int) -> List[str]
     for i in range(start_id, end_id + 1):
         arxiv_id = f"{month_prefix}.{i:05d}"
         id_list.append(arxiv_id)
-    print(f'id_list: {id_list}')
     return id_list
 
 
